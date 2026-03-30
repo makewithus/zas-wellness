@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!-- This site was created in Webflow. https://webflow.com -->
 <!-- Last Published: Mon Jan 26 2026 10:18:21 GMT+0000 (Coordinated Universal Time) -->
 <html data-wf-domain="fitcore-ttm.webflow.io" data-wf-page="691ea5c3d38e36d02b948f6f"
@@ -358,80 +358,361 @@
             </div>
         </section>
         <div class="all-content">
-            <section class="hero">
-                <div class="section-inner-block">
-                    <div class="hero-section-inner">
-                        <div class="hero-image-overlays"><img
-                                src="https://cdn.prod.website-files.com/691ea5c2d38e36d02b948f36/691ec1ddece54c3576500e71_bg-hero.avif"
-                                loading="lazy" data-w-id="8406132d-5d20-25e3-085e-5cb9f202050a" alt="hero image"
-                                class="hero-image" /></div>
-                        <div class="hero-color-overlays"></div>
-                        <div class="hero-section-holders">
-                            <div class="w-layout-blockcontainer container-full w-container">
-                                <div class="hero-wrap">
-                                    <div class="hero-content-wrap">
-                                        <div class="hero-content-flex">
-                                            <div class="hero-content-top">
-                                                <div class="hero-content-top-flex">
-                                                    <div class="hero-content-main">
-                                                        <div class="hero-authers-box">
-                                                            <div class="hero-authers-image-box"><img
-                                                                    src="https://cdn.prod.website-files.com/691ea5c2d38e36d02b948f36/696b6c2920ee47ca154f1fbe_authers-image.avif"
-                                                                    loading="lazy" alt="authers image"
-                                                                    class="hero-authers-image" /></div>
-                                                            <div class="hero-authers-desc-box">
-                                                                <div class="hero-authers-desc">Cillum dolore eu fugiat
-                                                                    nulla pariatur Excepteur sint </div>
-                                                                <div class="hero-authers-desc">Occaecat <span
-                                                                        class="text-span-bold">Cupidatat</span> Non
-                                                                    proident sunt in culpa</div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="hero-title-box">
-                                                            <h1 class="hero-title">Transform Your Body, Unlock Your
-                                                                Potential</h1>
-                                                        </div>
-                                                    </div>
-                                                    <div class="hero-content-link"><a
-                                                            data-wf--link-button--variant="three"
-                                                            data-w-id="2e94237b-1394-b61c-0369-9f2dbebd474b"
-                                                            href="team.html"
-                                                            class="link-button w-variant-b3133629-543a-6530-8b30-a0165d89c445 w-inline-block">
-                                                            <div class="link-button-wrap">
-                                                                <div class="link-button-text-box">
-                                                                    <div class="link-button-text text-one">Start your
-                                                                        rhythm</div>
-                                                                    <div class="link-button-text text-two">Start your
-                                                                        rhythm</div>
-                                                                </div>
-                                                                <div class="link-button-line">
-                                                                    <div
-                                                                        class="buttone-line-one w-variant-b3133629-543a-6530-8b30-a0165d89c445">
-                                                                    </div>
-                                                                    <div class="buttone-line-two"></div>
-                                                                    <div
-                                                                        class="buttone-line-three w-variant-b3133629-543a-6530-8b30-a0165d89c445">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </a></div>
-                                                </div>
-                                            </div>
-                                            <!-- <div class="hero-content-bottom">
-                                                <div class="hero-content-bottom-flex">
-                                                    <div 
-                                                        class="hero-desc-box">
-                                                        <p class="hero-desc">Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem</p>
-                                                    </div>
-                                                </div>
-                                            </div> -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+            <section class="hero zas-hero" id="zasOrbContainer">
+                <!-- ZAS Breathing Human Hero — Scattered Text + Orb -->
+
+                <div class="zas-hero-bg"></div>
+                <div class="zas-orb-container">
+                    <div class="zas-orb" id="zasOrb"></div>
+                </div>
+
+                <div class="zas-hero-content">
+                    <div class="zas-text-sequence">
+                        <h2 class="zas-seq-1">Something in you feels missing.</h2>
+                        <h2 class="zas-seq-2">You just haven't found it yet.</h2>
+                        <h2 class="zas-seq-3">Not motivation. Not discipline.</h2>
+                        <h2 class="zas-seq-4">Something deeper.</h2>
+                        <div class="zas-brand-reveal">
+                            <h1 class="zas-title">ZAS WELLNESS</h1>
+                            <p class="zas-subtitle">A Breathing Human</p>
                         </div>
                     </div>
                 </div>
+
+                <div class="zas-scroll-indicator">
+                    <span>↓ There's more to you</span>
+                </div>
+
+                <style>
+                    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&display=swap');
+
+                    .zas-hero {
+                        position: relative;
+                        width: 100%;
+                        height: 100vh;
+                        min-height: 700px;
+                        background-color: #08090c;
+                        background-image: radial-gradient(circle at center, #111 0%, #08090c 100%);
+                        overflow: hidden;
+                        font-family: 'Inter', sans-serif;
+                        color: #fff;
+                        z-index: 1;
+                    }
+
+                    .zas-hero-bg {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+                        opacity: 0.04;
+                        pointer-events: none;
+                        z-index: 1;
+                    }
+
+                    .zas-orb-container {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 100vw;
+                        height: 100vh;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        z-index: 2;
+                        pointer-events: auto;
+                    }
+
+                    .zas-orb {
+                        width: 45vh;
+                        height: 45vh;
+                        border-radius: 50%;
+                        background: radial-gradient(circle, rgba(255, 60, 0, 0.5) 0%, rgba(255, 90, 0, 0.2) 50%, rgba(0, 0, 0, 0) 80%);
+                        box-shadow: 0 0 180px 80px rgba(255, 60, 0, 0.2);
+                        filter: blur(25px);
+                        animation: zasPulseFlow 12s ease-in-out infinite alternate;
+                        transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.6s ease, background 0.6s ease;
+                        transform-origin: center;
+                        will-change: transform;
+                    }
+
+                    @keyframes zasPulseFlow {
+                        0% { transform: scale(0.85) translate(0px, 0px); opacity: 0.6; }
+                        33% { transform: scale(1.15) translate(30px, -20px); opacity: 0.9; }
+                        66% { transform: scale(0.95) translate(-30px, 30px); opacity: 0.7; }
+                        100% { transform: scale(1.2) translate(10px, -10px); opacity: 1; }
+                    }
+
+                    .zas-orb-container:hover .zas-orb {
+                        animation-play-state: paused;
+                        background: radial-gradient(circle, rgba(255, 80, 20, 0.6) 0%, rgba(255, 120, 0, 0.25) 50%, rgba(0, 0, 0, 0) 80%);
+                        box-shadow: 0 0 200px 100px rgba(255, 60, 0, 0.3);
+                    }
+
+                    /* Hero content layer */
+                    .zas-hero-content {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        z-index: 3;
+                        pointer-events: none;
+                    }
+
+                    .zas-text-sequence {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                    /* Scattered text items */
+                    .zas-seq-1,
+                    .zas-seq-2,
+                    .zas-seq-3,
+                    .zas-seq-4 {
+                        position: absolute;
+                        margin: 0;
+                        opacity: 0;
+                        font-family: 'Inter', sans-serif;
+                        font-weight: 300;
+                        letter-spacing: -1px;
+                        color: #b0b0b0;
+                        white-space: nowrap;
+                        font-size: clamp(24px, 4vw, 56px);
+                        will-change: transform, opacity, filter;
+                    }
+
+                    /* Dynamic scattered drifting positions */
+                    .zas-seq-1 {
+                        top: 15%;
+                        left: 5%;
+                        animation: zasDrift1 7.5s cubic-bezier(0.2, 0.8, 0.4, 1) 0.2s forwards;
+                    }
+
+                    .zas-seq-2 {
+                        top: 70%;
+                        right: 5%;
+                        animation: zasDrift2 6s cubic-bezier(0.2, 0.8, 0.4, 1) 2.0s forwards;
+                        text-align: right;
+                    }
+
+                    .zas-seq-3 {
+                        top: 20%;
+                        right: 5%;
+                        animation: zasDrift3 4s cubic-bezier(0.2, 0.8, 0.4, 1) 4.0s forwards;
+                        color: #eaeaea;
+                        font-weight: 400;
+                        text-align: right;
+                    }
+
+                    .zas-seq-4 {
+                        bottom: 5%;
+                        left: 5%;
+                        animation: zasDrift4 3s cubic-bezier(0.2, 0.8, 0.4, 1) 5.5s forwards;
+                        color: #ffffff;
+                        font-weight: 500;
+                        font-size: clamp(32px, 5.5vw, 76px);
+                        letter-spacing: -2px;
+                    }
+
+                    @keyframes zasDrift1 {
+                        0% { opacity: 0; transform: translate(-50px, 20px) scale(0.95); filter: blur(10px); }
+                        15% { opacity: 1; transform: translate(0px, 0px) scale(1); filter: blur(0); }
+                        80% { opacity: 1; transform: translate(60px, 0px) scale(1.05); filter: blur(0); }
+                        100% { opacity: 0; transform: translate(80px, -20px) scale(1.08); filter: blur(15px); }
+                    }
+
+                    @keyframes zasDrift2 {
+                        0% { opacity: 0; transform: translate(50px, 20px) scale(0.95); filter: blur(10px); }
+                        15% { opacity: 1; transform: translate(0px, 0px) scale(1); filter: blur(0); }
+                        80% { opacity: 1; transform: translate(-60px, 0px) scale(1.05); filter: blur(0); }
+                        100% { opacity: 0; transform: translate(-80px, -20px) scale(1.08); filter: blur(15px); }
+                    }
+
+                    @keyframes zasDrift3 {
+                        0% { opacity: 0; transform: translate(30px, -30px) scale(0.95); filter: blur(10px); }
+                        15% { opacity: 1; transform: translate(0px, 0px) scale(1); filter: blur(0); }
+                        80% { opacity: 1; transform: translate(-40px, 20px) scale(1.05); filter: blur(0); }
+                        100% { opacity: 0; transform: translate(-60px, 40px) scale(1.08); filter: blur(15px); }
+                    }
+
+                    @keyframes zasDrift4 {
+                        0% { opacity: 0; transform: translate(-30px, 40px) scale(0.95); filter: blur(12px); }
+                        15% { opacity: 1; transform: translate(0px, 0px) scale(1); filter: blur(0); }
+                        80% { opacity: 1; transform: translate(40px, -15px) scale(1.05); filter: blur(0); }
+                        100% { opacity: 0; transform: translate(60px, -30px) scale(1.08); filter: blur(15px); }
+                    }
+
+                    /* Brand reveal — centered */
+                    .zas-brand-reveal {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -40%);
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        opacity: 0;
+                        animation: zasRevealBrand 3s cubic-bezier(0.2, 0.8, 0.2, 1) 8.5s forwards;
+                    }
+
+                    @keyframes zasRevealBrand {
+                        0% {
+                            opacity: 0;
+                            transform: translate(-50%, -20%) scale(0.9);
+                            filter: blur(15px);
+                        }
+
+                        100% {
+                            opacity: 1;
+                            transform: translate(-50%, -50%) scale(1);
+                            filter: blur(0);
+                        }
+                    }
+
+                    .zas-title {
+                        font-family: 'Cinzel', serif;
+                        font-size: 11vw;
+                        font-weight: 600;
+                        letter-spacing: -2px;
+                        margin: 0;
+                        color: #ffffff;
+                        line-height: 1;
+                        white-space: nowrap;
+                        text-transform: uppercase;
+                        text-shadow: 0 0 60px rgba(255, 255, 255, 0.15);
+                    }
+
+                    .zas-subtitle {
+                        margin: 20px 0 0 0;
+                        font-family: 'Inter', sans-serif;
+                        font-size: clamp(16px, 2vw, 24px);
+                        font-weight: 500;
+                        letter-spacing: 8px;
+                        color: #ff3c00;
+                        text-transform: uppercase;
+                    }
+
+                    /* Scroll indicator */
+                    .zas-scroll-indicator {
+                        position: absolute;
+                        bottom: 36px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        font-size: 11px;
+                        font-family: 'Inter', sans-serif;
+                        font-weight: 500;
+                        letter-spacing: 2px;
+                        color: #9e9e9e;
+                        text-transform: uppercase;
+                        opacity: 0;
+                        pointer-events: none;
+                        z-index: 4;
+                        animation: zasScrollFade 2s ease 12s forwards, zasScrollPulse 5s ease-in-out 12s infinite alternate;
+                    }
+
+                    @keyframes zasScrollFade {
+                        0% {
+                            opacity: 0;
+                        }
+
+                        100% {
+                            opacity: 1;
+                        }
+                    }
+
+                    @keyframes zasScrollPulse {
+                        0% {
+                            opacity: 0.12;
+                            transform: translateX(-50%) translateY(0);
+                        }
+
+                        100% {
+                            opacity: 0.55;
+                            transform: translateX(-50%) translateY(8px);
+                        }
+                    }
+
+                    /* Mobile */
+                    @media (max-width: 768px) {
+
+                        .zas-seq-1,
+                        .zas-seq-2,
+                        .zas-seq-3,
+                        .zas-seq-4 {
+                            font-size: clamp(22px, 6vw, 32px);
+                            white-space: normal;
+                            width: 90%;
+                            text-align: center !important;
+                            left: 5% !important;
+                            right: 5% !important;
+                        }
+
+                        .zas-seq-1 {
+                            top: 12%;
+                        }
+
+                        .zas-seq-2 {
+                            top: 72%;
+                        }
+
+                        .zas-seq-3 {
+                            top: 32%;
+                        }
+
+                        .zas-seq-4 {
+                            bottom: 5%;
+                            font-size: clamp(26px, 7vw, 40px);
+                        }
+
+                        .zas-title {
+                            font-size: 12.5vw;
+                            letter-spacing: -1px;
+                        }
+
+                        .zas-subtitle {
+                            font-size: 14px;
+                            letter-spacing: 5px;
+                        }
+
+                        .zas-orb {
+                            width: 220px;
+                            height: 220px;
+                        }
+                    }
+                </style>
+
+                <script>
+                    (function () {
+                        var orbContainer = document.getElementById('zasOrbContainer');
+                        var orb = document.getElementById('zasOrb');
+                        if (orbContainer && orb) {
+                            orbContainer.addEventListener('mousemove', function (e) {
+                                var rect = orbContainer.getBoundingClientRect();
+                                var x = e.clientX - rect.left - rect.width / 2;
+                                var y = e.clientY - rect.top - rect.height / 2;
+                                var limit = 28;
+                                orb.style.transform = 'translate(' + Math.max(-limit, Math.min(limit, x * 0.09)) + 'px,' + Math.max(-limit, Math.min(limit, y * 0.09)) + 'px)';
+                                orb.style.transition = 'transform 0.1s linear';
+                            });
+                            orbContainer.addEventListener('mouseleave', function () {
+                                orb.style.transition = 'transform 1.5s cubic-bezier(0.2,0.8,0.2,1)';
+                                orb.style.transform = 'translate(0,0) scale(1)';
+                            });
+                            var clickOrb = function () {
+                                orb.classList.add('is-clicking');
+                                setTimeout(function () { orb.classList.remove('is-clicking'); }, 500);
+                            };
+                            orbContainer.addEventListener('mousedown', clickOrb);
+                            orbContainer.addEventListener('touchstart', clickOrb, { passive: true });
+                        }
+                    })();
+                </script>
+
             </section>
             <section class="about">
                 <div class="section-inner-block">
@@ -440,10 +721,10 @@
                             <div class="about-wrap">
                                 <div data-w-id="ca37051c-86a3-14e0-1d03-eedbc3d8a06f" class="about-title-wrap">
                                     <div class="about-scroll-text-block">
-                                        <div class="about-scroll-text light">At ZAS, we don’t just move bodies. We
-                                            awaken energy, rhythm, and a way of living that stays with you.</div>
-                                        <div class="about-scroll-text dark">At ZAS, we don’t just move bodies. We awaken
-                                            energy, rhythm, and a way of living that stays with you.</div>
+                                        <div class="about-scroll-text light">At ZAS Fit, we believe fitness is more than
+                                            workouts. building a healthier lifestyle</div>
+                                        <div class="about-scroll-text dark">At ZAS Fit, we believe fitness is more than
+                                            workouts. building a healthier lifestyle</div>
                                     </div>
                                 </div>
                                 <div class="about-content-wrap">
@@ -452,22 +733,21 @@
                                             <div class="about-info-flex">
                                                 <div data-w-id="af6b61af-043a-8e22-2653-a69cb2e6d85e"
                                                     class="about-desc-box">
-                                                    <div class="about-desc">It’s not about routines or repetition.
-                                                        It’s about feeling lighter, thinking clearer, and reconnecting
-                                                        with yourself.
-                                                        Through movement, music, and mindful flow, ZAS turns everyday
-                                                        fitness into something you actually live.</div>
+                                                    <div class="about-desc">Aut fugit sed quia consequuntur magni
+                                                        dolores eos qui ratione voluptatem sequi nesciunt Neque porro
+                                                        quisquam est qui</div>
                                                 </div>
                                                 <div data-w-id="348a7098-a2d1-757c-c8de-046f1fc26865"
                                                     class="about-link-box"><a data-wf--link-button--variant="three"
                                                         data-w-id="2e94237b-1394-b61c-0369-9f2dbebd474b"
                                                         href="team.html"
-                                                        class="link-button w-variant-b3133629-543a-6530-8b30-a0165d89c445 w-inline-block">
+                                                        class="link-button w-variant-b3133629-543a-6530-8b30-a0165d89c445 w-inline-block">Trainers
                                                         <div class="link-button-wrap">
                                                             <div class="link-button-text-box">
-                                                                <div class="link-button-text text-one">THE EXPERIENCE
+                                                                <div class="link-button-text text-one">Dolorem ipsum
+                                                                    quia
                                                                 </div>
-                                                                <div class="link-button-text text-two">THE EXPERIENCE
+                                                                <div class="link-button-text text-two">Dolor sit amet
                                                                 </div>
                                                             </div>
                                                             <div class="link-button-line">
@@ -514,11 +794,10 @@
                                 <div class="services-title-wrap">
                                     <div class="section-title-wrap">
                                         <div class="section-badge-box">
-                                            <div class="section-badge center">Ways to experience ZAS</div>
+                                            <div class="section-badge center">Consectetur adipisci</div>
                                         </div>
                                         <div class="section-title-box">
-                                            <h2 class="section-title center">Not programs. Different ways to reconnect.
-                                            </h2>
+                                            <h2 class="section-title center">Velit sed quia</h2>
                                         </div>
                                     </div>
                                 </div>
@@ -538,7 +817,7 @@
                                                                         class="services-nav-item w-dyn-item">
                                                                         <div class="services-nav-item-inner item-one">
                                                                             <div class="services-nav-item-title">
-                                                                                ADULT EXPERIENCE</div>
+                                                                                Non numquam</div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -551,8 +830,8 @@
                                                                     <div role="listitem"
                                                                         class="services-nav-item w-dyn-item">
                                                                         <div class="services-nav-item-inner">
-                                                                            <div class="services-nav-item-title">KIDS /
-                                                                                PASSION</div>
+                                                                            <div class="services-nav-item-title">Eius
+                                                                                modi</div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -566,7 +845,7 @@
                                                                         class="services-nav-item w-dyn-item">
                                                                         <div class="services-nav-item-inner item-three">
                                                                             <div class="services-nav-item-title">
-                                                                                CORPORATE / LIFESTYLE</div>
+                                                                                Tempora incidunt</div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -579,14 +858,27 @@
                                                                     <div role="listitem"
                                                                         class="services-nav-item w-dyn-item">
                                                                         <div class="services-nav-item-inner item-four">
-                                                                            <div class="services-nav-item-title">
-                                                                                COMMUNITY / IMPACT</div>
+                                                                            <div class="services-nav-item-title">Ut
+                                                                                labore et</div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-
+                                                        <div data-w-id="c4c14761-1342-99b2-7960-73a7bcc34f87"
+                                                            class="services-nav-item-box five">
+                                                            <div class="services-nav-list-wrap w-dyn-list">
+                                                                <div role="list" class="services-nav-list w-dyn-items">
+                                                                    <div role="listitem"
+                                                                        class="services-nav-item w-dyn-item">
+                                                                        <div class="services-nav-item-inner item-five">
+                                                                            <div class="services-nav-item-title">
+                                                                                Dolore magnam aliquam</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 <div data-w-id="c4c14761-1342-99b2-7960-73a7bcc34f4e"
@@ -607,16 +899,17 @@
                                                                             <div class="services-content">
                                                                                 <div class="services-info-box">
                                                                                     <div class="services-title-box">
-                                                                                        <div class="services-title">ZAS
-                                                                                            Flow</div>
+                                                                                        <div class="services-title">Our
+                                                                                            Services</div>
                                                                                     </div>
                                                                                     <div class="services-desc-box">
-                                                                                        <p class="services-desc">A
-                                                                                            rhythmic blend of movement
-                                                                                            and energy designed to reset
-                                                                                            your body, clear your mind,
-                                                                                            and bring you back to
-                                                                                            yourself.</p>
+                                                                                        <p class="services-desc">Vitae
+                                                                                            suscipit laboriosam nisi
+                                                                                            voluptatibus repudiandae
+                                                                                            recusandae itaque earum
+                                                                                            rerum hic tenetur sapiente
+                                                                                            delectus reiciendis
+                                                                                            voluptatibus</p>
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="services-link-box">
@@ -673,16 +966,18 @@
                                                                             <div class="services-content">
                                                                                 <div class="services-info-box">
                                                                                     <div class="services-title-box">
-                                                                                        <div class="services-title">ZAS
-                                                                                            Kids</div>
+                                                                                        <div class="services-title">Our
+                                                                                            Services</div>
                                                                                     </div>
                                                                                     <div class="services-desc-box">
-                                                                                        <p class="services-desc">A space
-                                                                                            where children move,
-                                                                                            explore, and discover what
-                                                                                            they love—building
-                                                                                            confidence, creativity, and
-                                                                                            joy through motion.</p>
+                                                                                        <p class="services-desc">
+                                                                                            Asperiores repellat
+                                                                                            provident similique sunt
+                                                                                            culpa officia deserunt
+                                                                                            mollitia animi id est
+                                                                                            laborum perspiciatis veniam
+                                                                                            consequatur exercitationem
+                                                                                        </p>
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="services-link-box">
@@ -739,16 +1034,15 @@
                                                                             <div class="services-content">
                                                                                 <div class="services-info-box">
                                                                                     <div class="services-title-box">
-                                                                                        <div class="services-title">ZAS
-                                                                                            Balance</div>
+                                                                                        <div class="services-title">Our
+                                                                                            Services</div>
                                                                                     </div>
                                                                                     <div class="services-desc-box">
-                                                                                        <p class="services-desc">
-                                                                                            Designed for modern
-                                                                                            lifestyles—reducing stress,
-                                                                                            improving focus, and
-                                                                                            bringing energy back into
-                                                                                            everyday work life.</p>
+                                                                                        <p class="services-desc">Maxime
+                                                                                            placeat facere possimus
+                                                                                            omnis voluptas assumenda est
+                                                                                            omnis dolor repellendus
+                                                                                            temporibus autem</p>
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="services-link-box">
@@ -805,16 +1099,16 @@
                                                                             <div class="services-content">
                                                                                 <div class="services-info-box">
                                                                                     <div class="services-title-box">
-                                                                                        <div class="services-title">ZAS
-                                                                                            Community</div>
+                                                                                        <div class="services-title">Our
+                                                                                            Services</div>
                                                                                     </div>
                                                                                     <div class="services-desc-box">
-                                                                                        <p class="services-desc">
-                                                                                            Bringing movement and joy to
-                                                                                            every space—creating
-                                                                                            connection, purpose, and
-                                                                                            shared experiences beyond
-                                                                                            fitness.</p>
+                                                                                        <p class="services-desc">Ut et
+                                                                                            voluptates repudiandae sint
+                                                                                            molestiae non recusandae
+                                                                                            itaque earum rerum hic
+                                                                                            tenetur sapiente delectus ut
+                                                                                        </p>
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="services-link-box">
@@ -855,7 +1149,73 @@
                                                             </div>
                                                         </div>
                                                     </div>
-
+                                                    <div class="services-item-box five">
+                                                        <div class="services-list-wrap w-dyn-list">
+                                                            <div role="list" class="services-list w-dyn-items">
+                                                                <div role="listitem" class="services-item w-dyn-item">
+                                                                    <div class="services-item-inner">
+                                                                        <div class="services-item-flex">
+                                                                            <div class="services-thumbnail">
+                                                                                <div class="services-image-block"><img
+                                                                                        loading="lazy"
+                                                                                        src="https://cdn.prod.website-files.com/691eefbafb5f1e6cbbc807b3/691efe78c6656c21bb377ca5_service%20-%205.avif"
+                                                                                        alt="service image"
+                                                                                        class="services-image" /></div>
+                                                                            </div>
+                                                                            <div class="services-content">
+                                                                                <div class="services-info-box">
+                                                                                    <div class="services-title-box">
+                                                                                        <div class="services-title">Our
+                                                                                            Services</div>
+                                                                                    </div>
+                                                                                    <div class="services-desc-box">
+                                                                                        <p class="services-desc">
+                                                                                            Perferendis doloribus
+                                                                                            asperiores repellat Lorem
+                                                                                            ipsum dolor sit amet
+                                                                                            consectetur adipiscing elit
+                                                                                            sed do eiusmod tempor
+                                                                                            incididunt ut labore et
+                                                                                        </p>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="services-link-box">
+                                                                                    <a data-wf--link-button--variant="two"
+                                                                                        data-w-id="2e94237b-1394-b61c-0369-9f2dbebd474b"
+                                                                                        href="services/recovery-wellness.html"
+                                                                                        class="link-button w-variant-259acf2d-4d19-37b7-61ed-0074877d54c5 w-inline-block">
+                                                                                        <div class="link-button-wrap">
+                                                                                            <div
+                                                                                                class="link-button-text-box">
+                                                                                                <div
+                                                                                                    class="link-button-text text-one">
+                                                                                                    Dolore magna</div>
+                                                                                                <div
+                                                                                                    class="link-button-text text-two">
+                                                                                                    Aliqua Ut</div>
+                                                                                            </div>
+                                                                                            <div
+                                                                                                class="link-button-line">
+                                                                                                <div
+                                                                                                    class="buttone-line-one w-variant-259acf2d-4d19-37b7-61ed-0074877d54c5">
+                                                                                                </div>
+                                                                                                <div
+                                                                                                    class="buttone-line-two">
+                                                                                                </div>
+                                                                                                <div
+                                                                                                    class="buttone-line-three w-variant-259acf2d-4d19-37b7-61ed-0074877d54c5">
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </a>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -978,8 +1338,8 @@
                                                                         <div class="programs-info">
                                                                             <div class="programs-info-flex">
                                                                                 <div class="programs-title-box">
-                                                                                    <div class="programs-title">Students
-                                                                                        & Youth</div>
+                                                                                    <div class="programs-title">Our
+                                                                                        Programs</div>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -1005,23 +1365,18 @@
                                                                                                                 class="programs-extra-main-title-box">
                                                                                                                 <div
                                                                                                                     class="programs-extra-main-title">
-                                                                                                                    More
-                                                                                                                    than
-                                                                                                                    activity.
-                                                                                                                    A
-                                                                                                                    spark.
+                                                                                                                    Aute
+                                                                                                                    irure
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                             <div
                                                                                                                 class="programs-extra-main-tag-box">
                                                                                                                 <div
                                                                                                                     class="programs-extra-main-tag">
-                                                                                                                    Most
-                                                                                                                    systems
-                                                                                                                    ask
-                                                                                                                    kids
-                                                                                                                    to
-                                                                                                                    follow.
+                                                                                                                    Dolor
+                                                                                                                    in
+                                                                                                                    reprehenderit
+                                                                                                                    in
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                         </div>
@@ -1038,16 +1393,17 @@
                                                                                                     class="programs-extra-desc-box">
                                                                                                     <p
                                                                                                         class="programs-extra-desc">
-                                                                                                        Very few help
-                                                                                                        them
-                                                                                                        discover.ZAS
-                                                                                                        creates a space
-                                                                                                        where movement
-                                                                                                        becomes
-                                                                                                        expression, and
-                                                                                                        expression
-                                                                                                        becomes
-                                                                                                        confidence.</p>
+                                                                                                        Voluptate velit
+                                                                                                        esse cillum
+                                                                                                        dolore eu fugiat
+                                                                                                        nulla pariatur
+                                                                                                        Excepteur sint
+                                                                                                        occaecat
+                                                                                                        cupidatat non
+                                                                                                        proident sunt in
+                                                                                                        culpa qui
+                                                                                                        officia deserunt
+                                                                                                        mollit</p>
                                                                                                 </div>
                                                                                                 <div
                                                                                                     class="programs-extra-features-box">
@@ -1059,13 +1415,12 @@
                                                                                                                 class="programs-2-features-item-flex">
                                                                                                                 <div
                                                                                                                     class="programs-2-features-label">
-                                                                                                                    Movement
+                                                                                                                    Anim
                                                                                                                 </div>
                                                                                                                 <div
                                                                                                                     class="programs-2-features-text">
-                                                                                                                    Joyful
-                                                                                                                    &
-                                                                                                                    engaging
+                                                                                                                    Id
+                                                                                                                    est
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                         </div>
@@ -1075,13 +1430,12 @@
                                                                                                                 class="programs-2-features-item-flex">
                                                                                                                 <div
                                                                                                                     class="programs-2-features-label">
-                                                                                                                    Mind
+                                                                                                                    Laborum
                                                                                                                 </div>
                                                                                                                 <div
                                                                                                                     class="programs-2-features-text">
-                                                                                                                    Confidence
-                                                                                                                    &
-                                                                                                                    clarity
+                                                                                                                    Sed
+                                                                                                                    ut
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                         </div>
@@ -1091,13 +1445,13 @@
                                                                                                                 class="programs-2-features-item-flex">
                                                                                                                 <div
                                                                                                                     class="programs-2-features-label">
-                                                                                                                    Growth
+                                                                                                                    Perspiciatis
                                                                                                                 </div>
                                                                                                                 <div
                                                                                                                     class="programs-2-features-text">
-                                                                                                                    Discovering
-                                                                                                                    passion
-                                                                                                                    early
+                                                                                                                    Unde
+                                                                                                                    omnis
+                                                                                                                    iste
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                         </div>
@@ -1107,13 +1461,15 @@
                                                                                                     class="programs-extra-desc-box">
                                                                                                     <p
                                                                                                         class="programs-extra-desc">
-                                                                                                        It’s not about
-                                                                                                        keeping them
-                                                                                                        active.
-                                                                                                        It’s about
-                                                                                                        helping them
-                                                                                                        find what drives
-                                                                                                        them.</p>
+                                                                                                        Natus error sit
+                                                                                                        voluptatem
+                                                                                                        accusantium
+                                                                                                        doloremque
+                                                                                                        laudantium totam
+                                                                                                        rem aperiam
+                                                                                                        eaque ipsa quae
+                                                                                                        ab illo
+                                                                                                        inventore</p>
                                                                                                 </div>
                                                                                                 <div
                                                                                                     class="programs-extra-button-box">
@@ -1164,10 +1520,11 @@
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="programs-desc-box">
-                                                                                    <p class="programs-desc">ZAS creates
-                                                                                        a space where movement becomes
-                                                                                        expression, and expression
-                                                                                        becomes confidence.</p>
+                                                                                    <p class="programs-desc">Beatae
+                                                                                        vitae dicta sunt explicabo Nemo
+                                                                                        enim ipsam voluptatem quia
+                                                                                        voluptas sit aspernatur aut odit
+                                                                                        aut</p>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -1192,8 +1549,8 @@
                                                                         <div class="programs-info">
                                                                             <div class="programs-info-flex">
                                                                                 <div class="programs-title-box">
-                                                                                    <div class="programs-title">
-                                                                                        Corporate Life</div>
+                                                                                    <div class="programs-title">Our
+                                                                                        Programs</div>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -1219,19 +1576,18 @@
                                                                                                                 class="programs-extra-main-title-box">
                                                                                                                 <div
                                                                                                                     class="programs-extra-main-title">
-                                                                                                                    Reset
-                                                                                                                    the
-                                                                                                                    routine
+                                                                                                                    Quia
+                                                                                                                    consequuntur
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                             <div
                                                                                                                 class="programs-extra-main-tag-box">
                                                                                                                 <div
                                                                                                                     class="programs-extra-main-tag">
-                                                                                                                    Long
-                                                                                                                    hours.
-                                                                                                                    Screens.
-                                                                                                                    Pressure.
+                                                                                                                    Magni
+                                                                                                                    dolores
+                                                                                                                    eos
+                                                                                                                    qui
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                         </div>
@@ -1248,17 +1604,16 @@
                                                                                                     class="programs-extra-desc-box">
                                                                                                     <p
                                                                                                         class="programs-extra-desc">
-                                                                                                        Energy drops,
-                                                                                                        focus fades.
-
-                                                                                                        ZAS brings
-                                                                                                        movement into
-                                                                                                        the
-                                                                                                        workplace—turning
-                                                                                                        stress into
-                                                                                                        rhythm and
-                                                                                                        routine into
-                                                                                                        balance.</p>
+                                                                                                        Ratione
+                                                                                                        voluptatem sequi
+                                                                                                        nesciunt Neque
+                                                                                                        porro quisquam
+                                                                                                        est qui dolorem
+                                                                                                        ipsum quia dolor
+                                                                                                        sit amet
+                                                                                                        consectetur
+                                                                                                        adipisci velit
+                                                                                                        sed quia non</p>
                                                                                                 </div>
                                                                                                 <div
                                                                                                     class="programs-extra-features-box">
@@ -1270,13 +1625,12 @@
                                                                                                                 class="programs-2-features-item-flex">
                                                                                                                 <div
                                                                                                                     class="programs-2-features-label">
-                                                                                                                    Body
+                                                                                                                    Numquam
                                                                                                                 </div>
                                                                                                                 <div
                                                                                                                     class="programs-2-features-text">
-                                                                                                                    Active
-                                                                                                                    &
-                                                                                                                    flexible
+                                                                                                                    Eius
+                                                                                                                    modi
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                         </div>
@@ -1286,13 +1640,11 @@
                                                                                                                 class="programs-2-features-item-flex">
                                                                                                                 <div
                                                                                                                     class="programs-2-features-label">
-                                                                                                                    Mind
+                                                                                                                    Tempora
                                                                                                                 </div>
                                                                                                                 <div
                                                                                                                     class="programs-2-features-text">
-                                                                                                                    Focus
-                                                                                                                    &
-                                                                                                                    clarity
+                                                                                                                    Incidunt
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                         </div>
@@ -1302,12 +1654,13 @@
                                                                                                                 class="programs-2-features-item-flex">
                                                                                                                 <div
                                                                                                                     class="programs-2-features-label">
-                                                                                                                    Team
+                                                                                                                    Ut
                                                                                                                 </div>
                                                                                                                 <div
                                                                                                                     class="programs-2-features-text">
-                                                                                                                    Stronger
-                                                                                                                    connection
+                                                                                                                    Labore
+                                                                                                                    et
+                                                                                                                    dolore
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                         </div>
@@ -1317,9 +1670,14 @@
                                                                                                     class="programs-extra-desc-box">
                                                                                                     <p
                                                                                                         class="programs-extra-desc">
-                                                                                                        Because better
-                                                                                                        energy builds
-                                                                                                        better work.
+                                                                                                        Magnam aliquam
+                                                                                                        quaerat
+                                                                                                        voluptatem vitae
+                                                                                                        suscipit
+                                                                                                        laboriosam nisi
+                                                                                                        voluptatibus
+                                                                                                        repudiandae
+                                                                                                        recusandae
                                                                                                     </p>
                                                                                                 </div>
                                                                                                 <div
@@ -1371,11 +1729,11 @@
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="programs-desc-box">
-                                                                                    <p class="programs-desc">ZAS brings
-                                                                                        movement into the
-                                                                                        workplace—turning stress into
-                                                                                        rhythm and routine into balance.
-                                                                                    </p>
+                                                                                    <p class="programs-desc">Tenetur
+                                                                                        sapiente delectus reiciendis
+                                                                                        voluptatibus maiores alias
+                                                                                        consequatur aut perferendis
+                                                                                        doloribus</p>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -1400,8 +1758,8 @@
                                                                         <div class="programs-info">
                                                                             <div class="programs-info-flex">
                                                                                 <div class="programs-title-box">
-                                                                                    <div class="programs-title">
-                                                                                        COMMUNITY / SOCIAL IMPACT</div>
+                                                                                    <div class="programs-title">Our
+                                                                                        Programs</div>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -1427,22 +1785,18 @@
                                                                                                                 class="programs-extra-main-title-box">
                                                                                                                 <div
                                                                                                                     class="programs-extra-main-title">
-                                                                                                                    Movement
-                                                                                                                    for
-                                                                                                                    everyone
+                                                                                                                    Similique
+                                                                                                                    sunt
+                                                                                                                    culpa
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                             <div
                                                                                                                 class="programs-extra-main-tag-box">
                                                                                                                 <div
                                                                                                                     class="programs-extra-main-tag">
-                                                                                                                    Not
-                                                                                                                    everyone
-                                                                                                                    has
-                                                                                                                    access
-                                                                                                                    to
-                                                                                                                    structured
-                                                                                                                    wellness.
+                                                                                                                    Officia
+                                                                                                                    deserunt
+                                                                                                                    mollitia
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                         </div>
@@ -1459,17 +1813,24 @@
                                                                                                     class="programs-extra-desc-box">
                                                                                                     <p
                                                                                                         class="programs-extra-desc">
-                                                                                                        But everyone
-                                                                                                        deserves to feel
-                                                                                                        alive.
-
-                                                                                                        ZAS brings
-                                                                                                        moments of
-                                                                                                        movement, joy,
-                                                                                                        and connection
-                                                                                                        to spaces that
-                                                                                                        need it the
-                                                                                                        most.
+                                                                                                        Animi id est
+                                                                                                        laborum
+                                                                                                        perspiciatis
+                                                                                                        veniam
+                                                                                                        consequatur
+                                                                                                        exercitationem
+                                                                                                        ipsum aliqua
+                                                                                                        commodo deserunt
+                                                                                                        perferendis
+                                                                                                        natus maxime
+                                                                                                        placeat facere
+                                                                                                        possimus omnis
+                                                                                                        voluptas
+                                                                                                        assumenda est
+                                                                                                        omnis dolor
+                                                                                                        repellendus
+                                                                                                        temporibus autem
+                                                                                                        quibusdam
                                                                                                     </p>
                                                                                                 </div>
                                                                                                 <div
@@ -1482,12 +1843,12 @@
                                                                                                                 class="programs-2-features-item-flex">
                                                                                                                 <div
                                                                                                                     class="programs-2-features-label">
-                                                                                                                    Access
+                                                                                                                    Officiis
                                                                                                                 </div>
                                                                                                                 <div
                                                                                                                     class="programs-2-features-text">
-                                                                                                                    Inclusive
-                                                                                                                    experiences
+                                                                                                                    Debitis
+                                                                                                                    rerum
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                         </div>
@@ -1497,13 +1858,11 @@
                                                                                                                 class="programs-2-features-item-flex">
                                                                                                                 <div
                                                                                                                     class="programs-2-features-label">
-                                                                                                                    Emotion
+                                                                                                                    Necessitatibus
                                                                                                                 </div>
                                                                                                                 <div
                                                                                                                     class="programs-2-features-text">
-                                                                                                                    Joy
-                                                                                                                    &
-                                                                                                                    connection
+                                                                                                                    Saepe
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                         </div>
@@ -1513,12 +1872,13 @@
                                                                                                                 class="programs-2-features-item-flex">
                                                                                                                 <div
                                                                                                                     class="programs-2-features-label">
-                                                                                                                    Impact
+                                                                                                                    Eveniet
                                                                                                                 </div>
                                                                                                                 <div
                                                                                                                     class="programs-2-features-text">
-                                                                                                                    Shared
-                                                                                                                    purpose
+                                                                                                                    Ut
+                                                                                                                    et
+                                                                                                                    voluptates
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                         </div>
@@ -1528,10 +1888,15 @@
                                                                                                     class="programs-extra-desc-box">
                                                                                                     <p
                                                                                                         class="programs-extra-desc">
-                                                                                                        Sometimes, one
-                                                                                                        session can
-                                                                                                        change someone’s
-                                                                                                        day.</p>
+                                                                                                        Repudiandae sint
+                                                                                                        molestiae non
+                                                                                                        recusandae
+                                                                                                        itaque earum
+                                                                                                        rerum hic
+                                                                                                        tenetur sapiente
+                                                                                                        delectus ut aut
+                                                                                                        reiciendis
+                                                                                                        voluptatibus</p>
                                                                                                 </div>
                                                                                                 <div
                                                                                                     class="programs-extra-button-box">
@@ -1582,10 +1947,11 @@
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="programs-desc-box">
-                                                                                    <p class="programs-desc">ZAS brings
-                                                                                        moments of movement, joy, and
-                                                                                        connection to spaces that need
-                                                                                        it the most.
+                                                                                    <p class="programs-desc">Perferendis
+                                                                                        doloribus asperiores repellat
+                                                                                        Lorem ipsum dolor sit amet
+                                                                                        consectetur adipiscing elit sed
+                                                                                        do eiusmod tempor
                                                                                     </p>
                                                                                 </div>
                                                                             </div>
@@ -1598,233 +1964,9 @@
                                                 </div>
                                             </div>
                                         </div>
-                                                                                        <div data-w-id="a1b2c3d4-e5f6-4890-abcd-ef1234567891"
-                                                    class="programs-item-box item-four">
-                                                    <div class="programs-list-wrap w-dyn-list">
-                                                        <div role="list" class="programs-list w-dyn-items">
-                                                            <div role="listitem" class="programs-item w-dyn-item">
-                                                                <div class="programs-item-inner">
-                                                                    <div class="programs-thumbnail"><img loading="lazy"
-                                                                            src="https://cdn.prod.website-files.com/691eefbafb5f1e6cbbc807b3/693ffa866174ef7346c72921_programs-main-5.avif"
-                                                                            alt="programs image"
-                                                                            class="programs-image" /></div>
-                                                                    <div class="program-item-overlays"></div>
-                                                                    <div class="programs-item-flex">
-                                                                        <div class="programs-info">
-                                                                            <div class="programs-info-flex">
-                                                                                <div class="programs-title-box">
-                                                                                    <div class="programs-title">
-                                                                                        WELLNESS / MINDFULNESS</div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="programs-content">
-                                                                            <div class="programs-content-flex">
-                                                                                <div data-w-id="e3dfbe81-fc20-b426-b232-9cc0df08d912"
-                                                                                    class="programs-icon-box">
-                                                                                    <div class="programs-extra-info">
-                                                                                        <div
-                                                                                            class="programs-extra-info-inner">
-                                                                                            <div
-                                                                                                class="programs-extra-overlays">
-                                                                                            </div>
-                                                                                            <div
-                                                                                                class="programs-extra-info-flex">
-                                                                                                <div
-                                                                                                    class="programs-extra-main">
-                                                                                                    <div
-                                                                                                        class="programs-extra-main-grid">
-                                                                                                        <div
-                                                                                                            class="programs-extra-main-info">
-                                                                                                            <div
-                                                                                                                class="programs-extra-main-title-box">
-                                                                                                                <div
-                                                                                                                    class="programs-extra-main-title">
-                                                                                                                    Live
-                                                                                                                    in
-                                                                                                                    rhythm
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                            <div
-                                                                                                                class="programs-extra-main-tag-box">
-                                                                                                                <div
-                                                                                                                    class="programs-extra-main-tag">
-                                                                                                                    Rest.
-                                                                                                                    Breathe.
-                                                                                                                    Restore.
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                        <div
-                                                                                                            class="programs-extra-thumbnail">
-                                                                                                            <img loading="lazy"
-                                                                                                                src="https://cdn.prod.website-files.com/691eefbafb5f1e6cbbc807b3/69201071c5227a0865fe8805_programs-5.avif"
-                                                                                                                alt="programs image"
-                                                                                                                class="programs-extra-image" />
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                                <div
-                                                                                                    class="programs-extra-desc-box">
-                                                                                                    <p
-                                                                                                        class="programs-extra-desc">
-                                                                                                        Stillness
-                                                                                                        is
-                                                                                                        a
-                                                                                                        skill.
-
-                                                                                                        ZAS
-                                                                                                        guides
-                                                                                                        you
-                                                                                                        through
-                                                                                                        breathwork,
-                                                                                                        mindful
-                                                                                                        movement,
-                                                                                                        and
-                                                                                                        deep
-                                                                                                        restoration
-                                                                                                        so
-                                                                                                        you
-                                                                                                        can
-                                                                                                        feel
-                                                                                                        whole
-                                                                                                        again.
-                                                                                                    </p>
-                                                                                                </div>
-                                                                                                <div
-                                                                                                    class="programs-extra-features-box">
-                                                                                                    <div
-                                                                                                        class="programs-2-features-list">
-                                                                                                        <div
-                                                                                                            class="programs-2-features-item">
-                                                                                                            <div
-                                                                                                                class="programs-2-features-item-flex">
-                                                                                                                <div
-                                                                                                                    class="programs-2-features-label">
-                                                                                                                    Mind
-                                                                                                                </div>
-                                                                                                                <div
-                                                                                                                    class="programs-2-features-text">
-                                                                                                                    Calm
-                                                                                                                    &amp;
-                                                                                                                    clarity
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                        <div
-                                                                                                            class="programs-2-features-item">
-                                                                                                            <div
-                                                                                                                class="programs-2-features-item-flex">
-                                                                                                                <div
-                                                                                                                    class="programs-2-features-label">
-                                                                                                                    Body
-                                                                                                                </div>
-                                                                                                                <div
-                                                                                                                    class="programs-2-features-text">
-                                                                                                                    Rest
-                                                                                                                    &amp;
-                                                                                                                    restore
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                        <div
-                                                                                                            class="programs-2-features-item last">
-                                                                                                            <div
-                                                                                                                class="programs-2-features-item-flex">
-                                                                                                                <div
-                                                                                                                    class="programs-2-features-label">
-                                                                                                                    Breath
-                                                                                                                </div>
-                                                                                                                <div
-                                                                                                                    class="programs-2-features-text">
-                                                                                                                    Deep
-                                                                                                                    presence
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                                <div
-                                                                                                    class="programs-extra-desc-box">
-                                                                                                    <p
-                                                                                                        class="programs-extra-desc">
-                                                                                                        Sometimes,
-                                                                                                        slowing
-                                                                                                        down
-                                                                                                        is
-                                                                                                        the
-                                                                                                        most
-                                                                                                        powerful
-                                                                                                        move.
-                                                                                                    </p>
-                                                                                                </div>
-                                                                                                <div
-                                                                                                    class="programs-extra-button-box">
-                                                                                                    <a data-w-id="0954ebad-a7f3-defe-36f2-e748ee80b251"
-                                                                                                        href="#"
-                                                                                                        class="button primary-button w-inline-block">
-                                                                                                        <div
-                                                                                                            class="button-wrap primary">
-                                                                                                            <div
-                                                                                                                class="button-flex">
-                                                                                                                <div
-                                                                                                                    class="button-text-box">
-                                                                                                                    <div
-                                                                                                                        class="button-text text-one">
-                                                                                                                        Find
-                                                                                                                        your
-                                                                                                                        calm
-                                                                                                                    </div>
-                                                                                                                    <div
-                                                                                                                        class="button-text text-two">
-                                                                                                                        Find
-                                                                                                                        your
-                                                                                                                        calm
-                                                                                                                    </div>
-                                                                                                                </div>
-                                                                                                                <div
-                                                                                                                    class="button-icon-box">
-                                                                                                                    <img src="https://cdn.prod.website-files.com/691ea5c2d38e36d02b948f36/693120f6a24d8ef7aeb4e03b_button-icon-2.svg"
-                                                                                                                        loading="lazy"
-                                                                                                                        alt="icon"
-                                                                                                                        class="button-icon" />
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                    </a>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                    <div class="links-round">
-                                                                                        <div class="links-background">
-                                                                                        </div><img loading="lazy"
-                                                                                            src="https://cdn.prod.website-files.com/691ea5c2d38e36d02b948f36/6932c8c50d6e2cfcfc8f46e6_plus-sign-button-round-2.svg"
-                                                                                            alt="icon"
-                                                                                            class="links-round-icon dark" /><img
-                                                                                            loading="lazy"
-                                                                                            src="https://cdn.prod.website-files.com/691ea5c2d38e36d02b948f36/696dd9d30b4c19ce09a5f653_plus-sign-button-round-3.svg"
-                                                                                            alt="icon"
-                                                                                            class="links-round-icon light" />
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="programs-desc-box">
-                                                                                    <p class="programs-desc">ZAS guides
-                                                                                        you through breathwork, mindful
-                                                                                        movement, and deep restoration.
-                                                                                    </p>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-<div class="programs-links">
+                                        <div class="programs-links">
                                             <div class="programs-link-box"><a href="programs.html"
-                                                    class="programs-link">Start Your ZAS Journey</a></div>
+                                                    class="programs-link">Incididunt ut</a></div>
                                         </div>
                                     </div>
                                 </div>
@@ -1840,20 +1982,18 @@
                             <div class="cta-wrap">
                                 <div class="cta-content-wrap">
                                     <div class="cta-title-box">
-                                        <h2 data-w-id="993a5663-951c-1077-33d4-cc3d170773e8" class="cta-title">You’ve
-                                            felt enough.</h2>
+                                        <h2 data-w-id="993a5663-951c-1077-33d4-cc3d170773e8" class="cta-title">Ready to
+                                            Get Started?</h2>
                                     </div>
                                     <div class="cta-content-box">
                                         <div class="cta-content-grid">
                                             <div id="w-node-_993a5663-951c-1077-33d4-cc3d170773ec-170773e1"
                                                 class="cta-contact-box">
                                                 <div class="cta-contact-list">
-                                                    <div class="cta-contact-item"><a href="tel:+917012744595"
-                                                            class="cta-contact-phone">+91 70127 44595</a></div>
-                                                    <div class="cta-contact-item"><a
-                                                            href="mailto:snehaminilanaushad@gmail.com"
-                                                            class="cta-contact-mail">snehaminilanaushad@gmail.com</a>
-                                                    </div>
+                                                    <div class="cta-contact-item"><a href="tel:1234"
+                                                            class="cta-contact-phone">Et</a></div>
+                                                    <div class="cta-contact-item"><a href="#"
+                                                            class="cta-contact-mail">Dolore</a></div>
                                                 </div>
                                             </div>
                                             <div id="w-node-_993a5663-951c-1077-33d4-cc3d170773f4-170773e1"
@@ -1942,12 +2082,14 @@
                                                 <div class="cta-button-holders"><a
                                                         data-w-id="9b1fe822-3576-daa1-1dbb-50ff1fc5522e"
                                                         href="contact.html"
-                                                        class="button secondary-button w-inline-block">
-                                                        <div class="button-wrap secondary">
+                                                        class="button secondary-button w-inline-block">Contact<div
+                                                            class="button-wrap secondary">
                                                             <div class="button-flex">
                                                                 <div class="button-text-box">
-                                                                    <div class="button-text two text-one">Begin </div>
-                                                                    <div class="button-text two text-two">Begin </div>
+                                                                    <div class="button-text two text-one">Quis nostrud
+                                                                    </div>
+                                                                    <div class="button-text two text-two">Exercitation
+                                                                        ullamco</div>
                                                                 </div>
                                                                 <div class="button-icon-box two"><img loading="lazy"
                                                                         src="https://cdn.prod.website-files.com/691ea5c2d38e36d02b948f36/691eeddd0bdd116879571f02_button-icon.svg"
@@ -1959,7 +2101,7 @@
                                         </div>
                                     </div>
                                     <div class="cta-title-box two">
-                                        <h2 class="cta-title">Now experience it.</h2>
+                                        <h2 class="cta-title">Ready to Get Started?</h2>
                                     </div>
                                 </div>
                             </div>
@@ -2497,12 +2639,12 @@
                                                 src="https://cdn.prod.website-files.com/691ea5c2d38e36d02b948f36/691fe8738b7adc70aebed3c6_star.svg"
                                                 loading="lazy" alt="icon" class="ratings-icon" /></div>
                                         <div class="ratings-numbers-box">
-                                            <div class="ratings-numbers">from our community</div>
+                                            <div class="ratings-numbers">Hic</div>
                                         </div>
                                     </div>
                                     <div class="section-title-wrap">
                                         <div class="section-title-box">
-                                            <h2 class="section-title center">What people feel after ZAS</h2>
+                                            <h2 class="section-title center">Tenetur sapiente</h2>
                                         </div>
                                     </div>
                                 </div>
@@ -2521,17 +2663,14 @@
                                                                         alt="icon" class="testimonials-logo" /></div>
                                                                 <div class="testimonials-content-info">
                                                                     <div class="testimonials-quote-box">
-                                                                        <div class="testimonials-quote">I didn’t come
-                                                                            here for fitness.
-                                                                            I came because I felt stuck.
-
-                                                                            Somewhere between work, routine, and
-                                                                            everything else, I had lost my energy.
-                                                                            ZAS didn’t just get me moving again—it
-                                                                            helped me feel like myself again.
-
-                                                                            Now it’s not something I force.
-                                                                            It’s something I look forward to.</div>
+                                                                        <div class="testimonials-quote">Delectus
+                                                                            reiciendis voluptatibus maiores alias
+                                                                            consequatur aut perferendis doloribus
+                                                                            asperiores repellat provident similique sunt
+                                                                            culpa officia deserunt mollitia animi id est
+                                                                            laborum
+                                                                            perspiciatis veniam consequatur
+                                                                            exercitationem</div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -2620,8 +2759,8 @@
                                                             loading="lazy" alt="testimonial image"
                                                             class="testimonials-auther-image" /></div>
                                                     <div class="testimonials-auther-info-box">
-                                                        <div class="testimonials-auther-name">Anjali R</div>
-                                                        <div class="testimonials-auther-position">Corporate Professional
+                                                        <div class="testimonials-auther-name">Aliquip ex</div>
+                                                        <div class="testimonials-auther-position">Ea commodo consequat
                                                         </div>
                                                     </div>
                                                 </div>
