@@ -22,7 +22,45 @@
         }
     }
 
-    // ─── 2. Make footer "Book Your Session" loop clickable ──────────────────
+    // ─── 2. Services nav button highlight (active state on click) ────────────
+    function setupServicesNavHighlight() {
+        // All four nav inner items
+        var navItems = document.querySelectorAll('.services-nav-item-inner');
+        if (!navItems.length) return;
+
+        // The CSS already styles .item-one with the active (dark) look.
+        // We replicate that exact inline style on click for any button,
+        // and reset all others — without touching classes or layout.
+        var ACTIVE_BG   = 'var(--_colors---primary)';
+        var ACTIVE_FG   = 'var(--_colors---tertiary)';
+        var DEFAULT_BG  = '';
+        var DEFAULT_FG  = '';
+
+        function setActive(target) {
+            navItems.forEach(function(item) {
+                if (item === target) {
+                    item.style.backgroundColor = ACTIVE_BG;
+                    item.style.color           = ACTIVE_FG;
+                } else {
+                    item.style.backgroundColor = DEFAULT_BG;
+                    item.style.color           = DEFAULT_FG;
+                }
+            });
+        }
+
+        navItems.forEach(function(item) {
+            item.style.cursor = 'pointer';
+            item.addEventListener('click', function() {
+                setActive(item);
+            });
+        });
+
+        // Keep item-one active by default on page load (matches the CSS default)
+        var itemOne = document.querySelector('.services-nav-item-inner.item-one');
+        if (itemOne) setActive(itemOne);
+    }
+
+    // ─── 3. Make footer "Book Your Session" loop clickable ──────────────────
     function setupFooterLoop() {
         // Find all footer-loops
         var footerLoops = document.querySelectorAll('.footer-loop');
@@ -47,9 +85,10 @@
         });
     }
 
-    // ─── 3. Main init sequence ───────────────────────────────────────────────
+    // ─── 4. Main init sequence ───────────────────────────────────────────────
     function init() {
         refreshScrollTrigger();
+        setupServicesNavHighlight();
         setupFooterLoop();
     }
 
@@ -63,6 +102,7 @@
     // Also run on window load to ensure all images constraints are met
     window.addEventListener('load', function () {
         refreshScrollTrigger();
+        setupServicesNavHighlight();
         setupFooterLoop();
     });
 
