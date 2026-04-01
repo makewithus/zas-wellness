@@ -109,27 +109,120 @@
 
 
 
-<style>
-/* ====== Elevate Trail Section CSS ====== */
-.trail-section { justify-content: center; align-items: center; width: 100%; height: 100vh; display: flex; position: relative; background: #000; overflow: hidden; }
-.trail-wrap { z-index: 5; pointer-events: none; width: 100%; height: 100%; position: absolute; inset: 0%; }
-.trail-list { width: 100%; height: 100%; position: relative; }
-.trail-item { opacity: 0; border-radius: 0.3125em; width: 15vw; max-width: 250px; aspect-ratio: 3/4; position: absolute; overflow: hidden; }
-.trail-item__img { object-fit: cover; width: 100%; height: 100%; }
-.amplify_headline { letter-spacing: -3px; font-size: clamp(4rem, 10vw, 12rem); line-height: 1.3; color: #fff; text-transform: uppercase; font-weight: 800; }
-.amplify_superscript { font-size: 2rem; position: absolute; }
+    <style>
+        /* ====== Elevate Trail Section CSS ====== */
+        .trail-section {
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            position: relative;
+            background: #000;
+            overflow: hidden;
+        }
 
-/* Structural CSS for inner content */
-.intro-content-wrapper { grid-column-gap: 5rem; grid-row-gap: 5rem; flex-flow: column; width: 100%; display: flex; z-index: 10; position: relative; }
-.intro-content-wrapper.amplify_good { grid-column-gap: 2rem; grid-row-gap: 2rem; }
-.intro_content-top { justify-content: center; align-items: center; display: flex; }
-.intro_content-bottom.right { justify-content: flex-end; align-items: flex-start; display: flex; padding-top: 2rem; }
-.max-width-small { width: 100%; max-width: 38rem; }
-.text-size-medium { font-size: 1.5rem; line-height: 1.4; color: #fff; opacity: 0.8; }
-.padding-global { padding-left: 5vw; padding-right: 5vw; width: 100%; box-sizing: border-box; }
-/* Staggered Reveal CSS */
-.split-line, .split-word, .split-char { overflow: hidden; vertical-align: bottom; }
-</style>
+        .trail-wrap {
+            z-index: 5;
+            pointer-events: none;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            inset: 0%;
+        }
+
+        .trail-list {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .trail-item {
+            opacity: 0;
+            border-radius: 0.3125em;
+            width: 15vw;
+            max-width: 250px;
+            aspect-ratio: 3/4;
+            position: absolute;
+            overflow: hidden;
+        }
+
+        .trail-item__img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+
+        .amplify_headline {
+            letter-spacing: -3px;
+            font-size: clamp(4rem, 10vw, 12rem);
+            line-height: 1.3;
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: 800;
+        }
+
+        .amplify_superscript {
+            font-size: 2rem;
+            position: absolute;
+        }
+
+        /* Structural CSS for inner content */
+        .intro-content-wrapper {
+            grid-column-gap: 5rem;
+            grid-row-gap: 5rem;
+            flex-flow: column;
+            width: 100%;
+            display: flex;
+            z-index: 10;
+            position: relative;
+        }
+
+        .intro-content-wrapper.amplify_good {
+            grid-column-gap: 2rem;
+            grid-row-gap: 2rem;
+        }
+
+        .intro_content-top {
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+
+        .intro_content-bottom.right {
+            justify-content: flex-end;
+            align-items: flex-start;
+            display: flex;
+            padding-top: 2rem;
+        }
+
+        .max-width-small {
+            width: 100%;
+            max-width: 38rem;
+        }
+
+        .text-size-medium {
+            font-size: 1.5rem;
+            line-height: 1.4;
+            color: #fff;
+            opacity: 0.8;
+        }
+
+        .padding-global {
+            padding-left: 5vw;
+            padding-right: 5vw;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        /* Staggered Reveal CSS */
+        .split-line,
+        .split-word,
+        .split-char {
+            overflow: hidden;
+            vertical-align: bottom;
+        }
+    </style>
 
 </head>
 
@@ -325,7 +418,8 @@
                                                                         loading="lazy" alt="social icon"
                                                                         class="social-icon light" />
                                                                 </a>
-                                                                <a href="https://www.instagram.com/zas.wellness/?utm_source=ig_web_button_share_sheet" target="_blank"
+                                                                <a href="https://www.instagram.com/zas.wellness/?utm_source=ig_web_button_share_sheet"
+                                                                    target="_blank"
                                                                     class="social-item fixed-menu-icon w-inline-block">
                                                                     <div class="social-background"></div><img
                                                                         src="https://cdn.prod.website-files.com/691ea5c2d38e36d02b948f36/69205312fcfec62df9831e2b_instagram-dark.svg"
@@ -394,6 +488,7 @@
                 body.body {
                     background-color: #181717;
                 }
+
                 /* Full-bleed breakout: escapes the all-content wrapper completely */
                 .scroll_wrap {
                     position: relative;
@@ -405,10 +500,12 @@
                     max-width: 100vw;
                     overflow: visible;
                 }
+
                 .scroll_target {
                     position: relative;
                     width: 100%;
                 }
+
                 .section_hero {
                     position: relative;
                     width: 100%;
@@ -421,15 +518,18 @@
                     box-sizing: border-box;
                     overflow: hidden;
                 }
+
                 .padding-global {
                     padding-left: 5%;
                     padding-right: 5%;
                 }
+
                 .container-large {
                     max-width: 1440px;
                     margin-left: auto;
                     margin-right: auto;
                 }
+
                 .padding-section-large.hero {
                     padding-top: 5rem;
                     padding-bottom: clamp(6rem, 18vw, 18rem);
@@ -439,6 +539,7 @@
                     justify-content: space-between;
                     box-sizing: border-box;
                 }
+
                 .homepage-hero-component {
                     width: 100%;
                     flex: 1;
@@ -446,6 +547,7 @@
                     flex-direction: column;
                     justify-content: space-between;
                 }
+
                 .homepage_hero {
                     display: grid;
                     grid-template-rows: auto 1fr;
@@ -453,6 +555,7 @@
                     height: 100%;
                     flex: 1;
                 }
+
                 /* Push top-row below navbar */
                 .homepage_hero-top {
                     display: flex;
@@ -461,10 +564,12 @@
                     gap: 1.5rem;
                     padding-top: 4.5rem;
                 }
+
                 .homepage_hero-top-left {
                     flex: 0 0 auto;
                     margin-right: -0.5rem;
                 }
+
                 .hero-brand-words {
                     font-family: 'Inter', sans-serif;
                     font-size: 1.15rem;
@@ -474,18 +579,21 @@
                     white-space: nowrap;
                     margin-top: -0.2rem;
                 }
+
                 .homepage_hero-line {
                     flex: 1;
                     height: 1.5px;
-                    background: rgba(255,255,255,0.25);
+                    background: rgba(255, 255, 255, 0.25);
                     align-self: flex-start;
                     margin-top: 0.6rem;
                     margin-right: 1.5rem;
                     min-width: 50px;
                 }
+
                 .homepage_hero-line.mobile-vertical {
                     display: none;
                 }
+
                 .homepage_hero-top-right {
                     flex: 0 0 45%;
                     max-width: 580px;
@@ -493,27 +601,40 @@
                     flex-direction: column;
                     gap: 1.75rem;
                 }
+
                 .hero-desc-text {
                     font-family: 'Inter', sans-serif;
                     font-size: 1.25rem;
                     line-height: 1.45;
-                    color: rgba(255,255,255,0.95);
+                    color: rgba(255, 255, 255, 0.95);
                     margin: 0;
                 }
+
                 .hero-staggered-wrap {
                     display: flex;
                     flex-direction: column;
                     gap: 0.5rem;
                 }
+
                 .stagger-item {
                     font-family: 'Inter', sans-serif;
                     font-size: 1.3rem;
                     font-weight: 500;
                     color: #fff;
                 }
-                .stagger-1 { padding-left: 15%; }
-                .stagger-2 { padding-left: 35%; }
-                .stagger-3 { padding-left: 5%; }
+
+                .stagger-1 {
+                    padding-left: 15%;
+                }
+
+                .stagger-2 {
+                    padding-left: 35%;
+                }
+
+                .stagger-3 {
+                    padding-left: 5%;
+                }
+
                 .homepage-hero-bottom {
                     position: absolute;
                     left: 0;
@@ -523,6 +644,7 @@
                     padding-bottom: 0;
                     overflow: hidden;
                 }
+
                 .split-animate {
                     font-family: 'Inter', sans-serif;
                     /* "zas wellness" = ~12 chars: font-size scaled from tetherup(8) to fit edge-to-edge */
@@ -540,60 +662,81 @@
                     transform: scaleY(1.15);
                     transform-origin: bottom center;
                 }
+
                 .split-animate .tighter {
                     letter-spacing: -0.04em;
                 }
+
                 @media screen and (max-width: 1280px) {
                     .split-animate {
                         font-size: clamp(2.5rem, 13vw, 14rem);
                     }
                 }
+
                 @media screen and (max-width: 991px) {
                     .split-animate {
                         font-size: clamp(2.5rem, 12.5vw, 12rem);
                     }
+
                     .homepage_hero-top {
                         padding-top: 3.5rem;
                     }
                 }
+
                 @media screen and (max-width: 767px) {
                     .section_hero {
-                        min-height: auto;
+                        min-height: 100svh;
                     }
+
                     .homepage_hero-top {
                         flex-direction: column;
                         padding-top: 3.5rem;
                         align-items: stretch;
                         gap: 2rem;
                     }
+
                     .homepage_hero-top-left {
                         display: block;
                     }
+
                     .hero-brand-words {
                         font-size: 1rem;
                     }
+
                     .homepage_hero-line {
                         display: none;
                     }
+
                     .homepage_hero-line.mobile-vertical {
                         display: none;
                     }
+
                     .homepage_hero-top-right {
                         max-width: none;
                         flex: 1;
                         gap: 1.5rem;
                     }
+
                     .hero-desc-text {
-                        display: none;
+                        display: block;
+                        font-family: 'Inter', sans-serif;
+                        font-size: 1.15rem;
+                        line-height: 1.45;
+                        color: rgba(255, 255, 255, 0.9);
+                        max-width: 90%;
+                        margin: 0;
                     }
+
                     .stagger-item {
                         font-size: 1.15rem;
                     }
+
                     .padding-section-large.hero {
                         padding-top: 6rem;
                         padding-bottom: clamp(10rem, 28vw, 16rem);
-                        min-height: auto;
+                        min-height: 100svh;
                     }
+
                     .homepage-hero-bottom {
                         position: absolute;
                         left: 0;
@@ -602,19 +745,24 @@
                         margin: 0;
                         overflow: hidden;
                     }
+
                     .split-animate {
-                        font-size: clamp(3.2rem, 14.5vw, 8rem);
+                        font-size: clamp(4rem, 18vw, 12rem);
                         padding: 0;
                         white-space: nowrap;
                         letter-spacing: -0.02em;
                         text-align: center;
+                        transform: scaleY(1.4);
+                        transform-origin: bottom center;
                     }
                 }
+
                 @media screen and (max-width: 480px) {
                     .split-animate {
                         font-size: clamp(2.8rem, 12vw, 5rem);
                     }
                 }
+
                 /* ===== End Anthem Creative Hero styles ===== */
 
                 /* ===== Page Transition Overlay ===== */
@@ -627,8 +775,10 @@
                     z-index: 9999;
                     pointer-events: none;
                     transform-origin: top center;
+                    transform: scaleY(1);
                     will-change: transform;
                 }
+
                 /* ===== End Page Transition Overlay ===== */
 
                 /* ===== Hero char clip wrappers ===== */
@@ -638,11 +788,13 @@
                     vertical-align: bottom;
                     line-height: 0.9;
                 }
+
                 .anthem-char-inner {
                     display: inline-block;
                     line-height: 0.9;
                     will-change: transform;
                 }
+
                 /* ===== End Hero char clip wrappers ===== */
             </style>
             <!-- Page Transition Overlay (Anthem-style yellow wipe) -->
@@ -665,12 +817,15 @@
                                                     class="homepage_hero-line mobile-vertical"></div>
                                                 <div class="homepage_hero-top-right">
                                                     <div class="hero-desc-text">
-                                                        At ZAS, we don't just move bodies. We awaken energy, rhythm, and a way of living that stays.
+                                                        What if movement wasn’t just exercise—but something you feel?
+
+                                                        At ZAS, it becomes energy, rhythm, and a way of living that
+                                                        stays.
                                                     </div>
                                                     <div class="hero-staggered-wrap">
                                                         <div class="stagger-item stagger-1">Move.</div>
                                                         <div class="stagger-item stagger-2">Create.</div>
-                                                        <div class="stagger-item stagger-3">Change the world.</div>
+                                                        <div class="stagger-item stagger-3">Become.</div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -691,479 +846,120 @@
             <!-- ===== GSAP for Anthem Hero Animations ===== -->
             <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
             <script>
-            (function () {
-                'use strict';
+                (function () {
+                    'use strict';
 
-                // ── Anthem Hero Animation ─────────────────────────────────────────
-                // Mirrors the Anthem Creative homepage on-load sequence:
-                //  1. Yellow page-transition overlay wipes upward (scaleY 1→0, expo.inOut)
-                //  2. Top-row items fade + translateY up (staggered, power3.out)
-                //  3. h1 chars clip-slide up from below (staggered, expo.out)
+                    // ── Anthem Hero Animation ─────────────────────────────────────────
+                    // Mirrors the Anthem Creative homepage on-load sequence:
+                    //  1. Yellow page-transition overlay wipes upward (scaleY 1→0, expo.inOut)
+                    //  2. Top-row items fade + translateY up (staggered, power3.out)
+                    //  3. h1 chars clip-slide up from below (staggered, expo.out)
 
-                function splitH1Chars(h1) {
-                    var inners = [];
-                    var nodes = Array.prototype.slice.call(h1.childNodes);
-                    nodes.forEach(function (node) {
-                        if (node.nodeType === 3) {
-                            var text = node.textContent;
-                            var frag = document.createDocumentFragment();
-                            for (var i = 0; i < text.length; i++) {
-                                var outer = document.createElement('span');
-                                outer.className = 'anthem-char-outer';
-                                var inner = document.createElement('span');
-                                inner.className = 'anthem-char-inner';
-                                inner.textContent = text[i] === ' ' ? '\u00a0' : text[i];
-                                outer.appendChild(inner);
-                                frag.appendChild(outer);
-                                inners.push(inner);
-                            }
-                            node.parentNode.replaceChild(frag, node);
-                        } else if (node.nodeType === 1) {
-                            var raw = node.textContent;
-                            node.textContent = '';
-                            for (var j = 0; j < raw.length; j++) {
-                                var outer2 = document.createElement('span');
-                                outer2.className = 'anthem-char-outer';
-                                var inner2 = document.createElement('span');
-                                inner2.className = 'anthem-char-inner';
-                                inner2.textContent = raw[j] === ' ' ? '\u00a0' : raw[j];
-                                outer2.appendChild(inner2);
-                                node.appendChild(outer2);
-                                inners.push(inner2);
-                            }
-                        }
-                    });
-                    return inners;
-                }
-
-                function initAnthemHero() {
-                    if (!window.gsap) { setTimeout(initAnthemHero, 30); return; }
-
-                    var overlay  = document.getElementById('anthem-overlay');
-                    var heroTop  = document.getElementById('anthem-hero-top');
-                    var heroH1   = document.getElementById('anthem-hero-h1');
-                    if (!overlay || !heroTop || !heroH1) return;
-
-                    var topItems = heroTop.querySelectorAll(
-                        '.homepage_hero-top-left, .homepage_hero-line, .hero-desc-text, .stagger-item'
-                    );
-                    var chars = splitH1Chars(heroH1);
-
-                    // Initial states
-                    gsap.set(overlay,   { scaleY: 1, transformOrigin: 'top center' });
-                    gsap.set(topItems,  { opacity: 0, y: 35 });
-                    gsap.set(chars,     { y: '130%', opacity: 0 });
-
-                    // Timeline
-                    var tl = gsap.timeline({ delay: 0.1 });
-
-                    // Phase 1 – overlay wipes up
-                    tl.to(overlay, {
-                        scaleY: 0,
-                        duration: 1.1,
-                        ease: 'expo.inOut',
-                        onComplete: function () { overlay.style.display = 'none'; }
-                    });
-
-                    // Phase 2 – top row items + staggered words appear
-                    tl.to(topItems, {
-                        opacity: 1, y: 0,
-                        duration: 1.1,
-                        ease: 'power3.out',
-                        stagger: 0.12
-                    }, '-=0.5');
-
-                    // Phase 3 – h1 chars slide up smoothly
-                    tl.to(chars, {
-                        y: '0%',
-                        opacity: 1,
-                        duration: 1.25,
-                        ease: 'power4.out',
-                        stagger: 0.045
-                    }, '-=0.7');
-
-                    // Phase 4 – Menu button visibility toggle
-                    var fixedMenu = document.querySelector('.fixed-menu-open-close');
-                    if (fixedMenu) {
-                        gsap.set(fixedMenu, { autoAlpha: 0 }); // Intially hide the menu wrapper
-                        window.addEventListener('scroll', function() {
-                            if (window.scrollY > window.innerHeight * 0.45) {
-                                gsap.to(fixedMenu, { autoAlpha: 1, duration: 0.3 });
-                            } else {
-                                gsap.to(fixedMenu, { autoAlpha: 0, duration: 0.3 });
+                    function splitH1Chars(h1) {
+                        var inners = [];
+                        var nodes = Array.prototype.slice.call(h1.childNodes);
+                        nodes.forEach(function (node) {
+                            if (node.nodeType === 3) {
+                                var text = node.textContent;
+                                var frag = document.createDocumentFragment();
+                                for (var i = 0; i < text.length; i++) {
+                                    var outer = document.createElement('span');
+                                    outer.className = 'anthem-char-outer';
+                                    var inner = document.createElement('span');
+                                    inner.className = 'anthem-char-inner';
+                                    inner.textContent = text[i] === ' ' ? '\u00a0' : text[i];
+                                    outer.appendChild(inner);
+                                    frag.appendChild(outer);
+                                    inners.push(inner);
+                                }
+                                node.parentNode.replaceChild(frag, node);
+                            } else if (node.nodeType === 1) {
+                                var raw = node.textContent;
+                                node.textContent = '';
+                                for (var j = 0; j < raw.length; j++) {
+                                    var outer2 = document.createElement('span');
+                                    outer2.className = 'anthem-char-outer';
+                                    var inner2 = document.createElement('span');
+                                    inner2.className = 'anthem-char-inner';
+                                    inner2.textContent = raw[j] === ' ' ? '\u00a0' : raw[j];
+                                    outer2.appendChild(inner2);
+                                    node.appendChild(outer2);
+                                    inners.push(inner2);
+                                }
                             }
                         });
+                        return inners;
                     }
-                }
 
-                if (document.readyState === 'loading') {
-                    document.addEventListener('DOMContentLoaded', initAnthemHero);
-                } else {
-                    initAnthemHero();
-                }
-            })();
+                    function initAnthemHero() {
+                        if (!window.gsap) { setTimeout(initAnthemHero, 30); return; }
+
+                        var overlay = document.getElementById('anthem-overlay');
+                        var heroTop = document.getElementById('anthem-hero-top');
+                        var heroH1 = document.getElementById('anthem-hero-h1');
+                        if (!overlay || !heroTop || !heroH1) return;
+
+                        var topItems = heroTop.querySelectorAll(
+                            '.homepage_hero-top-left, .homepage_hero-line, .hero-desc-text, .stagger-item'
+                        );
+                        var chars = splitH1Chars(heroH1);
+
+                        // Initial states
+                        gsap.set(overlay, { scaleY: 1, transformOrigin: 'top center' });
+                        gsap.set(topItems, { opacity: 0, y: 35 });
+                        gsap.set(chars, { y: '130%', opacity: 0 });
+
+                        // Timeline
+                        var tl = gsap.timeline({ delay: 0.4 });
+
+                        // Phase 1 – overlay wipes up
+                        tl.to(overlay, {
+                            scaleY: 0,
+                            duration: 1.1,
+                            ease: 'expo.inOut',
+                            force3D: true,
+                            onComplete: function () { overlay.style.display = 'none'; }
+                        });
+
+                        // Phase 2 – top row items + staggered words appear
+                        tl.to(topItems, {
+                            opacity: 1, y: 0,
+                            duration: 1.1,
+                            ease: 'power3.out',
+                            stagger: 0.12
+                        }, '-=0.5');
+
+                        // Phase 3 – h1 chars slide up smoothly
+                        tl.to(chars, {
+                            y: '0%',
+                            opacity: 1,
+                            duration: 1.25,
+                            ease: 'power4.out',
+                            stagger: 0.045
+                        }, '-=0.7');
+
+                        // Phase 4 – Menu button visibility toggle
+                        var fixedMenu = document.querySelector('.fixed-menu-open-close');
+                        if (fixedMenu) {
+                            gsap.set(fixedMenu, { autoAlpha: 0 }); // Intially hide the menu wrapper
+                            window.addEventListener('scroll', function () {
+                                if (window.scrollY > window.innerHeight * 0.45) {
+                                    gsap.to(fixedMenu, { autoAlpha: 1, duration: 0.3 });
+                                } else {
+                                    gsap.to(fixedMenu, { autoAlpha: 0, duration: 0.3 });
+                                }
+                            });
+                        }
+                    }
+
+                    if (document.readyState === 'loading') {
+                        document.addEventListener('DOMContentLoaded', initAnthemHero);
+                    } else {
+                        initAnthemHero();
+                    }
+                })();
             </script>
             <!-- ===== End GSAP Anthem Hero Animations ===== -->
-
-
-            <!-- ===== Premium Showcase Section ===== -->
-            <style>
-                .showcase-section {
-                    position: relative;
-                    width: 100%;
-                    min-height: 100vh;
-                    background-color: #0a0a0a;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    overflow: hidden;
-                    padding: 4rem 2rem;
-                    box-sizing: border-box;
-                    z-index: 5;
-                }
-                .showcase-center-content {
-                    position: relative;
-                    z-index: 10;
-                    text-align: center;
-                    max-width: 800px;
-                    pointer-events: none;
-                    will-change: transform;
-                }
-                .showcase-heading {
-                    font-family: 'Inter', sans-serif;
-                    font-size: clamp(3.5rem, 8vw, 6.5rem);
-                    font-weight: 800;
-                    line-height: 1.1;
-                    color: #ffffff;
-                    margin-bottom: 1.5rem;
-                    letter-spacing: -0.02em;
-                    text-transform: uppercase;
-                    opacity: 0;
-                    transform: translateY(40px) scale(0.95);
-                    transition: opacity 1.2s cubic-bezier(0.165, 0.84, 0.44, 1), transform 1.2s cubic-bezier(0.165, 0.84, 0.44, 1);
-                }
-                .showcase-heading.entry-active {
-                    opacity: 1;
-                    transform: translateY(0) scale(1);
-                    animation: subtleLetterSpace 8s ease-in-out infinite alternate 1.2s;
-                }
-                @keyframes subtleLetterSpace {
-                    0% { letter-spacing: -0.02em; }
-                    100% { letter-spacing: 0.03em; }
-                }
-
-                .showcase-subtext {
-                    font-family: 'Inter', sans-serif;
-                    font-size: 1.35rem;
-                    color: rgba(255, 255, 255, 0.7);
-                    margin-bottom: 2.5rem;
-                    font-weight: 400;
-                    max-width: 600px;
-                    margin-left: auto;
-                    margin-right: auto;
-                    opacity: 0;
-                    transform: translateY(20px);
-                    transition: opacity 1s ease-out 0.25s, transform 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0.25s;
-                }
-                .showcase-subtext.entry-active {
-                    opacity: 1;
-                    transform: translateY(0);
-                }
-                .showcase-cta {
-                    display: inline-block;
-                    padding: 1.125rem 2.75rem;
-                    background: #ffffff;
-                    color: #000000;
-                    text-decoration: none;
-                    font-family: 'Inter', sans-serif;
-                    font-weight: 600;
-                    font-size: 1rem;
-                    border-radius: 50px;
-                    transition: transform 0.4s ease, background 0.4s ease, box-shadow 0.4s ease, opacity 1s ease-out 0.5s;
-                    pointer-events: auto;
-                    opacity: 0;
-                    transform: translateY(20px);
-                }
-                .showcase-cta.entry-active {
-                    opacity: 1;
-                    transform: translateY(0);
-                }
-                .showcase-cta.entry-active:hover {
-                    background: #f0f0f0;
-                    transform: translateY(-4px) scale(1.02);
-                    box-shadow: 0 15px 30px rgba(255, 255, 255, 0.2);
-                }
-
-                /* Floating Cards Layout */
-                .floating-cards-container {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    pointer-events: none;
-                    z-index: 1;
-                }
-                .parallax-wrapper {
-                    position: absolute;
-                    opacity: 0;
-                    transform: scale(0.85) translateY(40px);
-                    transition: opacity 1s ease-out, transform 1.2s cubic-bezier(0.165, 0.84, 0.44, 1);
-                    will-change: transform, opacity;
-                }
-                .parallax-wrapper.entry-active {
-                    opacity: 1;
-                    transform: scale(1) translateY(0);
-                    transition: opacity 1s ease-out, transform 0.1s linear; /* Fast response to scroll */
-                }
-
-                .floating-card {
-                    width: 100%;
-                    height: 100%;
-                    border-radius: 24px;
-                    overflow: hidden;
-                    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-                    pointer-events: auto;
-                    cursor: auto;
-                    transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
-                    will-change: transform;
-                }
-                .floating-card img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                    display: block;
-                    transition: transform 0.7s cubic-bezier(0.25, 1, 0.5, 1);
-                }
-
-                .parallax-wrapper:hover .floating-card {
-                    transform: scale(1.05) !important;
-                    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.9), 0 0 40px rgba(255, 255, 255, 0.06);
-                    filter: brightness(1.15);
-                }
-                .parallax-wrapper:hover {
-                    z-index: 20;
-                }
-
-                /* Deep floating animations (Rotation + Translation + Breathing) */
-                @keyframes floatOrganic {
-                    0%   { transform: translate(0px, 0px) rotate(0deg) scale(0.98); }
-                    33%  { transform: translate(12px, -24px) rotate(2.5deg) scale(1); }
-                    66%  { transform: translate(-8px, 18px) rotate(-1.5deg) scale(0.99); }
-                    100% { transform: translate(0px, 0px) rotate(0deg) scale(0.98); }
-                }
-                @keyframes floatVertical {
-                    0%   { transform: translateY(0px) rotate(0deg) scale(0.97); }
-                    50%  { transform: translateY(-35px) rotate(-2deg) scale(1.02); }
-                    100% { transform: translateY(0px) rotate(0deg) scale(0.97); }
-                }
-                @keyframes floatDiagonal {
-                    0%   { transform: translate(0px, 0px) rotate(0deg) scale(0.98); }
-                    50%  { transform: translate(-18px, -28px) rotate(1deg) scale(1); }
-                    100% { transform: translate(0px, 0px) rotate(0deg) scale(0.98); }
-                }
-
-                .anim-o1 { animation: floatOrganic 13s ease-in-out infinite; }
-                .anim-v2 { animation: floatVertical 10s ease-in-out infinite 1s; }
-                .anim-d3 { animation: floatDiagonal 15s ease-in-out infinite 2s; }
-                .anim-o4 { animation: floatOrganic 11.5s ease-in-out infinite 0.5s reverse; }
-                .anim-v5 { animation: floatVertical 9s ease-in-out infinite 1.5s reverse; }
-                .anim-d6 { animation: floatDiagonal 14.5s ease-in-out infinite 2.5s; }
-
-                /* Randomized Depth Grid Positions via Blur and Scale */
-                .pw-1 { width: 17vw; max-width: 200px; height: 260px; top: 18%; left: 8%; z-index: 3; }
-                .pw-2 { width: 12vw; max-width: 140px; height: 180px; top: 10%; right: 28%; z-index: 1; filter: blur(3.5px); opacity: 0.7; }
-                .pw-3 { width: 22vw; max-width: 280px; height: 190px; bottom: 18%; left: 4%; z-index: 4; }
-                .pw-4 { width: 16vw; max-width: 220px; height: 300px; bottom: 8%; right: 12%; z-index: 2; }
-                .pw-5 { width: 10vw; max-width: 130px; height: 130px; top: 40%; left: 24%; z-index: 1; filter: blur(4px); opacity: 0.6; }
-                .pw-6 { width: 19vw; max-width: 250px; height: 340px; top: 25%; right: 5%; z-index: 4; }
-
-                .floating-cards-mobile-fallback { display: none; }
-
-                /* Responsiveness */
-                @media (max-width: 991px) {
-                    .pw-2, .pw-5 { display: none; }
-                    .pw-1 { width: 180px; height: 240px; top: 5%; left: 3%; }
-                    .pw-3 { width: 200px; height: 150px; bottom: 6%; left: 4%; }
-                    .pw-4 { width: 160px; height: 220px; bottom: 4%; right: 2%; }
-                    .pw-6 { width: 200px; height: 280px; top: 15%; right: 2%; }
-                }
-
-                @media (max-width: 767px) {
-                    .showcase-section {
-                        min-height: auto;
-                        padding: 6rem 1rem;
-                        flex-direction: column;
-                    }
-                    .showcase-heading { font-size: clamp(2.5rem, 10vw, 3.5rem); }
-                    .showcase-subtext { font-size: 1.1rem; }
-                    .floating-cards-container { display: none; }
-                    .showcase-center-content { margin-bottom: 3rem; }
-                    .floating-cards-mobile-fallback {
-                        display: flex;
-                        flex-wrap: wrap;
-                        gap: 1rem;
-                        justify-content: center;
-                        width: 100%;
-                    }
-                    .fallback-card {
-                        width: calc(50% - 0.5rem);
-                        border-radius: 12px;
-                        overflow: hidden;
-                        box-shadow: 0 8px 20px rgba(0,0,0,0.5);
-                    }
-                    .fallback-card img { 
-                        width: 100%; height: 100%; object-fit: cover; display: block; aspect-ratio: 4/5;
-                    }
-                }
-            </style>
-
-            <section class="showcase-section" id="premium-showcase">
-                <div class="floating-cards-container" id="parallax-container">
-                    <!-- data-scroll-speed: Foreground (+) is faster parallax, Background (-) is slower or opposite parallax -->
-                    <div class="parallax-wrapper pw-1 parallax-item" data-scroll-speed="0.15">
-                        <div class="floating-card anim-o1"><img src="https://cdn.prod.website-files.com/691ea5c2d38e36d02b948f36/696b7878e51cdabde67ab71a_about-1.avif" alt="Left Fore"></div>
-                    </div>
-                    <div class="parallax-wrapper pw-2 parallax-item" data-scroll-speed="-0.08">
-                        <div class="floating-card anim-v2"><img src="https://cdn.prod.website-files.com/691eefbafb5f1e6cbbc807b3/691efeadca6c1dc18f18ab70_service%20-%201.avif" alt="Right Mid Blur"></div>
-                    </div>
-                    <div class="parallax-wrapper pw-3 parallax-item" data-scroll-speed="0.22">
-                        <div class="floating-card anim-d3"><img src="https://cdn.prod.website-files.com/691ea5c2d38e36d02b948f36/696b78797cedc44d5ecdf7f7_about-2.avif" alt="Left Bottom Fore"></div>
-                    </div>
-                    <div class="parallax-wrapper pw-4 parallax-item" data-scroll-speed="-0.12">
-                        <div class="floating-card anim-o4"><img src="https://cdn.prod.website-files.com/691eefbafb5f1e6cbbc807b3/691efea284d276bf9ed2cddc_service%20-%202.avif" alt="Right Bottom Mid"></div>
-                    </div>
-                    <div class="parallax-wrapper pw-5 parallax-item" data-scroll-speed="-0.05">
-                        <div class="floating-card anim-v5"><img src="https://cdn.prod.website-files.com/691eefbafb5f1e6cbbc807b3/691efe9138135ae16184553d_service%20-%203.avif" alt="Center Depth Blur"></div>
-                    </div>
-                    <div class="parallax-wrapper pw-6 parallax-item" data-scroll-speed="0.18">
-                        <div class="floating-card anim-d6"><img src="https://cdn.prod.website-files.com/691eefbafb5f1e6cbbc807b3/691efe85fdd0c3500096d008_service%20-%204.avif" alt="Right Fore"></div>
-                    </div>
-                </div>
-                
-                <div class="showcase-center-content">
-                    <h2 class="showcase-heading">Experience The Motion</h2>
-                    <p class="showcase-subtext">Elevate your body and mind with our curated rhythm-based fitness programs.</p>
-                    <a href="services.html" class="showcase-cta">Discover More</a>
-                </div>
-
-                <div class="floating-cards-mobile-fallback">
-                    <div class="fallback-card"><img src="https://cdn.prod.website-files.com/691ea5c2d38e36d02b948f36/696b7878e51cdabde67ab71a_about-1.avif" loading="lazy"></div>
-                    <div class="fallback-card"><img src="https://cdn.prod.website-files.com/691ea5c2d38e36d02b948f36/696b78797cedc44d5ecdf7f7_about-2.avif" loading="lazy"></div>
-                    <div class="fallback-card"><img src="https://cdn.prod.website-files.com/691eefbafb5f1e6cbbc807b3/691efeadca6c1dc18f18ab70_service%20-%201.avif" loading="lazy"></div>
-                    <div class="fallback-card"><img src="https://cdn.prod.website-files.com/691eefbafb5f1e6cbbc807b3/691efea284d276bf9ed2cddc_service%20-%202.avif" loading="lazy"></div>
-                </div>
-            </section>
-
-            <script>
-            document.addEventListener('DOMContentLoaded', () => {
-                const section = document.getElementById('premium-showcase');
-                if (!section) return;
-
-                const heading = section.querySelector('.showcase-heading');
-                const subtext = section.querySelector('.showcase-subtext');
-                const cta = section.querySelector('.showcase-cta');
-                const centerText = section.querySelector('.showcase-center-content');
-                const layers = Array.from(section.querySelectorAll('.parallax-item'));
-
-                // 1. Precise Staggered Entry Reveal
-                const observerOptions = { threshold: 0.35 };
-                const observer = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            heading.classList.add('entry-active');
-                            subtext.classList.add('entry-active');
-                            cta.classList.add('entry-active');
-                            
-                            // Stagger random entry for floating cards
-                            layers.forEach((layer, idx) => {
-                                setTimeout(() => {
-                                    layer.classList.add('entry-active');
-                                }, 150 + (idx * Math.random() * 200)); 
-                            });
-                            
-                            observer.disconnect();
-                        }
-                    });
-                }, observerOptions);
-                observer.observe(section);
-
-                // 2. Scroll Parallax Effect (Depth Illusion)
-                let currentScroll = window.scrollY;
-                let rafScroll = null;
-
-                window.addEventListener('scroll', () => {
-                    if (window.innerWidth <= 991) return; // Disable scroll parallax on mobile
-                    currentScroll = window.scrollY;
-                    if (!rafScroll) {
-                        rafScroll = requestAnimationFrame(updateScrollParallax);
-                    }
-                }, { passive: true });
-
-                function updateScrollParallax() {
-                    const sectionRect = section.getBoundingClientRect();
-                    
-                    // Only update elements if the section is currently in the viewport
-                    if (sectionRect.top < window.innerHeight && sectionRect.bottom > 0) {
-                        // Calculate offset relative to the center of the viewport
-                        const relativeScroll = (window.innerHeight / 2) - (sectionRect.top + sectionRect.height / 2);
-                        
-                        layers.forEach(layer => {
-                            // Only apply if animated in to prevent entry transition jumping
-                            if (!layer.classList.contains('entry-active')) return;
-                            const speed = parseFloat(layer.getAttribute('data-scroll-speed') || 0.1);
-                            const yOffset = relativeScroll * speed;
-                            layer.style.transform = `scale(1) translateY(${yOffset}px)`;
-                        });
-                        
-                        // Ultra subtle depth motion for center text
-                        if (heading.classList.contains('entry-active')) {
-                            centerText.style.transform = `translateY(${relativeScroll * 0.04}px)`;
-                        }
-                    }
-                    rafScroll = null;
-                }
-            });
-            </script>
-            <!-- ===== End Premium Showcase Section ===== -->
-
-            <!-- ===== Begin Elevate Trail Section ===== -->
-            <div data-trail="wrapper" class="trail-section">
-                <div class="padding-global">
-                  <div class="intro-content-wrapper amplify_good">
-                    <div class="intro_content-top">
-                      <h2 data-split-reveal="chars" data-split="heading" class="amplify_headline">Elevate<span class="amplify_superscript"></span></h2>
-                    </div>
-                    <div class="intro_content-bottom right">
-                      <div class="max-width-small">
-                        <p data-split-reveal="lines" data-split="heading" class="text-size-medium">We engineer impact that drives industries forward—uniting innovation, social purpose, and world-class execution. By partnering closely with clients, we turn ideas into scalable solutions and empower future talent. Every project sparks progress, strengthens communities, and creates meaningful, lasting change.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="trail-wrap">
-                  <div class="trail-list">
-                    <div data-trail="item" class="trail-item"><img src="www.anthemcreative.ca/6835ef94fba7ee7ef42e8357/685d64136ee7dffa65ca9895_dan_1.avif" loading="lazy" class="trail-item__img"></div>
-                    <div data-trail="item" class="trail-item"><img src="www.anthemcreative.ca/6835ef94fba7ee7ef42e8357/685d64118f3088e147e36f06_daniel_1.avif" loading="lazy" class="trail-item__img"></div>
-                    <div data-trail="item" class="trail-item"><img src="www.anthemcreative.ca/6835ef94fba7ee7ef42e8357/6859c8788fd2855a13c716d7_mark.avif" loading="lazy" class="trail-item__img"></div>
-                    <div data-trail="item" class="trail-item"><img src="www.anthemcreative.ca/6835ef94fba7ee7ef42e8357/685d6411063c3f9af54d6f67_graeme_!.avif" loading="lazy" class="trail-item__img"></div>
-                    <div data-trail="item" class="trail-item"><img src="www.anthemcreative.ca/6835ef94fba7ee7ef42e8357/685b0fe93dd7270ba91598e4_erin_1.avif" loading="lazy" class="trail-item__img"></div>
-                    <div data-trail="item" class="trail-item"><img src="www.anthemcreative.ca/6835ef94fba7ee7ef42e8357/685b1d5656e20177d52d2a55_david_1.avif" loading="lazy" class="trail-item__img"></div>
-                    <div data-trail="item" class="trail-item"><img src="www.anthemcreative.ca/6835ef94fba7ee7ef42e8357/685b1d582c037b9abd235da9_Jake_1.avif" loading="lazy" class="trail-item__img"></div>
-                    <div data-trail="item" class="trail-item"><img src="www.anthemcreative.ca/6835ef94fba7ee7ef42e8357/685b1d57d68454614fad2877_kevin_!.avif" loading="lazy" class="trail-item__img"></div>
-                    <div data-trail="item" class="trail-item"><img src="www.anthemcreative.ca/6835ef94fba7ee7ef42e8357/685b1d5b7e593937495290a2_morgan_1.avif" loading="lazy" class="trail-item__img"></div>
-                    <div data-trail="item" class="trail-item"><img src="www.anthemcreative.ca/6835ef94fba7ee7ef42e8357/685b1d59079858364526d83c_Leks_1.avif" loading="lazy" class="trail-item__img"></div>
-                  </div>
-                </div>
-            </div>
-            <!-- ===== End Elevate Trail Section ===== -->
-
-
-            
-
-
-            
-
 
             <section class="about">
                 <div class="section-inner-block">
@@ -1238,6 +1034,62 @@
                     </div>
                 </div>
             </section>
+            <!-- ===== Begin Elevate Trail Section ===== -->
+            <div data-trail="wrapper" class="trail-section">
+                <div class="padding-global">
+                    <div class="intro-content-wrapper amplify_good">
+                        <div class="intro_content-top">
+                            <h2 data-split-reveal="chars" data-split="heading" class="amplify_headline">AWAKEN<span
+                                    class="amplify_superscript"></span></h2>
+                        </div>
+                        <div class="intro_content-bottom right">
+                            <div class="max-width-small">
+                                <p data-split-reveal="lines" data-split="heading" class="text-size-medium">We create
+                                    movement that awakens energy, rhythm, and self-awareness—bringing together
+                                    expression, purpose, and real connection. Through guided experiences, we help
+                                    individuals discover their flow, build confidence, and feel more present in their
+                                    everyday lives. Every session sparks growth, strengthens mindset, and creates a
+                                    lasting connection with movement.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="trail-wrap">
+                    <div class="trail-list">
+                        <div data-trail="item" class="trail-item"><img
+                                src="www.anthemcreative.ca/6835ef94fba7ee7ef42e8357/685d64136ee7dffa65ca9895_dan_1.avif"
+                                loading="lazy" class="trail-item__img"></div>
+                        <div data-trail="item" class="trail-item"><img
+                                src="www.anthemcreative.ca/6835ef94fba7ee7ef42e8357/685d64118f3088e147e36f06_daniel_1.avif"
+                                loading="lazy" class="trail-item__img"></div>
+                        <div data-trail="item" class="trail-item"><img
+                                src="www.anthemcreative.ca/6835ef94fba7ee7ef42e8357/6859c8788fd2855a13c716d7_mark.avif"
+                                loading="lazy" class="trail-item__img"></div>
+                        <div data-trail="item" class="trail-item"><img
+                                src="www.anthemcreative.ca/6835ef94fba7ee7ef42e8357/685d6411063c3f9af54d6f67_graeme_!.avif"
+                                loading="lazy" class="trail-item__img"></div>
+                        <div data-trail="item" class="trail-item"><img
+                                src="www.anthemcreative.ca/6835ef94fba7ee7ef42e8357/685b0fe93dd7270ba91598e4_erin_1.avif"
+                                loading="lazy" class="trail-item__img"></div>
+                        <div data-trail="item" class="trail-item"><img
+                                src="www.anthemcreative.ca/6835ef94fba7ee7ef42e8357/685b1d5656e20177d52d2a55_david_1.avif"
+                                loading="lazy" class="trail-item__img"></div>
+                        <div data-trail="item" class="trail-item"><img
+                                src="www.anthemcreative.ca/6835ef94fba7ee7ef42e8357/685b1d582c037b9abd235da9_Jake_1.avif"
+                                loading="lazy" class="trail-item__img"></div>
+                        <div data-trail="item" class="trail-item"><img
+                                src="www.anthemcreative.ca/6835ef94fba7ee7ef42e8357/685b1d57d68454614fad2877_kevin_!.avif"
+                                loading="lazy" class="trail-item__img"></div>
+                        <div data-trail="item" class="trail-item"><img
+                                src="www.anthemcreative.ca/6835ef94fba7ee7ef42e8357/685b1d5b7e593937495290a2_morgan_1.avif"
+                                loading="lazy" class="trail-item__img"></div>
+                        <div data-trail="item" class="trail-item"><img
+                                src="www.anthemcreative.ca/6835ef94fba7ee7ef42e8357/685b1d59079858364526d83c_Leks_1.avif"
+                                loading="lazy" class="trail-item__img"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- ===== End Elevate Trail Section ===== -->
             <section class="services services-3">
                 <div class="section-inner-block">
                     <div class="services-inner section-padding">
@@ -1361,10 +1213,10 @@
                                                                                                 class="link-button-text-box">
                                                                                                 <div
                                                                                                     class="link-button-text text-one">
-                                                                                                    Maiores alias</div>
+                                                                                                    EXPLORE</div>
                                                                                                 <div
                                                                                                     class="link-button-text text-two">
-                                                                                                    Consequatur aut
+                                                                                                    EXPLORE
                                                                                                 </div>
                                                                                             </div>
                                                                                             <div
@@ -1427,10 +1279,10 @@
                                                                                                 class="link-button-text-box">
                                                                                                 <div
                                                                                                     class="link-button-text text-one">
-                                                                                                    Ipsum aliqua</div>
+                                                                                                    EXPLORE</div>
                                                                                                 <div
                                                                                                     class="link-button-text text-two">
-                                                                                                    Commodo deserunt
+                                                                                                    EXPLORE
                                                                                                 </div>
                                                                                             </div>
                                                                                             <div
@@ -1493,11 +1345,11 @@
                                                                                                 class="link-button-text-box">
                                                                                                 <div
                                                                                                     class="link-button-text text-one">
-                                                                                                    Quibusdam officiis
+                                                                                                    EXPLORE
                                                                                                 </div>
                                                                                                 <div
                                                                                                     class="link-button-text text-two">
-                                                                                                    Debitis rerum</div>
+                                                                                                    EXPLORE</div>
                                                                                             </div>
                                                                                             <div
                                                                                                 class="link-button-line">
@@ -1559,10 +1411,10 @@
                                                                                                 class="link-button-text-box">
                                                                                                 <div
                                                                                                     class="link-button-text text-one">
-                                                                                                    Aut reiciendis</div>
+                                                                                                    EXPLORE</div>
                                                                                                 <div
                                                                                                     class="link-button-text text-two">
-                                                                                                    Voluptatibus maiores
+                                                                                                    EXPLORE
                                                                                                 </div>
                                                                                             </div>
                                                                                             <div
@@ -1611,55 +1463,27 @@
                                                     class="loop-block">
                                                     <div class="loop-item">
                                                         <div class="loop-item-inner">
-                                                            <div class="loop-item-text">Programs</div>
+                                                            <div class="loop-item-text">Explore</div>
                                                         </div>
                                                     </div>
                                                     <div class="loop-item">
                                                         <div class="loop-item-inner">
-                                                            <div class="loop-item-text">Programs</div>
+                                                            <div class="loop-item-text">Explore</div>
                                                         </div>
                                                     </div>
                                                     <div class="loop-item">
                                                         <div class="loop-item-inner">
-                                                            <div class="loop-item-text">Programs</div>
+                                                            <div class="loop-item-text">Explore</div>
                                                         </div>
                                                     </div>
                                                     <div class="loop-item">
                                                         <div class="loop-item-inner">
-                                                            <div class="loop-item-text">Programs</div>
+                                                            <div class="loop-item-text">Explore</div>
                                                         </div>
                                                     </div>
                                                     <div class="loop-item">
                                                         <div class="loop-item-inner">
-                                                            <div class="loop-item-text">Programs</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div style="-webkit-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
-                                                    class="loop-block">
-                                                    <div class="loop-item">
-                                                        <div class="loop-item-inner">
-                                                            <div class="loop-item-text">Programs</div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="loop-item">
-                                                        <div class="loop-item-inner">
-                                                            <div class="loop-item-text">Programs</div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="loop-item">
-                                                        <div class="loop-item-inner">
-                                                            <div class="loop-item-text">Programs</div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="loop-item">
-                                                        <div class="loop-item-inner">
-                                                            <div class="loop-item-text">Programs</div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="loop-item">
-                                                        <div class="loop-item-inner">
-                                                            <div class="loop-item-text">Programs</div>
+                                                            <div class="loop-item-text">Explore</div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1667,27 +1491,55 @@
                                                     class="loop-block">
                                                     <div class="loop-item">
                                                         <div class="loop-item-inner">
-                                                            <div class="loop-item-text">Programs</div>
+                                                            <div class="loop-item-text">Explore</div>
                                                         </div>
                                                     </div>
                                                     <div class="loop-item">
                                                         <div class="loop-item-inner">
-                                                            <div class="loop-item-text">Programs</div>
+                                                            <div class="loop-item-text">Explore</div>
                                                         </div>
                                                     </div>
                                                     <div class="loop-item">
                                                         <div class="loop-item-inner">
-                                                            <div class="loop-item-text">Programs</div>
+                                                            <div class="loop-item-text">Explore</div>
                                                         </div>
                                                     </div>
                                                     <div class="loop-item">
                                                         <div class="loop-item-inner">
-                                                            <div class="loop-item-text">Programs</div>
+                                                            <div class="loop-item-text">Explore</div>
                                                         </div>
                                                     </div>
                                                     <div class="loop-item">
                                                         <div class="loop-item-inner">
-                                                            <div class="loop-item-text">Programs</div>
+                                                            <div class="loop-item-text">Explore</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div style="-webkit-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
+                                                    class="loop-block">
+                                                    <div class="loop-item">
+                                                        <div class="loop-item-inner">
+                                                            <div class="loop-item-text">Explore</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="loop-item">
+                                                        <div class="loop-item-inner">
+                                                            <div class="loop-item-text">Explore</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="loop-item">
+                                                        <div class="loop-item-inner">
+                                                            <div class="loop-item-text">Explore</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="loop-item">
+                                                        <div class="loop-item-inner">
+                                                            <div class="loop-item-text">Explore</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="loop-item">
+                                                        <div class="loop-item-inner">
+                                                            <div class="loop-item-text">Explore</div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1710,8 +1562,8 @@
                                                                         <div class="programs-info">
                                                                             <div class="programs-info-flex">
                                                                                 <div class="programs-title-box">
-                                                                                    <div class="programs-title">Our
-                                                                                        Programs</div>
+                                                                                    <div class="programs-title">Students
+                                                                                        & Youth</div>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -1737,18 +1589,18 @@
                                                                                                                 class="programs-extra-main-title-box">
                                                                                                                 <div
                                                                                                                     class="programs-extra-main-title">
-                                                                                                                    Aute
-                                                                                                                    irure
+                                                                                                                    Students
+                                                                                                                    &
+                                                                                                                    Youth
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                             <div
                                                                                                                 class="programs-extra-main-tag-box">
                                                                                                                 <div
                                                                                                                     class="programs-extra-main-tag">
-                                                                                                                    Dolor
-                                                                                                                    in
-                                                                                                                    reprehenderit
-                                                                                                                    in
+                                                                                                                    Where
+                                                                                                                    it
+                                                                                                                    begins
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                         </div>
@@ -1765,17 +1617,16 @@
                                                                                                     class="programs-extra-desc-box">
                                                                                                     <p
                                                                                                         class="programs-extra-desc">
-                                                                                                        Voluptate velit
-                                                                                                        esse cillum
-                                                                                                        dolore eu fugiat
-                                                                                                        nulla pariatur
-                                                                                                        Excepteur sint
-                                                                                                        occaecat
-                                                                                                        cupidatat non
-                                                                                                        proident sunt in
-                                                                                                        culpa qui
-                                                                                                        officia deserunt
-                                                                                                        mollit</p>
+                                                                                                        A space where
+                                                                                                        movement becomes
+                                                                                                        expression,
+                                                                                                        helping young
+                                                                                                        minds build
+                                                                                                        confidence,
+                                                                                                        energy, and a
+                                                                                                        connection to
+                                                                                                        what they truly
+                                                                                                        enjoy.</p>
                                                                                                 </div>
                                                                                                 <div
                                                                                                     class="programs-extra-features-box">
@@ -1787,12 +1638,13 @@
                                                                                                                 class="programs-2-features-item-flex">
                                                                                                                 <div
                                                                                                                     class="programs-2-features-label">
-                                                                                                                    Anim
+                                                                                                                    Movement
                                                                                                                 </div>
                                                                                                                 <div
                                                                                                                     class="programs-2-features-text">
-                                                                                                                    Id
-                                                                                                                    est
+                                                                                                                    Fun
+                                                                                                                    &
+                                                                                                                    engaging
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                         </div>
@@ -1802,12 +1654,13 @@
                                                                                                                 class="programs-2-features-item-flex">
                                                                                                                 <div
                                                                                                                     class="programs-2-features-label">
-                                                                                                                    Laborum
+                                                                                                                    Mind
                                                                                                                 </div>
                                                                                                                 <div
                                                                                                                     class="programs-2-features-text">
-                                                                                                                    Sed
-                                                                                                                    ut
+                                                                                                                    Confidence
+                                                                                                                    &
+                                                                                                                    clarity
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                         </div>
@@ -1817,13 +1670,13 @@
                                                                                                                 class="programs-2-features-item-flex">
                                                                                                                 <div
                                                                                                                     class="programs-2-features-label">
-                                                                                                                    Perspiciatis
+                                                                                                                    Growth
                                                                                                                 </div>
                                                                                                                 <div
                                                                                                                     class="programs-2-features-text">
-                                                                                                                    Unde
-                                                                                                                    omnis
-                                                                                                                    iste
+                                                                                                                    Discovering
+                                                                                                                    passion
+                                                                                                                    early
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                         </div>
@@ -1833,15 +1686,10 @@
                                                                                                     class="programs-extra-desc-box">
                                                                                                     <p
                                                                                                         class="programs-extra-desc">
-                                                                                                        Natus error sit
-                                                                                                        voluptatem
-                                                                                                        accusantium
-                                                                                                        doloremque
-                                                                                                        laudantium totam
-                                                                                                        rem aperiam
-                                                                                                        eaque ipsa quae
-                                                                                                        ab illo
-                                                                                                        inventore</p>
+                                                                                                        Not just
+                                                                                                        activity. A
+                                                                                                        starting point.
+                                                                                                    </p>
                                                                                                 </div>
                                                                                                 <div
                                                                                                     class="programs-extra-button-box">
@@ -1856,13 +1704,15 @@
                                                                                                                     class="button-text-box">
                                                                                                                     <div
                                                                                                                         class="button-text text-one">
-                                                                                                                        Veritatis
-                                                                                                                        et
+                                                                                                                        Explore
+                                                                                                                        for
+                                                                                                                        Kids
                                                                                                                     </div>
                                                                                                                     <div
                                                                                                                         class="button-text text-two">
-                                                                                                                        Quasi
-                                                                                                                        architecto
+                                                                                                                        Explore
+                                                                                                                        for
+                                                                                                                        Kids
                                                                                                                     </div>
                                                                                                                 </div>
                                                                                                                 <div
@@ -1892,11 +1742,12 @@
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="programs-desc-box">
-                                                                                    <p class="programs-desc">Beatae
-                                                                                        vitae dicta sunt explicabo Nemo
-                                                                                        enim ipsam voluptatem quia
-                                                                                        voluptas sit aspernatur aut odit
-                                                                                        aut</p>
+                                                                                    <p class="programs-desc">A space
+                                                                                        where movement becomes
+                                                                                        expression, helping young minds
+                                                                                        build confidence, energy, and a
+                                                                                        connection to what they truly
+                                                                                        enjoy.</p>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -1921,8 +1772,8 @@
                                                                         <div class="programs-info">
                                                                             <div class="programs-info-flex">
                                                                                 <div class="programs-title-box">
-                                                                                    <div class="programs-title">Ou
-                                                                                        Programs</div>
+                                                                                    <div class="programs-title">Adults &
+                                                                                        Professionals</div>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -1948,18 +1799,18 @@
                                                                                                                 class="programs-extra-main-title-box">
                                                                                                                 <div
                                                                                                                     class="programs-extra-main-title">
-                                                                                                                    Quia
-                                                                                                                    consequuntur
+                                                                                                                    Adults
+                                                                                                                    &
+                                                                                                                    Professionals
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                             <div
                                                                                                                 class="programs-extra-main-tag-box">
                                                                                                                 <div
                                                                                                                     class="programs-extra-main-tag">
-                                                                                                                    Magni
-                                                                                                                    dolores
-                                                                                                                    eos
-                                                                                                                    qui
+                                                                                                                    Find
+                                                                                                                    your
+                                                                                                                    balance
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                         </div>
@@ -1976,16 +1827,16 @@
                                                                                                     class="programs-extra-desc-box">
                                                                                                     <p
                                                                                                         class="programs-extra-desc">
-                                                                                                        Ratione
-                                                                                                        voluptatem sequi
-                                                                                                        nesciunt Neque
-                                                                                                        porro quisquam
-                                                                                                        est qui dolorem
-                                                                                                        ipsum quia dolor
-                                                                                                        sit amet
-                                                                                                        consectetur
-                                                                                                        adipisci velit
-                                                                                                        sed quia non</p>
+                                                                                                        Designed to
+                                                                                                        break routine,
+                                                                                                        reduce stress,
+                                                                                                        and bring energy
+                                                                                                        back into
+                                                                                                        everyday life
+                                                                                                        through movement
+                                                                                                        that feels
+                                                                                                        natural and
+                                                                                                        sustainable.</p>
                                                                                                 </div>
                                                                                                 <div
                                                                                                     class="programs-extra-features-box">
@@ -1997,12 +1848,13 @@
                                                                                                                 class="programs-2-features-item-flex">
                                                                                                                 <div
                                                                                                                     class="programs-2-features-label">
-                                                                                                                    Numquam
+                                                                                                                    Body
                                                                                                                 </div>
                                                                                                                 <div
                                                                                                                     class="programs-2-features-text">
-                                                                                                                    Eius
-                                                                                                                    modi
+                                                                                                                    Strength
+                                                                                                                    &
+                                                                                                                    flexibility
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                         </div>
@@ -2012,11 +1864,13 @@
                                                                                                                 class="programs-2-features-item-flex">
                                                                                                                 <div
                                                                                                                     class="programs-2-features-label">
-                                                                                                                    Tempora
+                                                                                                                    Mind
                                                                                                                 </div>
                                                                                                                 <div
                                                                                                                     class="programs-2-features-text">
-                                                                                                                    Incidunt
+                                                                                                                    Strength
+                                                                                                                    &
+                                                                                                                    flexibility
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                         </div>
@@ -2026,13 +1880,12 @@
                                                                                                                 class="programs-2-features-item-flex">
                                                                                                                 <div
                                                                                                                     class="programs-2-features-label">
-                                                                                                                    Ut
+                                                                                                                    Lifestyle
                                                                                                                 </div>
                                                                                                                 <div
                                                                                                                     class="programs-2-features-text">
-                                                                                                                    Labore
-                                                                                                                    et
-                                                                                                                    dolore
+                                                                                                                    Consistent
+                                                                                                                    energy
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                         </div>
@@ -2042,14 +1895,9 @@
                                                                                                     class="programs-extra-desc-box">
                                                                                                     <p
                                                                                                         class="programs-extra-desc">
-                                                                                                        Magnam aliquam
-                                                                                                        quaerat
-                                                                                                        voluptatem vitae
-                                                                                                        suscipit
-                                                                                                        laboriosam nisi
-                                                                                                        voluptatibus
-                                                                                                        repudiandae
-                                                                                                        recusandae
+                                                                                                        Built for real
+                                                                                                        life, not
+                                                                                                        routines.
                                                                                                     </p>
                                                                                                 </div>
                                                                                                 <div
@@ -2065,13 +1913,15 @@
                                                                                                                     class="button-text-box">
                                                                                                                     <div
                                                                                                                         class="button-text text-one">
-                                                                                                                        Itaque
-                                                                                                                        earum
+                                                                                                                        Explore
+                                                                                                                        for
+                                                                                                                        Adults
                                                                                                                     </div>
                                                                                                                     <div
                                                                                                                         class="button-text text-two">
-                                                                                                                        Rerum
-                                                                                                                        hic
+                                                                                                                        Explore
+                                                                                                                        for
+                                                                                                                        Adults
                                                                                                                     </div>
                                                                                                                 </div>
                                                                                                                 <div
@@ -2101,11 +1951,12 @@
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="programs-desc-box">
-                                                                                    <p class="programs-desc">Tenetur
-                                                                                        sapiente delectus reiciendis
-                                                                                        voluptatibus maiores alias
-                                                                                        consequatur aut perferendis
-                                                                                        doloribus</p>
+                                                                                    <p class="programs-desc">Designed to
+                                                                                        break routine, reduce stress,
+                                                                                        and bring energy back into
+                                                                                        everyday life through movement
+                                                                                        that feels natural and
+                                                                                        sustainable.</p>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -2131,8 +1982,8 @@
                                                                         <div class="programs-info">
                                                                             <div class="programs-info-flex">
                                                                                 <div class="programs-title-box">
-                                                                                    <div class="programs-title">Our
-                                                                                        Programs</div>
+                                                                                    <div class="programs-title">
+                                                                                        Communities & Spaces</div>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -2158,18 +2009,17 @@
                                                                                                                 class="programs-extra-main-title-box">
                                                                                                                 <div
                                                                                                                     class="programs-extra-main-title">
-                                                                                                                    Similique
-                                                                                                                    sunt
-                                                                                                                    culpa
+                                                                                                                    Communities
+                                                                                                                    &
+                                                                                                                    Spaces
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                             <div
                                                                                                                 class="programs-extra-main-tag-box">
                                                                                                                 <div
                                                                                                                     class="programs-extra-main-tag">
-                                                                                                                    Officia
-                                                                                                                    deserunt
-                                                                                                                    mollitia
+                                                                                                                    Shared
+                                                                                                                    energy
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                         </div>
@@ -2186,24 +2036,17 @@
                                                                                                     class="programs-extra-desc-box">
                                                                                                     <p
                                                                                                         class="programs-extra-desc">
-                                                                                                        Animi id est
-                                                                                                        laborum
-                                                                                                        perspiciatis
-                                                                                                        veniam
-                                                                                                        consequatur
-                                                                                                        exercitationem
-                                                                                                        ipsum aliqua
-                                                                                                        commodo deserunt
-                                                                                                        perferendis
-                                                                                                        natus maxime
-                                                                                                        placeat facere
-                                                                                                        possimus omnis
-                                                                                                        voluptas
-                                                                                                        assumenda est
-                                                                                                        omnis dolor
-                                                                                                        repellendus
-                                                                                                        temporibus autem
-                                                                                                        quibusdam
+                                                                                                        From events to
+                                                                                                        wellness
+                                                                                                        programs, ZAS
+                                                                                                        creates
+                                                                                                        collective
+                                                                                                        experiences that
+                                                                                                        bring people
+                                                                                                        together through
+                                                                                                        movement,
+                                                                                                        rhythm, and
+                                                                                                        connection.
                                                                                                     </p>
                                                                                                 </div>
                                                                                                 <div
@@ -2216,12 +2059,13 @@
                                                                                                                 class="programs-2-features-item-flex">
                                                                                                                 <div
                                                                                                                     class="programs-2-features-label">
-                                                                                                                    Officiis
+                                                                                                                    Access
                                                                                                                 </div>
                                                                                                                 <div
                                                                                                                     class="programs-2-features-text">
-                                                                                                                    Debitis
-                                                                                                                    rerum
+                                                                                                                    Open
+                                                                                                                    to
+                                                                                                                    all
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                         </div>
@@ -2231,11 +2075,12 @@
                                                                                                                 class="programs-2-features-item-flex">
                                                                                                                 <div
                                                                                                                     class="programs-2-features-label">
-                                                                                                                    Necessitatibus
+                                                                                                                    Experience
                                                                                                                 </div>
                                                                                                                 <div
                                                                                                                     class="programs-2-features-text">
-                                                                                                                    Saepe
+                                                                                                                    Engaging
+                                                                                                                    sessions
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                         </div>
@@ -2245,13 +2090,12 @@
                                                                                                                 class="programs-2-features-item-flex">
                                                                                                                 <div
                                                                                                                     class="programs-2-features-label">
-                                                                                                                    Eveniet
+                                                                                                                    Impact
                                                                                                                 </div>
                                                                                                                 <div
                                                                                                                     class="programs-2-features-text">
-                                                                                                                    Ut
-                                                                                                                    et
-                                                                                                                    voluptates
+                                                                                                                    Real
+                                                                                                                    connection
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                         </div>
@@ -2261,15 +2105,9 @@
                                                                                                     class="programs-extra-desc-box">
                                                                                                     <p
                                                                                                         class="programs-extra-desc">
-                                                                                                        Repudiandae sint
-                                                                                                        molestiae non
-                                                                                                        recusandae
-                                                                                                        itaque earum
-                                                                                                        rerum hic
-                                                                                                        tenetur sapiente
-                                                                                                        delectus ut aut
-                                                                                                        reiciendis
-                                                                                                        voluptatibus</p>
+                                                                                                        Movement that
+                                                                                                        connects people.
+                                                                                                    </p>
                                                                                                 </div>
                                                                                                 <div
                                                                                                     class="programs-extra-button-box">
@@ -2284,13 +2122,15 @@
                                                                                                                     class="button-text-box">
                                                                                                                     <div
                                                                                                                         class="button-text text-one">
-                                                                                                                        Maiores
-                                                                                                                        alias
+                                                                                                                        Collaborate
+                                                                                                                        with
+                                                                                                                        ZAS
                                                                                                                     </div>
                                                                                                                     <div
                                                                                                                         class="button-text text-two">
-                                                                                                                        Consequatur
-                                                                                                                        aut
+                                                                                                                        Collaborate
+                                                                                                                        with
+                                                                                                                        ZAS
                                                                                                                     </div>
                                                                                                                 </div>
                                                                                                                 <div
@@ -2320,11 +2160,12 @@
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="programs-desc-box">
-                                                                                    <p class="programs-desc">Perferendis
-                                                                                        doloribus asperiores repellat
-                                                                                        Lorem ipsum dolor sit amet
-                                                                                        consectetur adipiscing elit sed
-                                                                                        do eiusmod tempor
+                                                                                    <p class="programs-desc">From events
+                                                                                        to wellness programs, ZAS
+                                                                                        creates collective experiences
+                                                                                        that bring people together
+                                                                                        through movement, rhythm, and
+                                                                                        connection.
                                                                                     </p>
                                                                                 </div>
                                                                             </div>
@@ -2339,7 +2180,7 @@
                                         </div>
                                         <div class="programs-links">
                                             <div class="programs-link-box"><a href="programs.html"
-                                                    class="programs-link">Incididunt ut</a></div>
+                                                    class="programs-link">Explore</a></div>
                                         </div>
                                     </div>
                                 </div>
@@ -3191,7 +3032,8 @@
                     </div>
                 </div>
             </section>
-            <section class="pricing">
+            <!-- PRICING SECTION -->
+            <!-- <section class="pricing">
                 <div class="section-inner-block">
                     <div class="pricing-inner section-padding-4">
                         <div class="w-layout-blockcontainer container-full w-container">
@@ -4398,8 +4240,9 @@
                             </div>
                         </div>
                     </div>
-            </section>
-            <section class="find-out">
+            </section> -->
+
+            <!-- <section class="find-out">
                 <div class="section-inner-block">
                     <div data-w-id="efbb7d87-c45a-5012-9490-36fa80f6998e" class="find-out-inner">
                         <div class="w-layout-blockcontainer container w-container">
@@ -4496,7 +4339,7 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
         </div>
         <section class="footer">
             <div class="section-inner-block">
@@ -4620,7 +4463,8 @@
                                             <div class="footer-info-block">
                                                 <div class="footer-info-list">
                                                     <div class="footer-desc-box">
-                                                        <p class="footer-desc">ZAS creates movement that people can feel—for adults and children alike.</p>
+                                                        <p class="footer-desc">ZAS creates movement that people can
+                                                            feel—for adults and children alike.</p>
                                                     </div>
                                                     <div class="footer-desc-box">
                                                         <p class="footer-desc">Bring this experience to your space.</p>
@@ -4670,7 +4514,8 @@
                                                             </a>
                                                         </div>
                                                         <div class="footer-nav-item">
-                                                            <a href="team-page.html" class="footer-nav-link w-inline-block">
+                                                            <a href="team-page.html"
+                                                                class="footer-nav-link w-inline-block">
                                                                 <div class="footer-nav-text top">Team</div>
                                                                 <div class="footer-nav-text bottom">Team</div>
                                                             </a>
@@ -4749,7 +4594,8 @@
                                                             loading="lazy" alt="social icon"
                                                             class="social-icon light" />
                                                     </a>
-                                                    <a href="https://www.instagram.com/zas.wellness/?utm_source=ig_web_button_share_sheet" target="_blank" class="social-item w-inline-block">
+                                                    <a href="https://www.instagram.com/zas.wellness/?utm_source=ig_web_button_share_sheet"
+                                                        target="_blank" class="social-item w-inline-block">
                                                         <div class="social-background"></div><img
                                                             src="https://cdn.prod.website-files.com/691ea5c2d38e36d02b948f36/69205312fcfec62df9831e2b_instagram-dark.svg"
                                                             loading="lazy" alt="social icon"
@@ -4890,178 +4736,180 @@
     <script src="js/webflow-init.js" type="text/javascript"></script>
 
     <script>
-    /**
-     * ELEVATE TRAIL & REVEAL LOGIC
-     * Scoped safely to avoid breaking Webflow core interactions.
-     */
-    (function() {
-        // Safe Plugin Registration
-        function registerPlugins() {
-            if (window.gsap && window.ScrollTrigger && window.SplitText) {
-                gsap.registerPlugin(ScrollTrigger, SplitText);
-                return true;
+        /**
+         * ELEVATE TRAIL & REVEAL LOGIC
+         * Scoped safely to avoid breaking Webflow core interactions.
+         */
+        (function () {
+            // Safe Plugin Registration
+            function registerPlugins() {
+                if (window.gsap && window.ScrollTrigger && window.SplitText) {
+                    gsap.registerPlugin(ScrollTrigger, SplitText);
+                    return true;
+                }
+                return false;
             }
-            return false;
-        }
 
-        function initImageTrail(options={}){
-            const config = { 
-                minWidth: options.minWidth || 992, 
-                moveDistance: options.moveDistance || 12,
-                stopDuration: options.stopDuration || 800,
-                trailLength: options.trailLength || 10 
-            };
-            const wrapper = document.querySelector('[data-trail="wrapper"]');
-            if(!wrapper) return;
-            if(window.innerWidth < config.minWidth) return;
-            
-            const state = { 
-                trailInterval: null, globalIndex: 0, last: {x:0, y:0}, 
-                trailImageTimestamps: new Map(), 
-                trailImages: Array.from(wrapper.querySelectorAll('[data-trail="item"]')), 
-                isActive: false 
-            };
-            
-            if (state.trailImages.length === 0) return;
-            const utils = { distance: (x1, y1, x2, y2) => Math.hypot(x2-x1, y2-y1) };
+            function initImageTrail(options = {}) {
+                const config = {
+                    minWidth: options.minWidth || 992,
+                    moveDistance: options.moveDistance || 12,
+                    stopDuration: options.stopDuration || 800,
+                    trailLength: options.trailLength || 10
+                };
+                const wrapper = document.querySelector('[data-trail="wrapper"]');
+                if (!wrapper) return;
+                if (window.innerWidth < config.minWidth) return;
 
-            function showImage(el, x, y){
-                if(!el) return;
-                try {
-                    if(el.offsetWidth === 0) gsap.set(el, { display: "block" });
-                    const w = el.offsetWidth || 200;
-                    const h = el.offsetHeight || 266;
-                    
-                    Object.assign(el.style, { 
-                        left: (x - w/2) + "px", top: (y - h/2) + "px", 
-                        zIndex: state.globalIndex + 100, display: "block"
+                const state = {
+                    trailInterval: null, globalIndex: 0, last: { x: 0, y: 0 },
+                    trailImageTimestamps: new Map(),
+                    trailImages: Array.from(wrapper.querySelectorAll('[data-trail="item"]')),
+                    isActive: false
+                };
+
+                if (state.trailImages.length === 0) return;
+                const utils = { distance: (x1, y1, x2, y2) => Math.hypot(x2 - x1, y2 - y1) };
+
+                function showImage(el, x, y) {
+                    if (!el) return;
+                    try {
+                        if (el.offsetWidth === 0) gsap.set(el, { display: "block" });
+                        const w = el.offsetWidth || 200;
+                        const h = el.offsetHeight || 266;
+
+                        Object.assign(el.style, {
+                            left: (x - w / 2) + "px", top: (y - h / 2) + "px",
+                            zIndex: state.globalIndex + 100, display: "block"
+                        });
+
+                        state.trailImageTimestamps.set(el, Date.now());
+                        gsap.fromTo(el,
+                            { autoAlpha: 0, scale: 0.5, rotation: Math.random() * 10 - 5 },
+                            { scale: 1, rotation: 0, autoAlpha: 1, duration: 0.4, ease: "back.out(1.7)", overwrite: true }
+                        );
+                    } catch (e) { console.error("Trail showImage error:", e); }
+                }
+
+                function hideImage(el) {
+                    if (!el) return;
+                    gsap.to(el, {
+                        autoAlpha: 0, scale: 0.2, duration: 0.8, ease: "power2.inOut",
+                        onComplete: () => {
+                            if (!state.trailImageTimestamps.has(el)) gsap.set(el, { display: "none" });
+                        }
                     });
-                    
-                    state.trailImageTimestamps.set(el, Date.now());
-                    gsap.fromTo(el, 
-                        { autoAlpha: 0, scale: 0.5, rotation: Math.random() * 10 - 5 }, 
-                        { scale: 1, rotation: 0, autoAlpha: 1, duration: 0.4, ease: "back.out(1.7)", overwrite: true }
-                    );
-                } catch(e) { console.error("Trail showImage error:", e); }
+                }
+
+                function onMouseMove(e) {
+                    if (!state.isActive) return;
+                    const wrapRect = wrapper.getBoundingClientRect();
+                    const x = e.clientX - wrapRect.left;
+                    const y = e.clientY - wrapRect.top;
+                    if (utils.distance(x, y, state.last.x, state.last.y) > window.innerWidth / config.moveDistance) {
+                        const nextImg = state.trailImages[state.globalIndex % state.trailImages.length];
+                        showImage(nextImg, x, y);
+                        state.globalIndex++;
+                        state.last = { x, y };
+                    }
+                }
+
+                function cleanupObsolete() {
+                    const now = Date.now();
+                    for (const [el, time] of state.trailImageTimestamps.entries()) {
+                        if (now - time > config.stopDuration) {
+                            hideImage(el);
+                            state.trailImageTimestamps.delete(el);
+                        }
+                    }
+                }
+
+                function activate() {
+                    if (!state.isActive) {
+                        state.isActive = true;
+                        wrapper.addEventListener("mousemove", onMouseMove);
+                        state.trailInterval = setInterval(cleanupObsolete, 50);
+                    }
+                }
+
+                function deactivate() {
+                    if (state.isActive) {
+                        state.isActive = false;
+                        wrapper.removeEventListener("mousemove", onMouseMove);
+                        clearInterval(state.trailInterval);
+                        state.trailImages.forEach(hideImage);
+                        state.trailImageTimestamps.clear();
+                    }
+                }
+
+                ScrollTrigger.create({
+                    trigger: wrapper, start: "top bottom", end: "bottom top",
+                    onEnter: activate, onEnterBack: activate, onLeave: deactivate, onLeaveBack: deactivate
+                });
+
+                window.addEventListener("resize", () => {
+                    if (window.innerWidth < config.minWidth && state.isActive) deactivate();
+                    else if (window.innerWidth >= config.minWidth && !state.isActive) activate();
+                });
+                if (window.innerWidth >= config.minWidth) activate();
             }
 
-            function hideImage(el){
-                if(!el) return;
-                gsap.to(el, { 
-                    autoAlpha: 0, scale: 0.2, duration: 0.8, ease: "power2.inOut", 
-                    onComplete: () => {
-                        if(!state.trailImageTimestamps.has(el)) gsap.set(el, { display: "none" });
-                    }
+            function initTextReveals() {
+                document.querySelectorAll('[data-split-reveal]').forEach(el => {
+                    try {
+                        const type = el.dataset.splitReveal;
+                        const split = new SplitText(el, {
+                            type: "lines,words,chars",
+                            linesClass: "split-line", wordsClass: "split-word", charsClass: "split-char"
+                        });
+
+                        const targets = (type === "chars") ? split.chars : (type === "words" ? split.words : split.lines);
+                        gsap.set(el, { autoAlpha: 1 });
+
+                        const tl = gsap.timeline({
+                            scrollTrigger: {
+                                trigger: el, start: "top 90%", toggleActions: "play none none none"
+                            }
+                        });
+
+                        tl.from(targets, {
+                            yPercent: 100, autoAlpha: 0, duration: 1.2,
+                            stagger: type === "chars" ? 0.03 : 0.1, ease: "expo.out"
+                        });
+
+                        if (type === "chars") {
+                            tl.from(targets, {
+                                rotationX: -90, transformOrigin: "50% 50% -50px",
+                                duration: 1, stagger: 0.03, ease: "power2.out"
+                            }, 0);
+                        }
+                    } catch (e) { console.error("Text reveal error:", e); }
                 });
             }
 
-            function onMouseMove(e){
-                if(!state.isActive) return;
-                const wrapRect = wrapper.getBoundingClientRect();
-                const x = e.clientX - wrapRect.left;
-                const y = e.clientY - wrapRect.top;
-                if(utils.distance(x, y, state.last.x, state.last.y) > window.innerWidth / config.moveDistance){
-                    const nextImg = state.trailImages[state.globalIndex % state.trailImages.length];
-                    showImage(nextImg, x, y);
-                    state.globalIndex++;
-                    state.last = {x, y};
-                }
-            }
-
-            function cleanupObsolete(){
-                const now = Date.now();
-                for(const [el, time] of state.trailImageTimestamps.entries()){
-                    if(now - time > config.stopDuration){ 
-                        hideImage(el); 
-                        state.trailImageTimestamps.delete(el); 
+            // Initialize when ready, but defer secondary logic to prioritize hero intro on mobile
+            document.addEventListener("DOMContentLoaded", () => {
+                setTimeout(() => {
+                    if (registerPlugins()) {
+                        initImageTrail();
+                        initTextReveals();
+                    } else {
+                        // Fallback for async load
+                        let retryCount = 0;
+                        const retry = setInterval(() => {
+                            if (registerPlugins() || retryCount > 10) {
+                                clearInterval(retry);
+                                if (retryCount <= 10) {
+                                    initImageTrail();
+                                    initTextReveals();
+                                }
+                            }
+                            retryCount++;
+                        }, 100);
                     }
-                }
-            }
-
-            function activate(){ 
-                if(!state.isActive){ 
-                    state.isActive = true; 
-                    wrapper.addEventListener("mousemove", onMouseMove); 
-                    state.trailInterval = setInterval(cleanupObsolete, 50); 
-                } 
-            }
-            
-            function deactivate(){ 
-                if(state.isActive){ 
-                    state.isActive = false; 
-                    wrapper.removeEventListener("mousemove", onMouseMove); 
-                    clearInterval(state.trailInterval); 
-                    state.trailImages.forEach(hideImage); 
-                    state.trailImageTimestamps.clear(); 
-                } 
-            }
-
-            ScrollTrigger.create({ 
-                trigger: wrapper, start: "top bottom", end: "bottom top", 
-                onEnter: activate, onEnterBack: activate, onLeave: deactivate, onLeaveBack: deactivate 
+                }, 500);
             });
-
-            window.addEventListener("resize", () => {
-                if(window.innerWidth < config.minWidth && state.isActive) deactivate();
-                else if(window.innerWidth >= config.minWidth && !state.isActive) activate();
-            });
-            if(window.innerWidth >= config.minWidth) activate();
-        }
-
-        function initTextReveals() {
-            document.querySelectorAll('[data-split-reveal]').forEach(el => {
-                try {
-                    const type = el.dataset.splitReveal;
-                    const split = new SplitText(el, { 
-                        type: "lines,words,chars", 
-                        linesClass: "split-line", wordsClass: "split-word", charsClass: "split-char" 
-                    });
-                    
-                    const targets = (type === "chars") ? split.chars : (type === "words" ? split.words : split.lines);
-                    gsap.set(el, { autoAlpha: 1 });
-                    
-                    const tl = gsap.timeline({
-                        scrollTrigger: {
-                            trigger: el, start: "top 90%", toggleActions: "play none none none"
-                        }
-                    });
-
-                    tl.from(targets, {
-                        yPercent: 100, autoAlpha: 0, duration: 1.2,
-                        stagger: type === "chars" ? 0.03 : 0.1, ease: "expo.out"
-                    });
-
-                    if (type === "chars") {
-                        tl.from(targets, {
-                            rotationX: -90, transformOrigin: "50% 50% -50px",
-                            duration: 1, stagger: 0.03, ease: "power2.out"
-                        }, 0);
-                    }
-                } catch(e) { console.error("Text reveal error:", e); }
-            });
-        }
-
-        // Initialize when ready
-        document.addEventListener("DOMContentLoaded", () => {
-            if (registerPlugins()) {
-                initImageTrail();
-                initTextReveals();
-            } else {
-                // Fallback for async load
-                let retryCount = 0;
-                const retry = setInterval(() => {
-                    if (registerPlugins() || retryCount > 10) {
-                        clearInterval(retry);
-                        if (retryCount <= 10) {
-                            initImageTrail();
-                            initTextReveals();
-                        }
-                    }
-                    retryCount++;
-                }, 100);
-            }
-        });
-    })();
+        })();
     </script>
 
 </body>
