@@ -22,42 +22,61 @@
         }
     }
 
-    // ─── 2. Services nav button highlight (active state on click) ────────────
+    // ─── 2. Services nav button highlight & content switch ──────────────────
     function setupServicesNavHighlight() {
-        // All four nav inner items
         var navItems = document.querySelectorAll('.services-nav-item-inner');
+        var contentItems = document.querySelectorAll('.services-item-box');
         if (!navItems.length) return;
 
-        // The CSS already styles .item-one with the active (dark) look.
-        // We replicate that exact inline style on click for any button,
-        // and reset all others — without touching classes or layout.
-        var ACTIVE_BG   = 'var(--_colors---primary)';
-        var ACTIVE_FG   = 'var(--_colors---tertiary)';
-        var DEFAULT_BG  = '';
-        var DEFAULT_FG  = '';
-
-        function setActive(target) {
-            navItems.forEach(function(item) {
-                if (item === target) {
-                    item.style.backgroundColor = ACTIVE_BG;
-                    item.style.color           = ACTIVE_FG;
+        function setActive(index) {
+            // 1. Update Buttons
+            navItems.forEach(function(item, i) {
+                if (i === index) {
+                    item.classList.add('active');
+                    // We still set inline styles to ensure it overrides any Webflow base styles
+                    item.style.backgroundColor = '#000000';
+                    item.style.color = '#ffffff';
                 } else {
-                    item.style.backgroundColor = DEFAULT_BG;
-                    item.style.color           = DEFAULT_FG;
+                    item.classList.remove('active');
+                    item.style.backgroundColor = '';
+                    item.style.color = '';
+                }
+            });
+
+            // 2. Update Content (Image/Description)
+            contentItems.forEach(function(content, i) {
+                if (i === index) {
+                    // Show active content
+                    content.style.display = 'block';
+                    content.style.position = 'relative';
+                    content.style.opacity = '0';
+                    // Simple fade-in animation
+                    var opacity = 0;
+                    var timer = setInterval(function() {
+                        if (opacity >= 1) {
+                            clearInterval(timer);
+                        }
+                        content.style.opacity = opacity;
+                        opacity += 0.1;
+                    }, 20);
+                } else {
+                    // Hide other content
+                    content.style.display = 'none';
+                    content.style.position = 'absolute';
                 }
             });
         }
 
-        navItems.forEach(function(item) {
+        navItems.forEach(function(item, index) {
             item.style.cursor = 'pointer';
-            item.addEventListener('click', function() {
-                setActive(item);
+            item.addEventListener('click', function(e) {
+                e.preventDefault();
+                setActive(index);
             });
         });
 
-        // Keep item-one active by default on page load (matches the CSS default)
-        var itemOne = document.querySelector('.services-nav-item-inner.item-one');
-        if (itemOne) setActive(itemOne);
+        // Initialize first item as active
+        setActive(0);
     }
 
     // ─── 3. Make footer "Book Your Session" loop clickable ──────────────────
