@@ -947,7 +947,7 @@ strong {
 .social-item {
   border: 1px solid var(--color-black);
   border-radius: var(--_radius---radius-circle);
-  background-color: transparent;
+  background-color: var(--color-black);
   flex-flow: column;
   justify-content: center;
   align-items: center;
