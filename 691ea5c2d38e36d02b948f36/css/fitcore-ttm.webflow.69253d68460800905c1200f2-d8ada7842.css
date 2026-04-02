@@ -353,7 +353,7 @@ strong {
 
 .fixed-menu-icon-box {
   border-radius: var(--_radius---radius-large);
-  background-color: var(--color-white);
+  background-color: var(--color-black);
   flex-flow: column;
   justify-content: center;
   align-items: center;
@@ -458,7 +458,7 @@ strong {
 
 .button-icon-box {
   border-radius: var(--_radius---radius-large);
-  background-color: var(--color-white);
+  background-color: var(--color-black);
   flex-flow: column;
   flex: none;
   justify-content: center;

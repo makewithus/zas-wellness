@@ -412,7 +412,7 @@ strong {
 
 .fixed-menu-icon-box {
   border-radius: var(--_radius---radius-large);
-  background-color: var(--color-white);
+  background-color: var(--color-black);
   flex-flow: column;
   justify-content: center;
   align-items: center;
@@ -620,7 +620,7 @@ strong {
 
 .button-icon-box {
   border-radius: var(--_radius---radius-large);
-  background-color: var(--color-white);
+  background-color: var(--color-black);
   flex-flow: column;
   flex: none;
   justify-content: center;
@@ -1120,7 +1120,7 @@ strong {
 }
 
 .ratings-numbers {
-  color: var(--color-white);
+  color: var(--color-black);
   font-size: var(--body--body-font-size-small);
   line-height: var(--body--body-line-height-small);
   font-weight: var(--font-weight--font-weight-semibold);

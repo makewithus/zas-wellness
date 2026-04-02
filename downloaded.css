@@ -324,18 +324,10 @@ strong {
   float: none;
 }
 
-.nav-menu {
-  background-color: var(--color-black);
-}
-
 .logo {
   object-fit: contain;
   width: 100%;
   height: auto;
-}
-
-.nav-main-menu {
-  display: none;
 }
 
 .site-navigation {
@@ -344,45 +336,6 @@ strong {
   display: flex;
 }
 
-.nav-fixed-menu {
-  max-width: 138px;
-  position: fixed;
-  inset: auto auto 50px 50%;
-  transform: translate(-50%);
-}
-
-.fixed-menu-block {
-  position: relative;
-}
-
-.fixed-menu-open-close {
-  border: 1px solid var(--color-text-primary);
-  border-radius: var(--_radius---radius-medium);
-  background-color: var(--color-text-primary);
-  cursor: pointer;
-  padding: 5px;
-  position: relative;
-  overflow: hidden;
-}
-
-.fixed-menu-open-close-flex {
-  flex-flow: row;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-}
-
-.fixed-menu-wrap {
-  -webkit-backdrop-filter: blur(30px);
-  backdrop-filter: blur(30px);
-  transform-origin: 50% 100%;
-  width: 100vw;
-  height: 100vh;
-  display: none;
-  position: absolute;
-  inset: auto auto -50px calc(60px - 50vw);
-  overflow: hidden;
-}
 
 .fixed-menu-content {
   flex-flow: column;
@@ -2582,7 +2535,7 @@ strong {
 
 .footer-color-overlays {
   border-radius: var(--_radius---radius-extra-large);
-  background-color: #000c;
+  background-color: rgba(238, 238, 238, 0.8);
   position: absolute;
   inset: 0%;
 }
