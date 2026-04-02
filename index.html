@@ -108,6 +108,35 @@
 
 
     <style>
+        /* ====== Services Nav Item Active State Fix ====== */
+        .services-nav-item-inner {
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease !important;
+        }
+
+        /* Target the active/clicked state which Webflow IX2 often sets via inline styles or .w--current */
+        .services-nav-item-inner.w--current,
+        .services-nav-item-inner.w--active,
+        .services-nav-item-inner.active,
+        .services-nav-item-inner.is-active,
+        .services-nav-item-inner[style*="background-color: rgb(0, 0, 0)"],
+        .services-nav-item-inner[style*="background-color: #000"],
+        .services-nav-item-inner[style*="background-color: black"],
+        .services-nav-item-inner[style*="background-color:rgb(0,0,0)"] {
+            color: #ffffff !important;
+            border-color: #ffffff !important;
+        }
+
+        .services-nav-item-inner.w--current .services-nav-item-title,
+        .services-nav-item-inner.w--active .services-nav-item-title,
+        .services-nav-item-inner.active .services-nav-item-title,
+        .services-nav-item-inner.is-active .services-nav-item-title,
+        .services-nav-item-inner[style*="background-color: rgb(0, 0, 0)"] .services-nav-item-title,
+        .services-nav-item-inner[style*="background-color: #000"] .services-nav-item-title,
+        .services-nav-item-inner[style*="background-color: black"] .services-nav-item-title,
+        .services-nav-item-inner[style*="background-color:rgb(0,0,0)"] .services-nav-item-title {
+            color: #ffffff !important;
+        }
+
         /* ====== Elevate Trail Section CSS ====== */
         .trail-section {
             justify-content: center;
