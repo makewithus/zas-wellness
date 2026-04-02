@@ -264,10 +264,12 @@ strong {
   justify-content: flex-end;
   height: calc(100vh - 20px);
   display: flex;
+  
 }
 
 .hero-content-wrap {
   height: 64%;
+  background-image: url("image/hero-bg.png");
 }
 
 .hero-content-flex {
