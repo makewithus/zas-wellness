@@ -1443,7 +1443,7 @@ strong {
 
 .footer-color-overlays {
   border-radius: var(--_radius---radius-extra-large);
-  background-color: var(--gradient-primary)c;
+  background-color: #ffffff3b;
   position: absolute;
   inset: 0%;
 }

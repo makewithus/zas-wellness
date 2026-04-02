@@ -562,11 +562,14 @@
                     justify-content: flex-start;
                     gap: 1.5rem;
                     padding-top: 4.5rem;
+                    position: relative; /* Added for hook image layout */
                 }
 
                 .homepage_hero-top-left {
                     flex: 0 0 auto;
                     margin-right: -0.5rem;
+                    position: relative;
+                    z-index: 2;
                 }
 
                 .hero-brand-words {
@@ -587,6 +590,8 @@
                     margin-top: 0.6rem;
                     margin-right: 1.5rem;
                     min-width: 50px;
+                    position: relative;
+                    z-index: 2;
                 }
 
                 .homepage_hero-line.mobile-vertical {
@@ -599,6 +604,8 @@
                     display: flex;
                     flex-direction: column;
                     gap: 1.75rem;
+                    position: relative;
+                    z-index: 2;
                 }
 
                 .hero-desc-text {
@@ -641,17 +648,18 @@
                     width: 100%;
                     margin: 0;
                     padding-bottom: 0;
-                    overflow: hidden;
+                    overflow: visible;
+                    z-index: 10;
                 }
 
                 .split-animate {
                     font-family: 'Inter';
                     /* "zas wellness" = ~12 chars: font-size scaled from tetherup(8) to fit edge-to-edge */
-                    font-size: clamp(3rem, 15vw, 16rem);
+                    font-size: clamp(3rem, 12.5vw, 16rem);
                     font-weight: 900;
                     line-height: 0.88;
                     letter-spacing: -0.02em;
-                    text-transform: lowercase;
+                    text-transform: uppercase;
                     color: var(--color-white);
                     margin: 0;
                     padding: 0;
@@ -768,7 +776,7 @@
                 .anthem-page-transition-overlay {
                     position: fixed;
                     inset: 0;
-                    background: var(--color-text-primary);
+                    background: var(--gradient-accent);
                     height: 100%;
                     width: 100%;
                     z-index: 9999;
@@ -795,6 +803,62 @@
                 }
 
                 /* ===== End Hero char clip wrappers ===== */
+
+                .hero-right-overlay {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 1;
+                    pointer-events: none;
+                }
+
+                .hero-right-overlay img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: right;
+                    opacity: 0.5;
+                }
+
+                .hero-hook-image-wrap {
+                    position: absolute;
+                    top: 50%;
+                    left: 45%;
+                    transform: translate(-50%, -50%);
+                    width: 70%;
+                    max-width: 1000px;
+                    height: auto;
+                    z-index: 1;
+                    pointer-events: none;
+                    opacity: 0.3;
+                    mix-blend-mode: lighten;
+                    opacity: 0;
+                }
+
+                .hero-hook-image-wrap img {
+                    width: 100%;
+                    height: auto;
+                    object-fit: contain;
+                }
+
+                @media screen and (max-width: 767px) {
+                    .hero-hook-image-wrap {
+                        width: 120%;
+                        left: 50%;
+                        opacity: 0.2;
+                        opacity: 0;
+                    }
+                }
+
+                .homepage-hero-component {
+                    width: 100%;
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                }
             </style>
             <!-- Page Transition Overlay (Anthem-style yellow wipe) -->
             <div class="anthem-page-transition-overlay" id="anthem-overlay"></div>
@@ -803,6 +867,10 @@
                 <div class="scroll_target">
                     <header class="section_hero">
 
+                        <div class="hero-right-overlay">
+                            <img src="image/bg.png" alt="overlay bg" />
+                        </div>
+
                         <div class="padding-global">
                             <div class="container-large">
 
@@ -810,17 +878,21 @@
                                     <div class="homepage-hero-component">
                                         <div class="w-layout-grid homepage_hero">
                                             <div class="homepage_hero-top" id="anthem-hero-top">
+                                                <div class="hero-hook-image-wrap">
+                                                    <img src="image/bg.png" alt="Hero Hook" />
+                                                </div>
 
                                                 <div class="homepage_hero-top-left">
-
+                                                    
                                                     <div class="hero-brand-words">ZAS<br>WELLNESS</div>
+                                                   
                                                 </div>
                                                 <div class="homepage_hero-line"></div>
                                                 <div data-w-id="1ac5f44a-5200-9fd8-bf55-b73e20a6e675"
                                                     class="homepage_hero-line mobile-vertical"></div>
                                                 <div class="homepage_hero-top-right">
                                                     <div class="hero-desc-text">
-                                                        What if movement wasn't just exercise — but something you feel?
+                                                        What if movement wasn't just exercise, but something you feel?
 
                                                         At ZAS, it becomes energy, rhythm, and a way of living that
                                                         stays.
@@ -831,6 +903,7 @@
                                                         <div class="stagger-item stagger-3">Become.</div>
                                                     </div>
                                                 </div>
+                                               
                                             </div>
                                             <div class="homepage-hero-bottom">
                                                 <h1 class="split-animate" id="anthem-hero-h1">ZAS WELLNESS</h1>
@@ -902,8 +975,9 @@
                         var heroH1 = document.getElementById('anthem-hero-h1');
                         if (!overlay || !heroTop || !heroH1) return;
 
+                        var header = document.querySelector('.header');
                         var topItems = heroTop.querySelectorAll(
-                            '.homepage_hero-top-left, .homepage_hero-line, .hero-desc-text, .stagger-item'
+                            '.homepage_hero-top-left, .homepage_hero-line, .hero-desc-text, .stagger-item, .hero-video-bento'
                         );
                         var chars = splitH1Chars(heroH1);
 
@@ -941,15 +1015,23 @@
                             stagger: 0.045
                         }, '-=0.7');
 
-                        // Phase 4 — Menu button visibility toggle
+                        // Phase 4 — Fixed Menu Button initial reveal
                         var fixedMenu = document.querySelector('.fixed-menu-open-close');
                         if (fixedMenu) {
-                            gsap.set(fixedMenu, { autoAlpha: 0 }); // Intially hide the menu wrapper
+                            // Fade in the fixed menu button along with the other branding
+                            gsap.fromTo(fixedMenu, { autoAlpha: 0 }, { 
+                                autoAlpha: 1, 
+                                duration: 1, 
+                                ease: 'power3.out',
+                                delay: 1.5 // Show after the main transition is well underway
+                            });
+
                             window.addEventListener('scroll', function () {
                                 if (window.scrollY > window.innerHeight * 0.45) {
                                     gsap.to(fixedMenu, { autoAlpha: 1, duration: 0.3 });
                                 } else {
-                                    gsap.to(fixedMenu, { autoAlpha: 0, duration: 0.3 });
+                                    // Optional: Keep it visible even at the top if the user prefers
+                                    // gsap.to(fixedMenu, { autoAlpha: 0, duration: 0.3 }); 
                                 }
                             });
                         }
@@ -1332,7 +1414,8 @@
                                                                                     <div class="services-desc-box">
                                                                                         <p class="services-desc">
                                                                                             Designed for modern
-                                                                                            lifestyles — reducing stress,
+                                                                                            lifestyles — reducing
+                                                                                            stress,
                                                                                             improving focus, and
                                                                                             bringing energy back into
                                                                                             everyday work life.</p>
