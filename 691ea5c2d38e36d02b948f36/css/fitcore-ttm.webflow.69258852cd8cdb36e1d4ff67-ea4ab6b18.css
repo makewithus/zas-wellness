@@ -1,10 +1,10 @@
 :root {
-  --fonts--body-font-family: Inter, sans-serif;
+  --fonts--body-font-family: Inter;
   --_colors---text-one: #6b6b6b;
   --body--body-font-size: 16px;
   --body--body-line-height: 26px;
   --font-weight--font-weight-regular: 400;
-  --fonts--heading-font-family: Montserrat, sans-serif;
+  --fonts--heading-font-family: Montserrat;
   --_colors---secondary: #181717;
   --h1--h1-font-size: 60px;
   --h1--h1-line-height: 70px;
@@ -1671,11 +1671,11 @@ strong {
 
 @media screen and (min-width: 1280px) {
   body {
-    --fonts--body-font-family: Inter, sans-serif;
+    --fonts--body-font-family: Inter;
     --body--body-font-size: 16px;
     --body--body-line-height: 26px;
     --font-weight--font-weight-regular: 400;
-    --fonts--heading-font-family: Montserrat, sans-serif;
+    --fonts--heading-font-family: Montserrat;
     --h1--h1-font-size: 70px;
     --h1--h1-line-height: 80px;
     --font-weight--font-weight-semibold: 600;
@@ -1864,11 +1864,11 @@ strong {
 
 @media screen and (min-width: 1440px) {
   body {
-    --fonts--body-font-family: Inter, sans-serif;
+    --fonts--body-font-family: Inter;
     --body--body-font-size: 16px;
     --body--body-line-height: 26px;
     --font-weight--font-weight-regular: 400;
-    --fonts--heading-font-family: Montserrat, sans-serif;
+    --fonts--heading-font-family: Montserrat;
     --h1--h1-font-size: 78px;
     --h1--h1-line-height: 88px;
     --font-weight--font-weight-semibold: 600;
@@ -2012,11 +2012,11 @@ strong {
 
 @media screen and (min-width: 1920px) {
   body {
-    --fonts--body-font-family: Inter, sans-serif;
+    --fonts--body-font-family: Inter;
     --body--body-font-size: 16px;
     --body--body-line-height: 26px;
     --font-weight--font-weight-regular: 400;
-    --fonts--heading-font-family: Montserrat, sans-serif;
+    --fonts--heading-font-family: Montserrat;
     --h1--h1-font-size: 78px;
     --h1--h1-line-height: 88px;
     --font-weight--font-weight-semibold: 600;
@@ -2125,11 +2125,11 @@ strong {
 
 @media screen and (max-width: 991px) {
   body {
-    --fonts--body-font-family: Inter, sans-serif;
+    --fonts--body-font-family: Inter;
     --body--body-font-size: 15px;
     --body--body-line-height: 26px;
     --font-weight--font-weight-regular: 400;
-    --fonts--heading-font-family: Montserrat, sans-serif;
+    --fonts--heading-font-family: Montserrat;
     --h1--h1-font-size: 50px;
     --h1--h1-line-height: 60px;
     --font-weight--font-weight-semibold: 600;
@@ -2792,11 +2792,11 @@ strong {
 
 @media screen and (max-width: 767px) {
   body {
-    --fonts--body-font-family: Inter, sans-serif;
+    --fonts--body-font-family: Inter;
     --body--body-font-size: 15px;
     --body--body-line-height: 26px;
     --font-weight--font-weight-regular: 400;
-    --fonts--heading-font-family: Montserrat, sans-serif;
+    --fonts--heading-font-family: Montserrat;
     --h1--h1-font-size: 42px;
     --h1--h1-line-height: 52px;
     --font-weight--font-weight-semibold: 600;
@@ -3084,11 +3084,11 @@ strong {
 
 @media screen and (max-width: 479px) {
   body {
-    --fonts--body-font-family: Inter, sans-serif;
+    --fonts--body-font-family: Inter;
     --body--body-font-size: 15px;
     --body--body-line-height: 26px;
     --font-weight--font-weight-regular: 400;
-    --fonts--heading-font-family: Montserrat, sans-serif;
+    --fonts--heading-font-family: Montserrat;
     --h1--h1-font-size: 28px;
     --h1--h1-line-height: 38px;
     --font-weight--font-weight-semibold: 600;
@@ -3450,3 +3450,6 @@ strong {
     grid-column: span 1 / span 1;
   }
 }
+
+
+
