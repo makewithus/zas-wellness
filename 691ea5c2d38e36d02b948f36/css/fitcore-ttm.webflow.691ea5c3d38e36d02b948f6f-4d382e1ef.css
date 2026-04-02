@@ -2,7 +2,7 @@
   --fonts--body-font-family: Inter;
   --_colors---text-one: #6b6b6b;
   --body--body-font-size: 16px;
-  --body--body-line-height: 26px;
+  --body--body-line-height: 16px;
   --font-weight--font-weight-regular: 400;
   --fonts--heading-font-family: Montserrat;
   --_colors---secondary: #181717;
@@ -3023,7 +3023,7 @@ strong {
   body {
     --fonts--body-font-family: Inter;
     --body--body-font-size: 16px;
-    --body--body-line-height: 26px;
+    --body--body-line-height: 16px;
     --font-weight--font-weight-regular: 400;
     --fonts--heading-font-family: Montserrat;
     --h1--h1-font-size: 70px;
@@ -3216,7 +3216,7 @@ strong {
   body {
     --fonts--body-font-family: Inter;
     --body--body-font-size: 16px;
-    --body--body-line-height: 26px;
+    --body--body-line-height: 16px;
     --font-weight--font-weight-regular: 400;
     --fonts--heading-font-family: Montserrat;
     --h1--h1-font-size: 78px;
@@ -3364,7 +3364,7 @@ strong {
   body {
     --fonts--body-font-family: Inter;
     --body--body-font-size: 16px;
-    --body--body-line-height: 26px;
+    --body--body-line-height: 16px;
     --font-weight--font-weight-regular: 400;
     --fonts--heading-font-family: Montserrat;
     --h1--h1-font-size: 78px;
@@ -3477,7 +3477,7 @@ strong {
   body {
     --fonts--body-font-family: Inter;
     --body--body-font-size: 15px;
-    --body--body-line-height: 26px;
+    --body--body-line-height: 16px;
     --font-weight--font-weight-regular: 400;
     --fonts--heading-font-family: Montserrat;
     --h1--h1-font-size: 50px;
@@ -4144,7 +4144,7 @@ strong {
   body {
     --fonts--body-font-family: Inter;
     --body--body-font-size: 15px;
-    --body--body-line-height: 26px;
+    --body--body-line-height: 16px;
     --font-weight--font-weight-regular: 400;
     --fonts--heading-font-family: Montserrat;
     --h1--h1-font-size: 42px;
@@ -4436,7 +4436,7 @@ strong {
   body {
     --fonts--body-font-family: Inter;
     --body--body-font-size: 15px;
-    --body--body-line-height: 26px;
+    --body--body-line-height: 16px;
     --font-weight--font-weight-regular: 400;
     --fonts--heading-font-family: Montserrat;
     --h1--h1-font-size: 28px;
