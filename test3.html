@@ -27,11 +27,9 @@
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <meta content="1nparj5QmHqPyY1pHIuevLbkzAxa38EQwLyqvaprOVY" name="google-site-verification" />
     <meta content="Webflow" name="generator" />
-    <link
-        href="https://cdn.prod.website-files.com/691ea5c2d38e36d02b948f36/css/fitcore-ttm.webflow.shared.8948b5576.css"
-        rel="stylesheet" type="text/css" />
-    <link
-        href="https://cdn.prod.website-files.com/691ea5c2d38e36d02b948f36/css/fitcore-ttm.webflow.691ea5c3d38e36d02b948f6f-4d382e1ef.css"
+    <link href="691ea5c2d38e36d02b948f36/css/fitcore-ttm.webflow.shared.8948b5576.css" rel="stylesheet"
+        type="text/css" />
+    <link href="691ea5c2d38e36d02b948f36/css/fitcore-ttm.webflow.691ea5c3d38e36d02b948f6f-4d382e1ef.css"
         rel="stylesheet" type="text/css" />
     <style>
         @media (min-width:992px) {
@@ -93,7 +91,7 @@
             n.className += t + "js", ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch")
         }(window, document);
     </script>
-        <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
     <link rel="manifest" href="favicon/site.webmanifest">
@@ -104,9 +102,162 @@
             display: none !important;
         }
     </style>
+
+
+
+
+
+
+    <style>
+        /* ====== Services Nav Item Active State Fix ====== */
+        .services-nav-item-inner {
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease !important;
+        }
+
+        /* Target the active/clicked state which Webflow IX2 often sets via inline styles or .w--current */
+        .services-nav-item-inner.active,
+        .services-nav-item-inner.w--current,
+        .services-nav-item-inner.w--active {
+            background-color: #000000 !important;
+            color: #ffffff !important;
+            border-color: #ffffff !important;
+        }
+
+        .services-nav-item-inner.active .services-nav-item-title,
+        .services-nav-item-inner.w--current .services-nav-item-title,
+        .services-nav-item-inner.w--active .services-nav-item-title {
+            color: #ffffff !important;
+        }
+
+        /* ====== Elevate Trail Section CSS ====== */
+        .trail-section {
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            position: relative;
+            background: var(--gradient-primary);
+            overflow: hidden;
+        }
+
+        .trail-wrap {
+            z-index: 5;
+            pointer-events: none;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            inset: 0%;
+        }
+
+        .trail-list {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .trail-item {
+            opacity: 0;
+            border-radius: 0.3125em;
+            width: 15vw;
+            max-width: 250px;
+            aspect-ratio: 3/4;
+            position: absolute;
+            overflow: hidden;
+        }
+
+        .trail-item__img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+
+        .amplify_headline {
+            letter-spacing: -3px;
+            font-size: clamp(4rem, 10vw, 12rem);
+            line-height: 1.3;
+            color: var(--color-white);
+            text-transform: uppercase;
+            font-weight: 800;
+        }
+
+        .amplify_superscript {
+            font-size: 2rem;
+            position: absolute;
+        }
+
+        /* Structural CSS for inner content */
+        .intro-content-wrapper {
+            grid-column-gap: 5rem;
+            grid-row-gap: 5rem;
+            flex-flow: column;
+            width: 100%;
+            display: flex;
+            z-index: 10;
+            position: relative;
+        }
+
+        .intro-content-wrapper.amplify_good {
+            grid-column-gap: 2rem;
+            grid-row-gap: 2rem;
+        }
+
+        .intro_content-top {
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+
+        .intro_content-bottom.right {
+            justify-content: flex-end;
+            align-items: flex-start;
+            display: flex;
+            padding-top: 2rem;
+        }
+
+        .max-width-small {
+            width: 100%;
+            max-width: 38rem;
+        }
+
+        .text-size-medium {
+            font-size: 1.5rem;
+            line-height: 1.4;
+            color: var(--color-white);
+            opacity: 0.8;
+        }
+
+        .padding-global {
+            padding-left: 5vw;
+            padding-right: 5vw;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        /* Staggered Reveal CSS */
+        .split-char {
+            overflow: hidden;
+            vertical-align: bottom;
+        }
+
+        /* Removed .fixed-menu-open-close styles to prevent Webflow IX interference */
+
+        /* Enforce hidden state until user scrolls past hero */
+        body.hero-is-visible .fixed-menu-open-close {
+            opacity: 0 !important;
+            visibility: hidden !important;
+            transform: translateY(-20px) scale(0.9) !important;
+            pointer-events: none !important;
+        }
+         
+        .fixed-menu-open-close {
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.8s !important;
+        }
+    </style>
+
 </head>
 
-<body class="body">
+<body class="body hero-is-visible">
     <div class="page">
         <section class="header">
             <div class="header-content">
@@ -116,13 +267,9 @@
                         <div class="site-navigation">
                             <div class="nav-logo">
                                 <a href="index.html" aria-current="page" class="logo-block w-nav-brand" target="_self">
-                                    <div class="nav-logo">
-                                        <a href="index.html" aria-current="page" class="logo-block w-nav-brand" target="_self">
-                                            <div class="logo"
-                                                style="font-family: 'Montserrat'; font-weight: 700; font-size: 32px; color: #fff; line-height: 1; text-transform: uppercase; letter-spacing: -1px;">
-                                                <img src="image/zaslogowhite.png">
-                                            </div>
-                                        </a>
+                                    <div class="logo"
+                                        style="font-family: 'Montserrat'; font-weight: 700; font-size: 32px; color: var(--color-white); line-height: 1; text-transform: uppercase; letter-spacing: -1px;">
+                                        <img src="image/zaslogowhite.png">
                                     </div>
                                 </a>
                             </div>
@@ -164,7 +311,7 @@
                                         </a>
                                     </div>
                                     <div class="nav-link-item">
-                                        <a href="programs.html" class="nav-link w-inline-block">
+                                        <a href="#" class="nav-link w-inline-block">
                                             <div class="nav-link-text top">Programs</div>
                                             <div class="nav-link-text bottom">Programs</div>
                                         </a>
@@ -303,7 +450,8 @@
                                                                         loading="lazy" alt="social icon"
                                                                         class="social-icon light" />
                                                                 </a>
-                                                                <a href="https://www.instagram.com/zas.wellness/?utm_source=ig_web_button_share_sheet" target="_blank"
+                                                                <a href="https://www.instagram.com/zas.wellness/?utm_source=ig_web_button_share_sheet"
+                                                                    target="_blank"
                                                                     class="social-item fixed-menu-icon w-inline-block">
                                                                     <div class="social-background"></div><img
                                                                         src="https://cdn.prod.website-files.com/691ea5c2d38e36d02b948f36/69205312fcfec62df9831e2b_instagram-dark.svg"
@@ -370,8 +518,9 @@
                 /* ===== Anthem Creative Hero — scoped styles ===== */
                 /* Override body bg to eliminate white side bars from page wrapper */
                 body.body {
-                    background-color: #181717;
+                    background-color: var(--color-black);
                 }
+
                 /* Full-bleed breakout: escapes the all-content wrapper completely */
                 .scroll_wrap {
                     position: relative;
@@ -383,31 +532,104 @@
                     max-width: 100vw;
                     overflow: visible;
                 }
+
                 .scroll_target {
                     position: relative;
                     width: 100%;
                 }
+
                 .section_hero {
                     position: relative;
                     width: 100%;
                     min-height: 100vh;
-                    background: #181717;
-                    color: #fff;
+                    background: var(--gradient-primary);
+                    color: var(--color-white);
                     display: flex;
                     flex-direction: column;
                     justify-content: flex-start;
                     box-sizing: border-box;
                     overflow: hidden;
+                    cursor: none;
                 }
+
+                /* Redundant local style removed as it's now in the head with !important */
+
+                /* ===== Flare Cursor — canvas wrapper (scoped to hero) ===== */
+                .hero-canvas-wrapper {
+                    position: absolute;
+                    inset: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 0;
+                    pointer-events: none;
+                }
+
+                .hero-canvas-wrapper canvas.fluid {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    inset: 0;
+                }
+
+                /* ===== Flare Cursor — main cursor circle ===== */
+                .main_cursor {
+                    z-index: 9999;
+                    opacity: 0;
+                    pointer-events: none;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    height: 100vh;
+                    display: flex;
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                }
+
+                .cursor_icon {
+                    width: 3rem;
+                    height: 3rem;
+                    aspect-ratio: 1;
+                    border-radius: 50%;
+                    background-color: rgba(255, 255, 255, 0.12);
+                    -webkit-backdrop-filter: blur(2px);
+                    backdrop-filter: blur(2px);
+                    color: #ffffff;
+                    justify-content: center;
+                    align-items: center;
+                    transition: transform 0.2s ease-in-out;
+                    display: flex;
+                    position: absolute;
+                    transform: translate(-50%, -50%);
+                    top: 0;
+                    left: 0;
+                }
+
+                /* Color swatches for WebGL fluid (hidden) */
+                .cursor-color-swatches {
+                    display: none;
+                }
+                #flarecolor1 { background-color: rgb(255, 101, 39); }
+                #flarecolor2 { background-color: rgb(239, 64, 64); }
+                #flarecolor3 { background-color: rgb(255, 180, 0); }
+
+                /* Hide native cursor inside hero on desktop only */
+                @media (pointer: coarse) {
+                    .main_cursor { display: none !important; }
+                    .section_hero { cursor: auto; }
+                }
+
                 .padding-global {
                     padding-left: 5%;
                     padding-right: 5%;
                 }
+
                 .container-large {
                     max-width: 1440px;
                     margin-left: auto;
                     margin-right: auto;
                 }
+
                 .padding-section-large.hero {
                     padding-top: 5rem;
                     padding-bottom: clamp(6rem, 18vw, 18rem);
@@ -417,6 +639,7 @@
                     justify-content: space-between;
                     box-sizing: border-box;
                 }
+
                 .homepage-hero-component {
                     width: 100%;
                     flex: 1;
@@ -424,6 +647,7 @@
                     flex-direction: column;
                     justify-content: space-between;
                 }
+
                 .homepage_hero {
                     display: grid;
                     grid-template-rows: auto 1fr;
@@ -431,6 +655,7 @@
                     height: 100%;
                     flex: 1;
                 }
+
                 /* Push top-row below navbar */
                 .homepage_hero-top {
                     display: flex;
@@ -438,60 +663,85 @@
                     justify-content: flex-start;
                     gap: 1.5rem;
                     padding-top: 4.5rem;
+                    position: relative; /* Added for hook image layout */
                 }
+
                 .homepage_hero-top-left {
                     flex: 0 0 auto;
                     margin-right: -0.5rem;
+                    position: relative;
+                    z-index: 2;
                 }
+
                 .hero-brand-words {
                     font-family: 'Inter';
                     font-size: 1.15rem;
                     font-weight: 700;
-                    line-height: 1.25;
-                    color: #fff;
+                    line-height: 1;
+                    color: var(--color-white);
                     white-space: nowrap;
                     margin-top: -0.2rem;
                 }
+
                 .homepage_hero-line {
                     flex: 1;
                     height: 1.5px;
-                    background: rgba(255,255,255,0.25);
+                    background: var(--color-white);
                     align-self: flex-start;
                     margin-top: 0.6rem;
                     margin-right: 1.5rem;
                     min-width: 50px;
+                    position: relative;
+                    z-index: 2;
                 }
+
                 .homepage_hero-line.mobile-vertical {
                     display: none;
                 }
+
                 .homepage_hero-top-right {
                     flex: 0 0 45%;
                     max-width: 580px;
                     display: flex;
                     flex-direction: column;
                     gap: 1.75rem;
+                    position: relative;
+                    z-index: 2;
                 }
+
                 .hero-desc-text {
                     font-family: 'Inter';
                     font-size: 1.25rem;
                     line-height: 1.45;
-                    color: rgba(255,255,255,0.95);
+                    color: var(--color-white);
                     margin: 0;
                 }
+
                 .hero-staggered-wrap {
                     display: flex;
                     flex-direction: column;
                     gap: 0.5rem;
                 }
+
                 .stagger-item {
                     font-family: 'Inter';
                     font-size: 1.3rem;
                     font-weight: 500;
-                    color: #fff;
+                    color: var(--color-white);
                 }
-                .stagger-1 { padding-left: 15%; }
-                .stagger-2 { padding-left: 35%; }
-                .stagger-3 { padding-left: 5%; }
+
+                .stagger-1 {
+                    padding-left: 15%;
+                }
+
+                .stagger-2 {
+                    padding-left: 35%;
+                }
+
+                .stagger-3 {
+                    padding-left: 5%;
+                }
+
                 .homepage-hero-bottom {
                     position: absolute;
                     left: 0;
@@ -499,17 +749,19 @@
                     width: 100%;
                     margin: 0;
                     padding-bottom: 0;
-                    overflow: hidden;
+                    overflow: visible;
+                    z-index: 10;
                 }
+
                 .split-animate {
                     font-family: 'Inter';
                     /* "zas wellness" = ~12 chars: font-size scaled from tetherup(8) to fit edge-to-edge */
-                    font-size: clamp(3rem, 15vw, 16rem);
+                    font-size: clamp(3rem, 12.5vw, 16rem);
                     font-weight: 900;
                     line-height: 0.88;
                     letter-spacing: -0.02em;
-                    text-transform: lowercase;
-                    color: #fff;
+                    text-transform: uppercase;
+                    color: var(--color-white);
                     margin: 0;
                     padding: 0;
                     display: block;
@@ -518,61 +770,82 @@
                     transform: scaleY(1.15);
                     transform-origin: bottom center;
                 }
+
                 .split-animate .tighter {
                     letter-spacing: -0.04em;
                 }
+
                 @media screen and (max-width: 1280px) {
                     .split-animate {
                         font-size: clamp(2.5rem, 13vw, 14rem);
                     }
                 }
+
                 @media screen and (max-width: 991px) {
                     .split-animate {
                         font-size: clamp(2.5rem, 12.5vw, 12rem);
                     }
+
                     .homepage_hero-top {
                         padding-top: 3.5rem;
                     }
                 }
+
                 @media screen and (max-width: 767px) {
                     .section_hero {
-                        min-height: auto;
+                        min-height: 100svh;
                     }
+
                     .homepage_hero-top {
                         flex-direction: column;
                         padding-top: 3.5rem;
                         align-items: stretch;
                         gap: 2rem;
                     }
+
                     .homepage_hero-top-left {
                         display: block;
                     }
+
                     .hero-brand-words {
                         font-size: 1rem;
                     }
+
                     .homepage_hero-line {
                         display: none;
                     }
+
                     .homepage_hero-line.mobile-vertical {
                         display: none;
                     }
+
                     .homepage_hero-top-right {
                         max-width: none;
                         flex: 1;
                         gap: 1.5rem;
                     }
+
                     .hero-desc-text {
-                        display: none;
+                        display: block;
+                        font-family: 'Inter';
+                        font-size: 1.15rem;
+                        line-height: 1.45;
+                        color: var(--color-white);
+                        max-width: 90%;
+                        margin: 0;
                     }
+
                     .stagger-item {
                         font-size: 1.15rem;
                     }
+
                     .padding-section-large.hero {
                         padding-top: 6rem;
                         padding-bottom: clamp(10rem, 28vw, 16rem);
-                        min-height: auto;
+                        min-height: 100svh;
                     }
-                    .homepage-hero-bottom {
+
+                    .homepage_hero-bottom {
                         position: absolute;
                         left: 0;
                         bottom: 0;
@@ -580,33 +853,40 @@
                         margin: 0;
                         overflow: hidden;
                     }
+
                     .split-animate {
-                        font-size: clamp(3.2rem, 14.5vw, 8rem);
+                        font-size: clamp(4rem, 18vw, 12rem);
                         padding: 0;
                         white-space: nowrap;
                         letter-spacing: -0.02em;
                         text-align: center;
+                        transform: scaleY(1.4);
+                        transform-origin: bottom center;
                     }
                 }
+
                 @media screen and (max-width: 480px) {
                     .split-animate {
                         font-size: clamp(2.8rem, 12vw, 5rem);
                     }
                 }
+
                 /* ===== End Anthem Creative Hero styles ===== */
 
                 /* ===== Page Transition Overlay ===== */
                 .anthem-page-transition-overlay {
                     position: fixed;
                     inset: 0;
-                    background: #FFED56;
+                    background: var(--gradient-accent);
                     height: 100%;
                     width: 100%;
                     z-index: 9999;
                     pointer-events: none;
                     transform-origin: top center;
+                    transform: scaleY(1);
                     will-change: transform;
                 }
+
                 /* ===== End Page Transition Overlay ===== */
 
                 /* ===== Hero char clip wrappers ===== */
@@ -616,12 +896,70 @@
                     vertical-align: bottom;
                     line-height: 0.9;
                 }
+
                 .anthem-char-inner {
                     display: inline-block;
                     line-height: 0.9;
                     will-change: transform;
                 }
+
                 /* ===== End Hero char clip wrappers ===== */
+
+                .hero-right-overlay {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 1;
+                    pointer-events: none;
+                }
+
+                .hero-right-overlay img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: right;
+                    opacity: 0.5;
+                }
+
+                .hero-hook-image-wrap {
+                    position: absolute;
+                    top: 50%;
+                    left: 45%;
+                    transform: translate(-50%, -50%);
+                    width: 70%;
+                    max-width: 1000px;
+                    height: auto;
+                    z-index: 1;
+                    pointer-events: none;
+                    opacity: 0.3;
+                    mix-blend-mode: lighten;
+                    opacity: 0;
+                }
+
+                .hero-hook-image-wrap img {
+                    width: 100%;
+                    height: auto;
+                    object-fit: contain;
+                }
+
+                @media screen and (max-width: 767px) {
+                    .hero-hook-image-wrap {
+                        width: 120%;
+                        left: 50%;
+                        opacity: 0.2;
+                        opacity: 0;
+                    }
+                }
+
+                .homepage-hero-component {
+                    width: 100%;
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                }
             </style>
             <!-- Page Transition Overlay (Anthem-style yellow wipe) -->
             <div class="anthem-page-transition-overlay" id="anthem-overlay"></div>
@@ -629,31 +967,52 @@
             <div class="scroll_wrap">
                 <div class="scroll_target">
                     <header class="section_hero">
+
+                        <!-- Flare Cursor WebGL Fluid Canvas -->
+                        <div class="hero-canvas-wrapper">
+                            <canvas data-splash="" class="fluid"></canvas>
+                        </div>
+
+                        <div class="hero-right-overlay">
+                            <img src="image/bg.png" alt="overlay bg" />
+                        </div>
+
                         <div class="padding-global">
                             <div class="container-large">
+
                                 <div class="padding-section-large hero">
                                     <div class="homepage-hero-component">
                                         <div class="w-layout-grid homepage_hero">
                                             <div class="homepage_hero-top" id="anthem-hero-top">
+                                                <div class="hero-hook-image-wrap">
+                                                    <img src="image/bg.png" alt="Hero Hook" />
+                                                </div>
+
                                                 <div class="homepage_hero-top-left">
-                                                    <div class="hero-brand-words">ZAS<br>Wellness</div>
+                                                    
+                                                    <div class="hero-brand-words">ZAS<br>WELLNESS</div>
+                                                   
                                                 </div>
                                                 <div class="homepage_hero-line"></div>
                                                 <div data-w-id="1ac5f44a-5200-9fd8-bf55-b73e20a6e675"
                                                     class="homepage_hero-line mobile-vertical"></div>
                                                 <div class="homepage_hero-top-right">
-                                                    <div class="hero-desc-text">
-                                                        At ZAS, we don't just move bodies. We awaken energy, rhythm, and a way of living that stays.
+                                                    <div class="hero-desc-text" >
+                                                        What if movement wasn't just exercise, but something you feel?
+
+                                                        At ZAS, it becomes energy, rhythm, and a way of living that
+                                                        stays.
                                                     </div>
                                                     <div class="hero-staggered-wrap">
                                                         <div class="stagger-item stagger-1">Move.</div>
                                                         <div class="stagger-item stagger-2">Create.</div>
-                                                        <div class="stagger-item stagger-3">Change the world.</div>
+                                                        <div class="stagger-item stagger-3">Become.</div>
                                                     </div>
                                                 </div>
+                                               
                                             </div>
                                             <div class="homepage-hero-bottom">
-                                                <h1 class="split-animate" id="anthem-hero-h1">zas wellness</h1>
+                                                <h1 class="split-animate" id="anthem-hero-h1">ZAS WELLNESS</h1>
                                             </div>
                                         </div>
                                     </div>
@@ -666,122 +1025,137 @@
             </div>
             <!-- End Anthem Creative Hero Section -->
 
+            <!-- ===== Flare Cursor Script (Slater — same as draper.vc) ===== -->
+            <!--🤙 https://slater.app/15192/40140.js-->
+            <script>document.addEventListener("DOMContentLoaded", function () { function loadflarecursorpublished(e) { let t = document.createElement("script"); t.setAttribute("src", e), t.setAttribute("type", "text/javascript"), document.body.appendChild(t), t.addEventListener("load", () => { console.log("Slater loaded Flare Cursor - published.js: https://slater.app/15192/40140.js 🤙") }), t.addEventListener("error", e => { console.log("Error loading file", e) }) } let src = window.location.host.includes("webflow.io") ? "https://slater.app/15192/40140.js" : "https://assets.slater.app/slater/15192/40140.js?v=1.0"; loadflarecursorpublished(src); })</script>
+
             <!-- ===== GSAP for Anthem Hero Animations ===== -->
             <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
             <script>
-            (function () {
-                'use strict';
+                (function () {
+                    'use strict';
 
-                // ── Anthem Hero Animation ─────────────────────────────────────────
-                // Mirrors the Anthem Creative homepage on-load sequence:
-                //  1. Yellow page-transition overlay wipes upward (scaleY 1→0, expo.inOut)
-                //  2. Top-row items fade + translateY up (staggered, power3.out)
-                //  3. h1 chars clip-slide up from below (staggered, expo.out)
+                    // ── Anthem Hero Animation ─────────────────────────────────────────
+                    // Mirrors the Anthem Creative homepage on-load sequence:
+                    //  1. Yellow page-transition overlay wipes upward (scaleY 1→0, expo.inOut)
+                    //  2. Top-row items fade + translateY up (staggered, power3.out)
+                    //  3. h1 chars clip-slide up from below (staggered, expo.out)
 
-                function splitH1Chars(h1) {
-                    var inners = [];
-                    var nodes = Array.prototype.slice.call(h1.childNodes);
-                    nodes.forEach(function (node) {
-                        if (node.nodeType === 3) {
-                            var text = node.textContent;
-                            var frag = document.createDocumentFragment();
-                            for (var i = 0; i < text.length; i++) {
-                                var outer = document.createElement('span');
-                                outer.className = 'anthem-char-outer';
-                                var inner = document.createElement('span');
-                                inner.className = 'anthem-char-inner';
-                                inner.textContent = text[i] === ' ' ? '\u00a0' : text[i];
-                                outer.appendChild(inner);
-                                frag.appendChild(outer);
-                                inners.push(inner);
-                            }
-                            node.parentNode.replaceChild(frag, node);
-                        } else if (node.nodeType === 1) {
-                            var raw = node.textContent;
-                            node.textContent = '';
-                            for (var j = 0; j < raw.length; j++) {
-                                var outer2 = document.createElement('span');
-                                outer2.className = 'anthem-char-outer';
-                                var inner2 = document.createElement('span');
-                                inner2.className = 'anthem-char-inner';
-                                inner2.textContent = raw[j] === ' ' ? '\u00a0' : raw[j];
-                                outer2.appendChild(inner2);
-                                node.appendChild(outer2);
-                                inners.push(inner2);
-                            }
-                        }
-                    });
-                    return inners;
-                }
-
-                function initAnthemHero() {
-                    if (!window.gsap) { setTimeout(initAnthemHero, 30); return; }
-
-                    var overlay  = document.getElementById('anthem-overlay');
-                    var heroTop  = document.getElementById('anthem-hero-top');
-                    var heroH1   = document.getElementById('anthem-hero-h1');
-                    if (!overlay || !heroTop || !heroH1) return;
-
-                    var topItems = heroTop.querySelectorAll(
-                        '.homepage_hero-top-left, .homepage_hero-line, .hero-desc-text, .stagger-item'
-                    );
-                    var chars = splitH1Chars(heroH1);
-
-                    // Initial states
-                    gsap.set(overlay,   { scaleY: 1, transformOrigin: 'top center' });
-                    gsap.set(topItems,  { opacity: 0, y: 35 });
-                    gsap.set(chars,     { y: '130%', opacity: 0 });
-
-                    // Timeline
-                    var tl = gsap.timeline({ delay: 0.1 });
-
-                    // Phase 1 — overlay wipes up
-                    tl.to(overlay, {
-                        scaleY: 0,
-                        duration: 1.1,
-                        ease: 'expo.inOut',
-                        onComplete: function () { overlay.style.display = 'none'; }
-                    });
-
-                    // Phase 2 — top row items + staggered words appear
-                    tl.to(topItems, {
-                        opacity: 1, y: 0,
-                        duration: 1.1,
-                        ease: 'power3.out',
-                        stagger: 0.12
-                    }, '-=0.5');
-
-                    // Phase 3 — h1 chars slide up smoothly
-                    tl.to(chars, {
-                        y: '0%',
-                        opacity: 1,
-                        duration: 1.25,
-                        ease: 'power4.out',
-                        stagger: 0.045
-                    }, '-=0.7');
-
-                    // Phase 4 — Menu button visibility toggle
-                    var fixedMenu = document.querySelector('.fixed-menu-open-close');
-                    if (fixedMenu) {
-                        gsap.set(fixedMenu, { autoAlpha: 0 }); // Intially hide the menu wrapper
-                        window.addEventListener('scroll', function() {
-                            if (window.scrollY > window.innerHeight * 0.45) {
-                                gsap.to(fixedMenu, { autoAlpha: 1, duration: 0.3 });
-                            } else {
-                                gsap.to(fixedMenu, { autoAlpha: 0, duration: 0.3 });
+                    function splitH1Chars(h1) {
+                        var inners = [];
+                        var nodes = Array.prototype.slice.call(h1.childNodes);
+                        nodes.forEach(function (node) {
+                            if (node.nodeType === 3) {
+                                var text = node.textContent;
+                                var frag = document.createDocumentFragment();
+                                for (var i = 0; i < text.length; i++) {
+                                    var outer = document.createElement('span');
+                                    outer.className = 'anthem-char-outer';
+                                    var inner = document.createElement('span');
+                                    inner.className = 'anthem-char-inner';
+                                    inner.textContent = text[i] === ' ' ? '\u00a0' : text[i];
+                                    outer.appendChild(inner);
+                                    frag.appendChild(outer);
+                                    inners.push(inner);
+                                }
+                                node.parentNode.replaceChild(frag, node);
+                            } else if (node.nodeType === 1) {
+                                var raw = node.textContent;
+                                node.textContent = '';
+                                for (var j = 0; j < raw.length; j++) {
+                                    var outer2 = document.createElement('span');
+                                    outer2.className = 'anthem-char-outer';
+                                    var inner2 = document.createElement('span');
+                                    inner2.className = 'anthem-char-inner';
+                                    inner2.textContent = raw[j] === ' ' ? '\u00a0' : raw[j];
+                                    outer2.appendChild(inner2);
+                                    node.appendChild(outer2);
+                                    inners.push(inner2);
+                                }
                             }
                         });
+                        return inners;
                     }
-                }
 
-                if (document.readyState === 'loading') {
-                    document.addEventListener('DOMContentLoaded', initAnthemHero);
-                } else {
-                    initAnthemHero();
-                }
-            })();
+                    function initAnthemHero() {
+                        if (!window.gsap) { setTimeout(initAnthemHero, 30); return; }
+
+                        var overlay = document.getElementById('anthem-overlay');
+                        var heroTop = document.getElementById('anthem-hero-top');
+                        var heroH1 = document.getElementById('anthem-hero-h1');
+                        if (!overlay || !heroTop || !heroH1) return;
+
+                        var header = document.querySelector('.header');
+                        var topItems = heroTop.querySelectorAll(
+                            '.homepage_hero-top-left, .homepage_hero-line, .hero-desc-text, .stagger-item, .hero-video-bento'
+                        );
+                        var chars = splitH1Chars(heroH1);
+
+                        // Initial states
+                        gsap.set(overlay, { scaleY: 1, transformOrigin: 'top center' });
+                        gsap.set(topItems, { opacity: 0, y: 35 });
+                        gsap.set(chars, { y: '130%', opacity: 0 });
+
+                        // Timeline
+                        var tl = gsap.timeline({ delay: 0.4 });
+
+                        // Phase 1 — overlay wipes up
+                        tl.to(overlay, {
+                            scaleY: 0,
+                            duration: 1.1,
+                            ease: 'expo.inOut',
+                            force3D: true,
+                            onComplete: function () { overlay.style.display = 'none'; }
+                        });
+
+                        // Phase 2 — top row items + staggered words appear
+                        tl.to(topItems, {
+                            opacity: 1, y: 0,
+                            duration: 1.1,
+                            ease: 'power3.out',
+                            stagger: 0.12
+                        }, '-=0.5');
+
+                        // Phase 3 — h1 chars slide up smoothly
+                        tl.to(chars, {
+                            y: '0%',
+                            opacity: 1,
+                            duration: 1.25,
+                            ease: 'power4.out',
+                            stagger: 0.045
+                        }, '-=0.7');
+
+                        // Phase 4 — Fixed Menu Button initial reveal
+                        var fixedMenu = document.querySelector('.fixed-menu-open-close');
+                        if (fixedMenu) {
+                            // Fade in the fixed menu button along with the other branding
+                            gsap.fromTo(fixedMenu, { autoAlpha: 0 }, { 
+                                autoAlpha: 1, 
+                                duration: 1, 
+                                ease: 'power3.out',
+                                delay: 1.5 // Show after the main transition is well underway
+                            });
+
+                            window.addEventListener('scroll', function () {
+                                if (window.scrollY > window.innerHeight * 0.45) {
+                                    gsap.to(fixedMenu, { autoAlpha: 1, duration: 0.3 });
+                                } else {
+                                    // Optional: Keep it visible even at the top if the user prefers
+                                    // gsap.to(fixedMenu, { autoAlpha: 0, duration: 0.3 }); 
+                                }
+                            });
+                        }
+                    }
+
+                    if (document.readyState === 'loading') {
+                        document.addEventListener('DOMContentLoaded', initAnthemHero);
+                    } else {
+                        initAnthemHero();
+                    }
+                })();
             </script>
             <!-- ===== End GSAP Anthem Hero Animations ===== -->
+
             <section class="about">
                 <div class="section-inner-block">
                     <div class="about-inner section-padding">
@@ -855,6 +1229,63 @@
                     </div>
                 </div>
             </section>
+            <!-- ===== Begin Elevate Trail Section ===== -->
+            <div data-trail="wrapper" class="trail-section">
+                <div style="position: absolute; top: 10vh; left: 50%; transform: translateX(-50%); font-family: 'Inter', sans-serif; font-size: 0.9rem; color: #ffffff; text-transform: uppercase; letter-spacing: 0.15em; z-index: 20; pointer-events: none; font-weight: 600; text-shadow: 0px 4px 10px rgba(0,0,0,0.4);">(HOVER ME )</div>
+                <div class="padding-global">
+                    <div class="intro-content-wrapper amplify_good">
+                        <div class="intro_content-top">
+                            <h2 data-split-reveal="chars" data-split="heading" class="amplify_headline">AWAKEN<span
+                                    class="amplify_superscript"></span></h2>
+                        </div>
+                        <div class="intro_content-bottom right">
+                            <div class="max-width-small">
+                                <p data-split-reveal="lines" data-split="heading" class="text-size-medium">We create
+                                    movement that awakens energy, rhythm, and self-awareness — bringing together
+                                    expression, purpose, and real connection. Through guided experiences, we help
+                                    individuals discover their flow, build confidence, and feel more present in their
+                                    everyday lives. Every session sparks growth, strengthens mindset, and creates a
+                                    lasting connection with movement.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="trail-wrap">
+                    <div class="trail-list">
+                        <div data-trail="item" class="trail-item"><img
+                                src="www.anthemcreative.ca/6835ef94fba7ee7ef42e8357/685d64136ee7dffa65ca9895_dan_1.avif"
+                                loading="lazy" class="trail-item__img"></div>
+                        <div data-trail="item" class="trail-item"><img
+                                src="www.anthemcreative.ca/6835ef94fba7ee7ef42e8357/685d64118f3088e147e36f06_daniel_1.avif"
+                                loading="lazy" class="trail-item__img"></div>
+                        <div data-trail="item" class="trail-item"><img
+                                src="www.anthemcreative.ca/6835ef94fba7ee7ef42e8357/6859c8788fd2855a13c716d7_mark.avif"
+                                loading="lazy" class="trail-item__img"></div>
+                        <div data-trail="item" class="trail-item"><img
+                                src="www.anthemcreative.ca/6835ef94fba7ee7ef42e8357/685d6411063c3f9af54d6f67_graeme_!.avif"
+                                loading="lazy" class="trail-item__img"></div>
+                        <div data-trail="item" class="trail-item"><img
+                                src="www.anthemcreative.ca/6835ef94fba7ee7ef42e8357/685b0fe93dd7270ba91598e4_erin_1.avif"
+                                loading="lazy" class="trail-item__img"></div>
+                        <div data-trail="item" class="trail-item"><img
+                                src="www.anthemcreative.ca/6835ef94fba7ee7ef42e8357/685b1d5656e20177d52d2a55_david_1.avif"
+                                loading="lazy" class="trail-item__img"></div>
+                        <div data-trail="item" class="trail-item"><img
+                                src="www.anthemcreative.ca/6835ef94fba7ee7ef42e8357/685b1d582c037b9abd235da9_Jake_1.avif"
+                                loading="lazy" class="trail-item__img"></div>
+                        <div data-trail="item" class="trail-item"><img
+                                src="www.anthemcreative.ca/6835ef94fba7ee7ef42e8357/685b1d57d68454614fad2877_kevin_!.avif"
+                                loading="lazy" class="trail-item__img"></div>
+                        <div data-trail="item" class="trail-item"><img
+                                src="www.anthemcreative.ca/6835ef94fba7ee7ef42e8357/685b1d5b7e593937495290a2_morgan_1.avif"
+                                loading="lazy" class="trail-item__img"></div>
+                        <div data-trail="item" class="trail-item"><img
+                                src="www.anthemcreative.ca/6835ef94fba7ee7ef42e8357/685b1d59079858364526d83c_Leks_1.avif"
+                                loading="lazy" class="trail-item__img"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- ===== End Elevate Trail Section ===== -->
             <section class="services services-3">
                 <div class="section-inner-block">
                     <div class="services-inner section-padding">
@@ -971,17 +1402,17 @@
                                                                                 <div class="services-link-box">
                                                                                     <a data-wf--link-button--variant="two"
                                                                                         data-w-id="2e94237b-1394-b61c-0369-9f2dbebd474b"
-                                                                                        href="services/personal-training.html"
+                                                                                        href="#"
                                                                                         class="link-button w-variant-259acf2d-4d19-37b7-61ed-0074877d54c5 w-inline-block">
                                                                                         <div class="link-button-wrap">
                                                                                             <div
                                                                                                 class="link-button-text-box">
                                                                                                 <div
                                                                                                     class="link-button-text text-one">
-                                                                                                    Maiores alias</div>
+                                                                                                    EXPLORE</div>
                                                                                                 <div
                                                                                                     class="link-button-text text-two">
-                                                                                                    Consequatur aut
+                                                                                                    EXPLORE
                                                                                                 </div>
                                                                                             </div>
                                                                                             <div
@@ -1037,17 +1468,17 @@
                                                                                 <div class="services-link-box">
                                                                                     <a data-wf--link-button--variant="two"
                                                                                         data-w-id="2e94237b-1394-b61c-0369-9f2dbebd474b"
-                                                                                        href="services/group-classes.html"
+                                                                                        href="#"
                                                                                         class="link-button w-variant-259acf2d-4d19-37b7-61ed-0074877d54c5 w-inline-block">
                                                                                         <div class="link-button-wrap">
                                                                                             <div
                                                                                                 class="link-button-text-box">
                                                                                                 <div
                                                                                                     class="link-button-text text-one">
-                                                                                                    Ipsum aliqua</div>
+                                                                                                    EXPLORE</div>
                                                                                                 <div
                                                                                                     class="link-button-text text-two">
-                                                                                                    Commodo deserunt
+                                                                                                    EXPLORE
                                                                                                 </div>
                                                                                             </div>
                                                                                             <div
@@ -1094,7 +1525,8 @@
                                                                                     <div class="services-desc-box">
                                                                                         <p class="services-desc">
                                                                                             Designed for modern
-                                                                                            lifestyles — reducing stress,
+                                                                                            lifestyles — reducing
+                                                                                            stress,
                                                                                             improving focus, and
                                                                                             bringing energy back into
                                                                                             everyday work life.</p>
@@ -1103,18 +1535,18 @@
                                                                                 <div class="services-link-box">
                                                                                     <a data-wf--link-button--variant="two"
                                                                                         data-w-id="2e94237b-1394-b61c-0369-9f2dbebd474b"
-                                                                                        href="services/nutrition-guidance.html"
+                                                                                        href="#"
                                                                                         class="link-button w-variant-259acf2d-4d19-37b7-61ed-0074877d54c5 w-inline-block">
                                                                                         <div class="link-button-wrap">
                                                                                             <div
                                                                                                 class="link-button-text-box">
                                                                                                 <div
                                                                                                     class="link-button-text text-one">
-                                                                                                    Quibusdam officiis
+                                                                                                    EXPLORE
                                                                                                 </div>
                                                                                                 <div
                                                                                                     class="link-button-text text-two">
-                                                                                                    Debitis rerum</div>
+                                                                                                    EXPLORE</div>
                                                                                             </div>
                                                                                             <div
                                                                                                 class="link-button-line">
@@ -1169,17 +1601,17 @@
                                                                                 <div class="services-link-box">
                                                                                     <a data-wf--link-button--variant="two"
                                                                                         data-w-id="2e94237b-1394-b61c-0369-9f2dbebd474b"
-                                                                                        href="services/cardio-endurance.html"
+                                                                                        href="#"
                                                                                         class="link-button w-variant-259acf2d-4d19-37b7-61ed-0074877d54c5 w-inline-block">
                                                                                         <div class="link-button-wrap">
                                                                                             <div
                                                                                                 class="link-button-text-box">
                                                                                                 <div
                                                                                                     class="link-button-text text-one">
-                                                                                                    Aut reiciendis</div>
+                                                                                                    EXPLORE</div>
                                                                                                 <div
                                                                                                     class="link-button-text text-two">
-                                                                                                    Voluptatibus maiores
+                                                                                                    EXPLORE
                                                                                                 </div>
                                                                                             </div>
                                                                                             <div
@@ -1228,55 +1660,27 @@
                                                     class="loop-block">
                                                     <div class="loop-item">
                                                         <div class="loop-item-inner">
-                                                            <div class="loop-item-text">Programs</div>
+                                                            <div class="loop-item-text">Explore</div>
                                                         </div>
                                                     </div>
                                                     <div class="loop-item">
                                                         <div class="loop-item-inner">
-                                                            <div class="loop-item-text">Programs</div>
+                                                            <div class="loop-item-text">Explore</div>
                                                         </div>
                                                     </div>
                                                     <div class="loop-item">
                                                         <div class="loop-item-inner">
-                                                            <div class="loop-item-text">Programs</div>
+                                                            <div class="loop-item-text">Explore</div>
                                                         </div>
                                                     </div>
                                                     <div class="loop-item">
                                                         <div class="loop-item-inner">
-                                                            <div class="loop-item-text">Programs</div>
+                                                            <div class="loop-item-text">Explore</div>
                                                         </div>
                                                     </div>
                                                     <div class="loop-item">
                                                         <div class="loop-item-inner">
-                                                            <div class="loop-item-text">Programs</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div style="-webkit-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
-                                                    class="loop-block">
-                                                    <div class="loop-item">
-                                                        <div class="loop-item-inner">
-                                                            <div class="loop-item-text">Programs</div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="loop-item">
-                                                        <div class="loop-item-inner">
-                                                            <div class="loop-item-text">Programs</div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="loop-item">
-                                                        <div class="loop-item-inner">
-                                                            <div class="loop-item-text">Programs</div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="loop-item">
-                                                        <div class="loop-item-inner">
-                                                            <div class="loop-item-text">Programs</div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="loop-item">
-                                                        <div class="loop-item-inner">
-                                                            <div class="loop-item-text">Programs</div>
+                                                            <div class="loop-item-text">Explore</div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1284,27 +1688,55 @@
                                                     class="loop-block">
                                                     <div class="loop-item">
                                                         <div class="loop-item-inner">
-                                                            <div class="loop-item-text">Programs</div>
+                                                            <div class="loop-item-text">Explore</div>
                                                         </div>
                                                     </div>
                                                     <div class="loop-item">
                                                         <div class="loop-item-inner">
-                                                            <div class="loop-item-text">Programs</div>
+                                                            <div class="loop-item-text">Explore</div>
                                                         </div>
                                                     </div>
                                                     <div class="loop-item">
                                                         <div class="loop-item-inner">
-                                                            <div class="loop-item-text">Programs</div>
+                                                            <div class="loop-item-text">Explore</div>
                                                         </div>
                                                     </div>
                                                     <div class="loop-item">
                                                         <div class="loop-item-inner">
-                                                            <div class="loop-item-text">Programs</div>
+                                                            <div class="loop-item-text">Explore</div>
                                                         </div>
                                                     </div>
                                                     <div class="loop-item">
                                                         <div class="loop-item-inner">
-                                                            <div class="loop-item-text">Programs</div>
+                                                            <div class="loop-item-text">Explore</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div style="-webkit-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
+                                                    class="loop-block">
+                                                    <div class="loop-item">
+                                                        <div class="loop-item-inner">
+                                                            <div class="loop-item-text">Explore</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="loop-item">
+                                                        <div class="loop-item-inner">
+                                                            <div class="loop-item-text">Explore</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="loop-item">
+                                                        <div class="loop-item-inner">
+                                                            <div class="loop-item-text">Explore</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="loop-item">
+                                                        <div class="loop-item-inner">
+                                                            <div class="loop-item-text">Explore</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="loop-item">
+                                                        <div class="loop-item-inner">
+                                                            <div class="loop-item-text">Explore</div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1327,8 +1759,8 @@
                                                                         <div class="programs-info">
                                                                             <div class="programs-info-flex">
                                                                                 <div class="programs-title-box">
-                                                                                    <div class="programs-title">Our
-                                                                                        Programs</div>
+                                                                                    <div class="programs-title" style="color: #ffffff;">Students
+                                                                                        & Youth</div>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -1354,18 +1786,18 @@
                                                                                                                 class="programs-extra-main-title-box">
                                                                                                                 <div
                                                                                                                     class="programs-extra-main-title">
-                                                                                                                    Aute
-                                                                                                                    irure
+                                                                                                                    Students
+                                                                                                                    &
+                                                                                                                    Youth
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                             <div
                                                                                                                 class="programs-extra-main-tag-box">
                                                                                                                 <div
                                                                                                                     class="programs-extra-main-tag">
-                                                                                                                    Dolor
-                                                                                                                    in
-                                                                                                                    reprehenderit
-                                                                                                                    in
+                                                                                                                    Where
+                                                                                                                    it
+                                                                                                                    begins
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                         </div>
@@ -1382,17 +1814,16 @@
                                                                                                     class="programs-extra-desc-box">
                                                                                                     <p
                                                                                                         class="programs-extra-desc">
-                                                                                                        Voluptate velit
-                                                                                                        esse cillum
-                                                                                                        dolore eu fugiat
-                                                                                                        nulla pariatur
-                                                                                                        Excepteur sint
-                                                                                                        occaecat
-                                                                                                        cupidatat non
-                                                                                                        proident sunt in
-                                                                                                        culpa qui
-                                                                                                        officia deserunt
-                                                                                                        mollit</p>
+                                                                                                        A space where
+                                                                                                        movement becomes
+                                                                                                        expression,
+                                                                                                        helping young
+                                                                                                        minds build
+                                                                                                        confidence,
+                                                                                                        energy, and a
+                                                                                                        connection to
+                                                                                                        what they truly
+                                                                                                        enjoy.</p>
                                                                                                 </div>
                                                                                                 <div
                                                                                                     class="programs-extra-features-box">
@@ -1404,12 +1835,13 @@
                                                                                                                 class="programs-2-features-item-flex">
                                                                                                                 <div
                                                                                                                     class="programs-2-features-label">
-                                                                                                                    Anim
+                                                                                                                    Movement
                                                                                                                 </div>
                                                                                                                 <div
                                                                                                                     class="programs-2-features-text">
-                                                                                                                    Id
-                                                                                                                    est
+                                                                                                                    Fun
+                                                                                                                    &
+                                                                                                                    engaging
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                         </div>
@@ -1419,12 +1851,13 @@
                                                                                                                 class="programs-2-features-item-flex">
                                                                                                                 <div
                                                                                                                     class="programs-2-features-label">
-                                                                                                                    Laborum
+                                                                                                                    Mind
                                                                                                                 </div>
                                                                                                                 <div
                                                                                                                     class="programs-2-features-text">
-                                                                                                                    Sed
-                                                                                                                    ut
+                                                                                                                    Confidence
+                                                                                                                    &
+                                                                                                                    clarity
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                         </div>
@@ -1434,13 +1867,13 @@
                                                                                                                 class="programs-2-features-item-flex">
                                                                                                                 <div
                                                                                                                     class="programs-2-features-label">
-                                                                                                                    Perspiciatis
+                                                                                                                    Growth
                                                                                                                 </div>
                                                                                                                 <div
                                                                                                                     class="programs-2-features-text">
-                                                                                                                    Unde
-                                                                                                                    omnis
-                                                                                                                    iste
+                                                                                                                    Discovering
+                                                                                                                    passion
+                                                                                                                    early
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                         </div>
@@ -1450,15 +1883,10 @@
                                                                                                     class="programs-extra-desc-box">
                                                                                                     <p
                                                                                                         class="programs-extra-desc">
-                                                                                                        Natus error sit
-                                                                                                        voluptatem
-                                                                                                        accusantium
-                                                                                                        doloremque
-                                                                                                        laudantium totam
-                                                                                                        rem aperiam
-                                                                                                        eaque ipsa quae
-                                                                                                        ab illo
-                                                                                                        inventore</p>
+                                                                                                        Not just
+                                                                                                        activity. A
+                                                                                                        starting point.
+                                                                                                    </p>
                                                                                                 </div>
                                                                                                 <div
                                                                                                     class="programs-extra-button-box">
@@ -1473,13 +1901,15 @@
                                                                                                                     class="button-text-box">
                                                                                                                     <div
                                                                                                                         class="button-text text-one">
-                                                                                                                        Veritatis
-                                                                                                                        et
+                                                                                                                        Explore
+                                                                                                                        for
+                                                                                                                        Kids
                                                                                                                     </div>
                                                                                                                     <div
                                                                                                                         class="button-text text-two">
-                                                                                                                        Quasi
-                                                                                                                        architecto
+                                                                                                                        Explore
+                                                                                                                        for
+                                                                                                                        Kids
                                                                                                                     </div>
                                                                                                                 </div>
                                                                                                                 <div
@@ -1509,11 +1939,12 @@
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="programs-desc-box">
-                                                                                    <p class="programs-desc">Beatae
-                                                                                        vitae dicta sunt explicabo Nemo
-                                                                                        enim ipsam voluptatem quia
-                                                                                        voluptas sit aspernatur aut odit
-                                                                                        aut</p>
+                                                                                    <p class="programs-desc">A space
+                                                                                        where movement becomes
+                                                                                        expression, helping young minds
+                                                                                        build confidence, energy, and a
+                                                                                        connection to what they truly
+                                                                                        enjoy.</p>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -1538,8 +1969,8 @@
                                                                         <div class="programs-info">
                                                                             <div class="programs-info-flex">
                                                                                 <div class="programs-title-box">
-                                                                                    <div class="programs-title">Ou
-                                                                                        Programs</div>
+                                                                                    <div class="programs-title" style="color: #ffffff;">Adults &
+                                                                                        Professionals</div>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -1565,18 +1996,18 @@
                                                                                                                 class="programs-extra-main-title-box">
                                                                                                                 <div
                                                                                                                     class="programs-extra-main-title">
-                                                                                                                    Quia
-                                                                                                                    consequuntur
+                                                                                                                    Adults
+                                                                                                                    &
+                                                                                                                    Professionals
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                             <div
                                                                                                                 class="programs-extra-main-tag-box">
                                                                                                                 <div
                                                                                                                     class="programs-extra-main-tag">
-                                                                                                                    Magni
-                                                                                                                    dolores
-                                                                                                                    eos
-                                                                                                                    qui
+                                                                                                                    Find
+                                                                                                                    your
+                                                                                                                    balance
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                         </div>
@@ -1593,16 +2024,16 @@
                                                                                                     class="programs-extra-desc-box">
                                                                                                     <p
                                                                                                         class="programs-extra-desc">
-                                                                                                        Ratione
-                                                                                                        voluptatem sequi
-                                                                                                        nesciunt Neque
-                                                                                                        porro quisquam
-                                                                                                        est qui dolorem
-                                                                                                        ipsum quia dolor
-                                                                                                        sit amet
-                                                                                                        consectetur
-                                                                                                        adipisci velit
-                                                                                                        sed quia non</p>
+                                                                                                        Designed to
+                                                                                                        break routine,
+                                                                                                        reduce stress,
+                                                                                                        and bring energy
+                                                                                                        back into
+                                                                                                        everyday life
+                                                                                                        through movement
+                                                                                                        that feels
+                                                                                                        natural and
+                                                                                                        sustainable.</p>
                                                                                                 </div>
                                                                                                 <div
                                                                                                     class="programs-extra-features-box">
@@ -1614,12 +2045,13 @@
                                                                                                                 class="programs-2-features-item-flex">
                                                                                                                 <div
                                                                                                                     class="programs-2-features-label">
-                                                                                                                    Numquam
+                                                                                                                    Body
                                                                                                                 </div>
                                                                                                                 <div
                                                                                                                     class="programs-2-features-text">
-                                                                                                                    Eius
-                                                                                                                    modi
+                                                                                                                    Strength
+                                                                                                                    &
+                                                                                                                    flexibility
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                         </div>
@@ -1629,11 +2061,13 @@
                                                                                                                 class="programs-2-features-item-flex">
                                                                                                                 <div
                                                                                                                     class="programs-2-features-label">
-                                                                                                                    Tempora
+                                                                                                                    Mind
                                                                                                                 </div>
                                                                                                                 <div
                                                                                                                     class="programs-2-features-text">
-                                                                                                                    Incidunt
+                                                                                                                    Strength
+                                                                                                                    &
+                                                                                                                    flexibility
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                         </div>
@@ -1643,13 +2077,12 @@
                                                                                                                 class="programs-2-features-item-flex">
                                                                                                                 <div
                                                                                                                     class="programs-2-features-label">
-                                                                                                                    Ut
+                                                                                                                    Lifestyle
                                                                                                                 </div>
                                                                                                                 <div
                                                                                                                     class="programs-2-features-text">
-                                                                                                                    Labore
-                                                                                                                    et
-                                                                                                                    dolore
+                                                                                                                    Consistent
+                                                                                                                    energy
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                         </div>
@@ -1659,14 +2092,9 @@
                                                                                                     class="programs-extra-desc-box">
                                                                                                     <p
                                                                                                         class="programs-extra-desc">
-                                                                                                        Magnam aliquam
-                                                                                                        quaerat
-                                                                                                        voluptatem vitae
-                                                                                                        suscipit
-                                                                                                        laboriosam nisi
-                                                                                                        voluptatibus
-                                                                                                        repudiandae
-                                                                                                        recusandae
+                                                                                                        Built for real
+                                                                                                        life, not
+                                                                                                        routines.
                                                                                                     </p>
                                                                                                 </div>
                                                                                                 <div
@@ -1682,13 +2110,15 @@
                                                                                                                     class="button-text-box">
                                                                                                                     <div
                                                                                                                         class="button-text text-one">
-                                                                                                                        Itaque
-                                                                                                                        earum
+                                                                                                                        Explore
+                                                                                                                        for
+                                                                                                                        Adults
                                                                                                                     </div>
                                                                                                                     <div
                                                                                                                         class="button-text text-two">
-                                                                                                                        Rerum
-                                                                                                                        hic
+                                                                                                                        Explore
+                                                                                                                        for
+                                                                                                                        Adults
                                                                                                                     </div>
                                                                                                                 </div>
                                                                                                                 <div
@@ -1718,11 +2148,12 @@
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="programs-desc-box">
-                                                                                    <p class="programs-desc">Tenetur
-                                                                                        sapiente delectus reiciendis
-                                                                                        voluptatibus maiores alias
-                                                                                        consequatur aut perferendis
-                                                                                        doloribus</p>
+                                                                                    <p class="programs-desc">Designed to
+                                                                                        break routine, reduce stress,
+                                                                                        and bring energy back into
+                                                                                        everyday life through movement
+                                                                                        that feels natural and
+                                                                                        sustainable.</p>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -1748,8 +2179,8 @@
                                                                         <div class="programs-info">
                                                                             <div class="programs-info-flex">
                                                                                 <div class="programs-title-box">
-                                                                                    <div class="programs-title">Our
-                                                                                        Programs</div>
+                                                                                    <div class="programs-title" style="color: #ffffff;">
+                                                                                        Communities & Spaces</div>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -1775,18 +2206,17 @@
                                                                                                                 class="programs-extra-main-title-box">
                                                                                                                 <div
                                                                                                                     class="programs-extra-main-title">
-                                                                                                                    Similique
-                                                                                                                    sunt
-                                                                                                                    culpa
+                                                                                                                    Communities
+                                                                                                                    &
+                                                                                                                    Spaces
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                             <div
                                                                                                                 class="programs-extra-main-tag-box">
                                                                                                                 <div
                                                                                                                     class="programs-extra-main-tag">
-                                                                                                                    Officia
-                                                                                                                    deserunt
-                                                                                                                    mollitia
+                                                                                                                    Shared
+                                                                                                                    energy
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                         </div>
@@ -1803,24 +2233,17 @@
                                                                                                     class="programs-extra-desc-box">
                                                                                                     <p
                                                                                                         class="programs-extra-desc">
-                                                                                                        Animi id est
-                                                                                                        laborum
-                                                                                                        perspiciatis
-                                                                                                        veniam
-                                                                                                        consequatur
-                                                                                                        exercitationem
-                                                                                                        ipsum aliqua
-                                                                                                        commodo deserunt
-                                                                                                        perferendis
-                                                                                                        natus maxime
-                                                                                                        placeat facere
-                                                                                                        possimus omnis
-                                                                                                        voluptas
-                                                                                                        assumenda est
-                                                                                                        omnis dolor
-                                                                                                        repellendus
-                                                                                                        temporibus autem
-                                                                                                        quibusdam
+                                                                                                        From events to
+                                                                                                        wellness
+                                                                                                        programs, ZAS
+                                                                                                        creates
+                                                                                                        collective
+                                                                                                        experiences that
+                                                                                                        bring people
+                                                                                                        together through
+                                                                                                        movement,
+                                                                                                        rhythm, and
+                                                                                                        connection.
                                                                                                     </p>
                                                                                                 </div>
                                                                                                 <div
@@ -1833,12 +2256,13 @@
                                                                                                                 class="programs-2-features-item-flex">
                                                                                                                 <div
                                                                                                                     class="programs-2-features-label">
-                                                                                                                    Officiis
+                                                                                                                    Access
                                                                                                                 </div>
                                                                                                                 <div
                                                                                                                     class="programs-2-features-text">
-                                                                                                                    Debitis
-                                                                                                                    rerum
+                                                                                                                    Open
+                                                                                                                    to
+                                                                                                                    all
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                         </div>
@@ -1848,11 +2272,12 @@
                                                                                                                 class="programs-2-features-item-flex">
                                                                                                                 <div
                                                                                                                     class="programs-2-features-label">
-                                                                                                                    Necessitatibus
+                                                                                                                    Experience
                                                                                                                 </div>
                                                                                                                 <div
                                                                                                                     class="programs-2-features-text">
-                                                                                                                    Saepe
+                                                                                                                    Engaging
+                                                                                                                    sessions
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                         </div>
@@ -1862,13 +2287,12 @@
                                                                                                                 class="programs-2-features-item-flex">
                                                                                                                 <div
                                                                                                                     class="programs-2-features-label">
-                                                                                                                    Eveniet
+                                                                                                                    Impact
                                                                                                                 </div>
                                                                                                                 <div
                                                                                                                     class="programs-2-features-text">
-                                                                                                                    Ut
-                                                                                                                    et
-                                                                                                                    voluptates
+                                                                                                                    Real
+                                                                                                                    connection
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                         </div>
@@ -1878,15 +2302,9 @@
                                                                                                     class="programs-extra-desc-box">
                                                                                                     <p
                                                                                                         class="programs-extra-desc">
-                                                                                                        Repudiandae sint
-                                                                                                        molestiae non
-                                                                                                        recusandae
-                                                                                                        itaque earum
-                                                                                                        rerum hic
-                                                                                                        tenetur sapiente
-                                                                                                        delectus ut aut
-                                                                                                        reiciendis
-                                                                                                        voluptatibus</p>
+                                                                                                        Movement that
+                                                                                                        connects people.
+                                                                                                    </p>
                                                                                                 </div>
                                                                                                 <div
                                                                                                     class="programs-extra-button-box">
@@ -1901,13 +2319,15 @@
                                                                                                                     class="button-text-box">
                                                                                                                     <div
                                                                                                                         class="button-text text-one">
-                                                                                                                        Maiores
-                                                                                                                        alias
+                                                                                                                        Collaborate
+                                                                                                                        with
+                                                                                                                        ZAS
                                                                                                                     </div>
                                                                                                                     <div
                                                                                                                         class="button-text text-two">
-                                                                                                                        Consequatur
-                                                                                                                        aut
+                                                                                                                        Collaborate
+                                                                                                                        with
+                                                                                                                        ZAS
                                                                                                                     </div>
                                                                                                                 </div>
                                                                                                                 <div
@@ -1937,11 +2357,12 @@
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="programs-desc-box">
-                                                                                    <p class="programs-desc">Perferendis
-                                                                                        doloribus asperiores repellat
-                                                                                        Lorem ipsum dolor sit amet
-                                                                                        consectetur adipiscing elit sed
-                                                                                        do eiusmod tempor
+                                                                                    <p class="programs-desc">From events
+                                                                                        to wellness programs, ZAS
+                                                                                        creates collective experiences
+                                                                                        that bring people together
+                                                                                        through movement, rhythm, and
+                                                                                        connection.
                                                                                     </p>
                                                                                 </div>
                                                                             </div>
@@ -1955,8 +2376,8 @@
                                             </div>
                                         </div>
                                         <div class="programs-links">
-                                            <div class="programs-link-box"><a href="programs.html"
-                                                    class="programs-link">Incididunt ut</a></div>
+                                            <div class="programs-link-box"><a href="#"
+                                                    class="programs-link">Explore</a></div>
                                         </div>
                                     </div>
                                 </div>
@@ -2099,7 +2520,8 @@
                     </div>
                 </div>
             </section>
-            <section class="team">
+
+            <!-- <section class="team">
                 <div class="section-inner-block">
                     <div data-w-id="9f64c06d-d81d-957a-1b07-4cde6d10b8e2" class="team-sticky-holders">
                         <div class="team-sticky-box">
@@ -2266,28 +2688,30 @@
                                                                                             perspiciatis</div>
                                                                                     </div>
                                                                                 </div>
-                                                                                <div class="team-info-social">
-                                                                                    <div class="social-4-wrap">
-                                                                                        <a href="https://www.facebook.com/"
-                                                                                            class="social-4-item w-inline-block">
-                                                                                            <div class="social-4-name">
-                                                                                                Unde</div>
-                                                                                        </a>
-                                                                                        <a href="#"
-                                                                                            class="social-4-item w-inline-block">
-                                                                                            <div class="social-4-name">
-                                                                                                Omnis</div>
-                                                                                        </a>
-                                                                                        <a href="https://www.instagram.com/"
-                                                                                            class="social-4-item w-inline-block">
-                                                                                            <div class="social-4-name">
-                                                                                                Iste</div>
-                                                                                        </a>
-                                                                                        <a href="https://www.pinterest.com/"
-                                                                                            class="social-4-item w-inline-block">
-                                                                                            <div class="social-4-name">
-                                                                                                Natus</div>
-                                                                                        </a>
+                                                                                <div class="team-content-info">
+                                                                                    <div class="team-info-social">
+                                                                                        <div class="social-4-wrap">
+                                                                                            <a href="https://www.facebook.com/"
+                                                                                                class="social-4-item w-inline-block">
+                                                                                                <div class="social-4-name">
+                                                                                                    Unde</div>
+                                                                                            </a>
+                                                                                            <a href="#"
+                                                                                                class="social-4-item w-inline-block">
+                                                                                                <div class="social-4-name">
+                                                                                                    Omnis</div>
+                                                                                            </a>
+                                                                                            <a href="https://www.instagram.com/"
+                                                                                                class="social-4-item w-inline-block">
+                                                                                                <div class="social-4-name">
+                                                                                                    Iste</div>
+                                                                                            </a>
+                                                                                            <a href="https://www.pinterest.com/"
+                                                                                                class="social-4-item w-inline-block">
+                                                                                                <div class="social-4-name">
+                                                                                                    Natus</div>
+                                                                                            </a>
+                                                                                        </div>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -2617,7 +3041,8 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
+
             <section class="testimonials">
                 <div class="section-inner-block">
                     <div class="testimonials-inner section-padding">
@@ -2808,7 +3233,8 @@
                     </div>
                 </div>
             </section>
-            <section class="pricing">
+            <!-- PRICING SECTION -->
+            <!-- <section class="pricing">
                 <div class="section-inner-block">
                     <div class="pricing-inner section-padding-4">
                         <div class="w-layout-blockcontainer container-full w-container">
@@ -4015,8 +4441,9 @@
                             </div>
                         </div>
                     </div>
-            </section>
-            <section class="find-out">
+            </section> -->
+
+            <!-- <section class="find-out">
                 <div class="section-inner-block">
                     <div data-w-id="efbb7d87-c45a-5012-9490-36fa80f6998e" class="find-out-inner">
                         <div class="w-layout-blockcontainer container w-container">
@@ -4113,7 +4540,7 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
         </div>
         <section class="footer">
             <div class="section-inner-block">
@@ -4189,7 +4616,7 @@
                                                                 src="https://cdn.prod.website-files.com/691ea5c2d38e36d02b948f36/69204b30b618afd30e2bc9b8_arrow.svg"
                                                                 loading="lazy" alt="loop icon"
                                                                 class="links-2-round-icon dark" /><img
-                                                                src="https://cdn.prod.website-files.com/696defb6f971754b096dc373_arrow-2.svg"
+                                                                src="https://cdn.prod.website-files.com/691ea5c2d38e36d02b948f36/696defb6f971754b096dc373_arrow-2.svg"
                                                                 loading="lazy" alt="loop icon"
                                                                 class="links-2-round-icon light" />
                                                         </div>
@@ -4205,7 +4632,7 @@
                                                                 src="https://cdn.prod.website-files.com/691ea5c2d38e36d02b948f36/69204b30b618afd30e2bc9b8_arrow.svg"
                                                                 loading="lazy" alt="loop icon"
                                                                 class="links-2-round-icon dark" /><img
-                                                                src="https://cdn.prod.website-files.com/696defb6f971754b096dc373_arrow-2.svg"
+                                                                src="https://cdn.prod.website-files.com/691ea5c2d38e36d02b948f36/696defb6f971754b096dc373_arrow-2.svg"
                                                                 loading="lazy" alt="loop icon"
                                                                 class="links-2-round-icon light" />
                                                         </div>
@@ -4221,7 +4648,7 @@
                                                                 src="https://cdn.prod.website-files.com/691ea5c2d38e36d02b948f36/69204b30b618afd30e2bc9b8_arrow.svg"
                                                                 loading="lazy" alt="loop icon"
                                                                 class="links-2-round-icon dark" /><img
-                                                                src="https://cdn.prod.website-files.com/696defb6f971754b096dc373_arrow-2.svg"
+                                                                src="https://cdn.prod.website-files.com/691ea5c2d38e36d02b948f36/696defb6f971754b096dc373_arrow-2.svg"
                                                                 loading="lazy" alt="loop icon"
                                                                 class="links-2-round-icon light" />
                                                         </div>
@@ -4237,7 +4664,8 @@
                                             <div class="footer-info-block">
                                                 <div class="footer-info-list">
                                                     <div class="footer-desc-box">
-                                                        <p class="footer-desc">ZAS creates movement that people can feel — for adults and children alike.</p>
+                                                        <p class="footer-desc">ZAS creates movement that people can
+                                                            feel — for adults and children alike.</p>
                                                     </div>
                                                     <div class="footer-desc-box">
                                                         <p class="footer-desc">Bring this experience to your space.</p>
@@ -4280,14 +4708,14 @@
                                                             </a>
                                                         </div>
                                                         <div class="footer-nav-item">
-                                                            <a href="#"
-                                                                class="footer-nav-link w-inline-block">
+                                                            <a href="#" class="footer-nav-link w-inline-block">
                                                                 <div class="footer-nav-text top">Programs</div>
                                                                 <div class="footer-nav-text bottom">Programs</div>
                                                             </a>
                                                         </div>
                                                         <div class="footer-nav-item">
-                                                            <a href="team-page.html" class="footer-nav-link w-inline-block">
+                                                            <a href="team-page.html"
+                                                                class="footer-nav-link w-inline-block">
                                                                 <div class="footer-nav-text top">Team</div>
                                                                 <div class="footer-nav-text bottom">Team</div>
                                                             </a>
@@ -4322,8 +4750,7 @@
                                                             </a>
                                                         </div>
                                                         <div class="footer-nav-item">
-                                                            <a href="#"
-                                                                class="footer-nav-link w-inline-block">
+                                                            <a href="#" class="footer-nav-link w-inline-block">
                                                                 <div class="footer-nav-text top">Licenses</div>
                                                                 <div class="footer-nav-text bottom">Licenses</div>
                                                             </a>
@@ -4366,7 +4793,8 @@
                                                             loading="lazy" alt="social icon"
                                                             class="social-icon light" />
                                                     </a>
-                                                    <a href="https://www.instagram.com/zas.wellness/?utm_source=ig_web_button_share_sheet" target="_blank" class="social-item w-inline-block">
+                                                    <a href="https://www.instagram.com/zas.wellness/?utm_source=ig_web_button_share_sheet"
+                                                        target="_blank" class="social-item w-inline-block">
                                                         <div class="social-background"></div><img
                                                             src="https://cdn.prod.website-files.com/691ea5c2d38e36d02b948f36/69205312fcfec62df9831e2b_instagram-dark.svg"
                                                             loading="lazy" alt="social icon"
@@ -4498,18 +4926,274 @@
     <script src="https://cdn.prod.website-files.com/691ea5c2d38e36d02b948f36/js/webflow.e240f213.444cd1cea82eec77.js"
         type="text/javascript"></script>
 
-    <!-- GSAP Animation Library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.14.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.14.2/ScrollTrigger.min.js"></script>
+    <!-- GSAP Animation Library (Local Versions for Compatibility) -->
+    <script src="./www.anthemcreative.ca/gsap/3.13.0/gsap.min.js"></script>
+    <script src="./www.anthemcreative.ca/gsap/3.13.0/ScrollTrigger.min.js"></script>
+    <script src="./www.anthemcreative.ca/gsap/3.13.0/SplitText.min.js"></script>
 
     <!-- Master Initialization Script -->
     <script src="js/webflow-init.js" type="text/javascript"></script>
+
+    <script>
+        /**
+         * ELEVATE TRAIL & REVEAL LOGIC
+         * Scoped safely to avoid breaking Webflow core interactions.
+         */
+        (function () {
+            // Safe Plugin Registration
+            function registerPlugins() {
+                if (window.gsap && window.ScrollTrigger && window.SplitText) {
+                    gsap.registerPlugin(ScrollTrigger, SplitText);
+                    return true;
+                }
+                return false;
+            }
+
+            function initImageTrail(options = {}) {
+                const config = {
+                    minWidth: options.minWidth || 992,
+                    moveDistance: options.moveDistance || 12,
+                    stopDuration: options.stopDuration || 800,
+                    trailLength: options.trailLength || 10
+                };
+                const wrapper = document.querySelector('[data-trail="wrapper"]');
+                if (!wrapper) return;
+                if (window.innerWidth < config.minWidth) return;
+
+                const state = {
+                    trailInterval: null, globalIndex: 0, last: { x: 0, y: 0 },
+                    trailImageTimestamps: new Map(),
+                    trailImages: Array.from(wrapper.querySelectorAll('[data-trail="item"]')),
+                    isActive: false
+                };
+
+                if (state.trailImages.length === 0) return;
+                const utils = { distance: (x1, y1, x2, y2) => Math.hypot(x2 - x1, y2 - y1) };
+
+                function showImage(el, x, y) {
+                    if (!el) return;
+                    try {
+                        if (el.offsetWidth === 0) gsap.set(el, { display: "block" });
+                        const w = el.offsetWidth || 200;
+                        const h = el.offsetHeight || 266;
+
+                        Object.assign(el.style, {
+                            left: (x - w / 2) + "px", top: (y - h / 2) + "px",
+                            zIndex: state.globalIndex + 100, display: "block"
+                        });
+
+                        state.trailImageTimestamps.set(el, Date.now());
+                        gsap.fromTo(el,
+                            { autoAlpha: 0, scale: 0.5, rotation: Math.random() * 10 - 5 },
+                            { scale: 1, rotation: 0, autoAlpha: 1, duration: 0.4, ease: "back.out(1.7)", overwrite: true }
+                        );
+                    } catch (e) { console.error("Trail showImage error:", e); }
+                }
+
+                function hideImage(el) {
+                    if (!el) return;
+                    gsap.to(el, {
+                        autoAlpha: 0, scale: 0.2, duration: 0.8, ease: "power2.inOut",
+                        onComplete: () => {
+                            if (!state.trailImageTimestamps.has(el)) gsap.set(el, { display: "none" });
+                        }
+                    });
+                }
+
+                function onMouseMove(e) {
+                    if (!state.isActive) return;
+                    const wrapRect = wrapper.getBoundingClientRect();
+                    const x = e.clientX - wrapRect.left;
+                    const y = e.clientY - wrapRect.top;
+                    if (utils.distance(x, y, state.last.x, state.last.y) > window.innerWidth / config.moveDistance) {
+                        const nextImg = state.trailImages[state.globalIndex % state.trailImages.length];
+                        showImage(nextImg, x, y);
+                        state.globalIndex++;
+                        state.last = { x, y };
+                    }
+                }
+
+                function cleanupObsolete() {
+                    const now = Date.now();
+                    for (const [el, time] of state.trailImageTimestamps.entries()) {
+                        if (now - time > config.stopDuration) {
+                            hideImage(el);
+                            state.trailImageTimestamps.delete(el);
+                        }
+                    }
+                }
+
+                function activate() {
+                    if (!state.isActive) {
+                        state.isActive = true;
+                        wrapper.addEventListener("mousemove", onMouseMove);
+                        state.trailInterval = setInterval(cleanupObsolete, 50);
+                    }
+                }
+
+                function deactivate() {
+                    if (state.isActive) {
+                        state.isActive = false;
+                        wrapper.removeEventListener("mousemove", onMouseMove);
+                        clearInterval(state.trailInterval);
+                        state.trailImages.forEach(hideImage);
+                        state.trailImageTimestamps.clear();
+                    }
+                }
+
+                ScrollTrigger.create({
+                    trigger: wrapper, start: "top bottom", end: "bottom top",
+                    onEnter: activate, onEnterBack: activate, onLeave: deactivate, onLeaveBack: deactivate
+                });
+
+                window.addEventListener("resize", () => {
+                    if (window.innerWidth < config.minWidth && state.isActive) deactivate();
+                    else if (window.innerWidth >= config.minWidth && !state.isActive) activate();
+                });
+                if (window.innerWidth >= config.minWidth) activate();
+            }
+
+            function initTextReveals() {
+                document.querySelectorAll('[data-split-reveal]').forEach(el => {
+                    try {
+                        const type = el.dataset.splitReveal;
+                        const split = new SplitText(el, {
+                            type: "lines,words,chars",
+                            linesClass: "split-line", wordsClass: "split-word", charsClass: "split-char"
+                        });
+
+                        const targets = (type === "chars") ? split.chars : (type === "words" ? split.words : split.lines);
+                        gsap.set(el, { autoAlpha: 1 });
+
+                        const tl = gsap.timeline({
+                            scrollTrigger: {
+                                trigger: el, start: "top 90%", toggleActions: "play none none none"
+                            }
+                        });
+
+                        tl.from(targets, {
+                            yPercent: 100, autoAlpha: 0, duration: 1.2,
+                            stagger: type === "chars" ? 0.03 : 0.1, ease: "expo.out"
+                        });
+
+                        if (type === "chars") {
+                            tl.from(targets, {
+                                rotationX: -90, transformOrigin: "50% 50% -50px",
+                                duration: 1, stagger: 0.03, ease: "power2.out"
+                            }, 0);
+                        }
+                    } catch (e) { console.error("Text reveal error:", e); }
+                });
+            }
+
+            function initMenuReveal() {
+                // Remove wrapper logic, use simple ScrollTrigger class toggle on body
+                ScrollTrigger.create({
+                    trigger: ".section_hero",
+                    start: "bottom 20%", // Trigger when bottom of hero is 20% from top
+                    onEnter: () => document.body.classList.remove("hero-is-visible"),
+                    onLeaveBack: () => document.body.classList.add("hero-is-visible")
+                });
+            }
+
+            // Initialize when ready, but defer secondary logic to prioritize hero intro on mobile
+            document.addEventListener("DOMContentLoaded", () => {
+                setTimeout(() => {
+                    if (registerPlugins()) {
+                        initImageTrail();
+                        initTextReveals();
+                        initMenuReveal();
+                    } else {
+                        // Fallback for async load
+                        let retryCount = 0;
+                        const retry = setInterval(() => {
+                            if (registerPlugins() || retryCount > 10) {
+                                clearInterval(retry);
+                                if (retryCount <= 10) {
+                                    initImageTrail();
+                                    initTextReveals();
+                                    initMenuReveal();
+                                }
+                            }
+                            retryCount++;
+                        }, 100);
+                    }
+                }, 500);
+            });
+        })();
+    </script>
+
+    <!-- ===== Flare Cursor Elements ===== -->
+    <!-- Main cursor circle with X icon (exact match from draper.vc) -->
+    <div data-wf--cursor--variant="base" class="main_cursor">
+        <div class="cursor_icon w-embed"><svg width="8" height="8" viewBox="0 0 8 8" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M4.76735 3.61361C4.5551 3.82585 4.5551 4.16871 4.76735 4.38095L8 7.61361L7.61905 7.99456L4.38639 4.7619C4.17415 4.54966 3.83129 4.54966 3.61905 4.7619L0.380952 8L0 7.61905L3.23265 4.38639C3.4449 4.17415 3.4449 3.83129 3.23265 3.61905L0 0.380952L0.380952 0L3.61361 3.23265C3.82585 3.4449 4.16871 3.4449 4.38095 3.23265L7.61905 0L8 0.380952L4.76735 3.61361Z"
+                fill="currentColor" />
+        </svg></div>
+    </div>
+
+    <!-- Hidden color swatches for WebGL fluid palette (warm accent tones for ZAS Wellness) -->
+    <div class="cursor-color-swatches">
+        <div id="flarecolor1"></div>
+        <div id="flarecolor2"></div>
+        <div id="flarecolor3"></div>
+    </div>
+
+    <!-- Cursor icon rotation on link/button hover (exact from draper.vc) -->
+    <script>
+        const cursorIcon = document.querySelector('.cursor_icon');
+        if (cursorIcon) {
+            const targets = document.querySelectorAll('a, button');
+            targets.forEach(target => {
+                target.addEventListener('mouseenter', () => {
+                    cursorIcon.style.transform = 'translate(-50%, -50%) rotateZ(135deg)';
+                });
+                target.addEventListener('mouseleave', () => {
+                    cursorIcon.style.transform = 'translate(-50%, -50%) rotate(0deg)';
+                });
+            });
+        }
+
+        /* Show cursor only inside hero section, hide global cursor on hero hover */
+        (function () {
+            const hero = document.querySelector('.section_hero');
+            const cursor = document.querySelector('.main_cursor');
+            const icon = document.querySelector('.cursor_icon');
+            if (!hero || !cursor || !icon) return;
+
+            let curX = 0, curY = 0;
+            let destX = 0, destY = 0;
+            let raf;
+
+            document.addEventListener('mousemove', function (e) {
+                destX = e.clientX;
+                destY = e.clientY;
+            });
+
+            function lerp(a, b, t) { return a + (b - a) * t; }
+
+            function tick() {
+                curX = lerp(curX, destX, 0.12);
+                curY = lerp(curY, destY, 0.12);
+                icon.style.left = curX + 'px';
+                icon.style.top = curY + 'px';
+                raf = requestAnimationFrame(tick);
+            }
+            tick();
+
+            hero.addEventListener('mouseenter', function () {
+                cursor.style.opacity = '1';
+            });
+            hero.addEventListener('mouseleave', function () {
+                cursor.style.opacity = '0';
+            });
+        })();
+    </script>
+    <!-- ===== End Flare Cursor Elements ===== -->
+
 </body>
 
 
 </html>
-
-
-
-
-
