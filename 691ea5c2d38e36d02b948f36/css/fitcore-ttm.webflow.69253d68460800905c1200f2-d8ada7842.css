@@ -1289,7 +1289,7 @@ strong {
 }
 
 .team-3 {
-  background: var(--gradient-accent);
+  background: linear-gradient(135deg, #1e63ff, #47ffdd);
 }
 
 .team-3-inner {

@@ -1024,7 +1024,7 @@ strong {
 }
 
 .services-2 {
-  background: var(--gradient-accent);
+  background: linear-gradient(135deg, #1e63ff, #47ffdd);
 }
 
 .services-2-wrap {
@@ -1064,7 +1064,8 @@ strong {
 }
 
 .services-2-content {
-  background: var(--gradient-accent);
+  border-radius: var(--_radius---radius-medium);
+  border-color: #000000;
   flex-flow: column;
   justify-content: center;
   padding-left: 20px;
