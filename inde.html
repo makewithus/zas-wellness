@@ -235,29 +235,17 @@
         }
 
         /* Staggered Reveal CSS */
+        .split-line,
+        .split-word,
         .split-char {
             overflow: hidden;
             vertical-align: bottom;
-        }
-
-        /* Removed .fixed-menu-open-close styles to prevent Webflow IX interference */
-
-        /* Enforce hidden state until user scrolls past hero */
-        body.hero-is-visible .fixed-menu-open-close {
-            opacity: 0 !important;
-            visibility: hidden !important;
-            transform: translateY(-20px) scale(0.9) !important;
-            pointer-events: none !important;
-        }
-         
-        .fixed-menu-open-close {
-            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.8s !important;
         }
     </style>
 
 </head>
 
-<body class="body hero-is-visible">
+<body class="body">
     <div class="page">
         <section class="header">
             <div class="header-content">
@@ -549,74 +537,6 @@
                     justify-content: flex-start;
                     box-sizing: border-box;
                     overflow: hidden;
-                    cursor: none;
-                }
-
-                /* Redundant local style removed as it's now in the head with !important */
-
-                /* ===== Flare Cursor — canvas wrapper (scoped to hero) ===== */
-                .hero-canvas-wrapper {
-                    position: absolute;
-                    inset: 0;
-                    width: 100%;
-                    height: 100%;
-                    z-index: 0;
-                    pointer-events: none;
-                }
-
-                .hero-canvas-wrapper canvas.fluid {
-                    width: 100%;
-                    height: 100%;
-                    position: absolute;
-                    inset: 0;
-                }
-
-                /* ===== Flare Cursor — main cursor circle ===== */
-                .main_cursor {
-                    z-index: 9999;
-                    opacity: 0;
-                    pointer-events: none;
-                    justify-content: center;
-                    align-items: center;
-                    width: 100%;
-                    height: 100vh;
-                    display: flex;
-                    position: fixed;
-                    top: 0;
-                    left: 0;
-                }
-
-                .cursor_icon {
-                    width: 3rem;
-                    height: 3rem;
-                    aspect-ratio: 1;
-                    border-radius: 50%;
-                    background-color: rgba(255, 255, 255, 0.12);
-                    -webkit-backdrop-filter: blur(2px);
-                    backdrop-filter: blur(2px);
-                    color: #ffffff;
-                    justify-content: center;
-                    align-items: center;
-                    transition: transform 0.2s ease-in-out;
-                    display: flex;
-                    position: absolute;
-                    transform: translate(-50%, -50%);
-                    top: 0;
-                    left: 0;
-                }
-
-                /* Color swatches for WebGL fluid (hidden) */
-                .cursor-color-swatches {
-                    display: none;
-                }
-                #flarecolor1 { background-color: rgb(255, 101, 39); }
-                #flarecolor2 { background-color: rgb(239, 64, 64); }
-                #flarecolor3 { background-color: rgb(255, 180, 0); }
-
-                /* Hide native cursor inside hero on desktop only */
-                @media (pointer: coarse) {
-                    .main_cursor { display: none !important; }
-                    .section_hero { cursor: auto; }
                 }
 
                 .padding-global {
@@ -968,11 +888,6 @@
                 <div class="scroll_target">
                     <header class="section_hero">
 
-                        <!-- Flare Cursor WebGL Fluid Canvas -->
-                        <div class="hero-canvas-wrapper">
-                            <canvas data-splash="" class="fluid"></canvas>
-                        </div>
-
                         <div class="hero-right-overlay">
                             <img src="image/bg.png" alt="overlay bg" />
                         </div>
@@ -997,7 +912,7 @@
                                                 <div data-w-id="1ac5f44a-5200-9fd8-bf55-b73e20a6e675"
                                                     class="homepage_hero-line mobile-vertical"></div>
                                                 <div class="homepage_hero-top-right">
-                                                    <div class="hero-desc-text" >
+                                                    <div class="hero-desc-text">
                                                         What if movement wasn't just exercise, but something you feel?
 
                                                         At ZAS, it becomes energy, rhythm, and a way of living that
@@ -1024,10 +939,6 @@
                 <div class="scroll_trigger"></div>
             </div>
             <!-- End Anthem Creative Hero Section -->
-
-            <!-- ===== Flare Cursor Script (Slater — same as draper.vc) ===== -->
-            <!--🤙 https://slater.app/15192/40140.js-->
-            <script>document.addEventListener("DOMContentLoaded", function () { function loadflarecursorpublished(e) { let t = document.createElement("script"); t.setAttribute("src", e), t.setAttribute("type", "text/javascript"), document.body.appendChild(t), t.addEventListener("load", () => { console.log("Slater loaded Flare Cursor - published.js: https://slater.app/15192/40140.js 🤙") }), t.addEventListener("error", e => { console.log("Error loading file", e) }) } let src = window.location.host.includes("webflow.io") ? "https://slater.app/15192/40140.js" : "https://assets.slater.app/slater/15192/40140.js?v=1.0"; loadflarecursorpublished(src); })</script>
 
             <!-- ===== GSAP for Anthem Hero Animations ===== -->
             <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
@@ -1231,12 +1142,10 @@
             </section>
             <!-- ===== Begin Elevate Trail Section ===== -->
             <div data-trail="wrapper" class="trail-section">
-                <div style="position: absolute; top: 10vh; left: 50%; transform: translateX(-50%); font-family: 'Inter', sans-serif; font-size: 0.9rem; color: #ffffff; text-transform: uppercase; letter-spacing: 0.15em; z-index: 20; pointer-events: none; font-weight: 600; text-shadow: 0px 4px 10px rgba(0,0,0,0.4);">(HOVER ME )</div>
                 <div class="padding-global">
                     <div class="intro-content-wrapper amplify_good">
                         <div class="intro_content-top">
-                            <h2 data-split-reveal="chars" data-split="heading" class="amplify_headline">AWAKEN<span
-                                    class="amplify_superscript"></span></h2>
+                            <h3 class="split-animate" id="anthem-hero-h1">AWAKEN</h3>
                         </div>
                         <div class="intro_content-bottom right">
                             <div class="max-width-small">
@@ -1759,7 +1668,7 @@
                                                                         <div class="programs-info">
                                                                             <div class="programs-info-flex">
                                                                                 <div class="programs-title-box">
-                                                                                    <div class="programs-title" style="color: #ffffff;">Students
+                                                                                    <div class="programs-title">Students
                                                                                         & Youth</div>
                                                                                 </div>
                                                                             </div>
@@ -1969,7 +1878,7 @@
                                                                         <div class="programs-info">
                                                                             <div class="programs-info-flex">
                                                                                 <div class="programs-title-box">
-                                                                                    <div class="programs-title" style="color: #ffffff;">Adults &
+                                                                                    <div class="programs-title">Adults &
                                                                                         Professionals</div>
                                                                                 </div>
                                                                             </div>
@@ -2179,7 +2088,7 @@
                                                                         <div class="programs-info">
                                                                             <div class="programs-info-flex">
                                                                                 <div class="programs-title-box">
-                                                                                    <div class="programs-title" style="color: #ffffff;">
+                                                                                    <div class="programs-title">
                                                                                         Communities & Spaces</div>
                                                                                 </div>
                                                                             </div>
@@ -2401,9 +2310,9 @@
                                             <div id="w-node-_993a5663-951c-1077-33d4-cc3d170773ec-170773e1"
                                                 class="cta-contact-box">
                                                 <div class="cta-contact-list">
-                                                    <div class="cta-contact-item"><a href="tel:+917012744595"
+                                                    <div class="cta-contact-item"><a>Contact us here with this Phone Number(Indian):</a><a href="tel:+917012744595"
                                                             class="cta-contact-phone">+91 70127 44595</a></div>
-                                                    <div class="cta-contact-item"><a
+                                                    <div class="cta-contact-item"><a>Contact us here with this Email:</a><a
                                                             href="mailto:snehaminilanaushad@gmail.com"
                                                             class="cta-contact-mail">snehaminilanaushad@gmail.com</a>
                                                     </div>
@@ -4822,7 +4731,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="footer-line"></div>
+                      
                         <div class="footer-bottom">
                             <div class="footer-bottom-flex"
                                 style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; text-align: center;">
@@ -5086,23 +4995,12 @@
                 });
             }
 
-            function initMenuReveal() {
-                // Remove wrapper logic, use simple ScrollTrigger class toggle on body
-                ScrollTrigger.create({
-                    trigger: ".section_hero",
-                    start: "bottom 20%", // Trigger when bottom of hero is 20% from top
-                    onEnter: () => document.body.classList.remove("hero-is-visible"),
-                    onLeaveBack: () => document.body.classList.add("hero-is-visible")
-                });
-            }
-
             // Initialize when ready, but defer secondary logic to prioritize hero intro on mobile
             document.addEventListener("DOMContentLoaded", () => {
                 setTimeout(() => {
                     if (registerPlugins()) {
                         initImageTrail();
                         initTextReveals();
-                        initMenuReveal();
                     } else {
                         // Fallback for async load
                         let retryCount = 0;
@@ -5112,7 +5010,6 @@
                                 if (retryCount <= 10) {
                                     initImageTrail();
                                     initTextReveals();
-                                    initMenuReveal();
                                 }
                             }
                             retryCount++;
@@ -5122,76 +5019,6 @@
             });
         })();
     </script>
-
-    <!-- ===== Flare Cursor Elements ===== -->
-    <!-- Main cursor circle with X icon (exact match from draper.vc) -->
-    <div data-wf--cursor--variant="base" class="main_cursor">
-        <div class="cursor_icon w-embed"><svg width="8" height="8" viewBox="0 0 8 8" fill="none"
-            xmlns="http://www.w3.org/2000/svg">
-            <path
-                d="M4.76735 3.61361C4.5551 3.82585 4.5551 4.16871 4.76735 4.38095L8 7.61361L7.61905 7.99456L4.38639 4.7619C4.17415 4.54966 3.83129 4.54966 3.61905 4.7619L0.380952 8L0 7.61905L3.23265 4.38639C3.4449 4.17415 3.4449 3.83129 3.23265 3.61905L0 0.380952L0.380952 0L3.61361 3.23265C3.82585 3.4449 4.16871 3.4449 4.38095 3.23265L7.61905 0L8 0.380952L4.76735 3.61361Z"
-                fill="currentColor" />
-        </svg></div>
-    </div>
-
-    <!-- Hidden color swatches for WebGL fluid palette (warm accent tones for ZAS Wellness) -->
-    <div class="cursor-color-swatches">
-        <div id="flarecolor1"></div>
-        <div id="flarecolor2"></div>
-        <div id="flarecolor3"></div>
-    </div>
-
-    <!-- Cursor icon rotation on link/button hover (exact from draper.vc) -->
-    <script>
-        const cursorIcon = document.querySelector('.cursor_icon');
-        if (cursorIcon) {
-            const targets = document.querySelectorAll('a, button');
-            targets.forEach(target => {
-                target.addEventListener('mouseenter', () => {
-                    cursorIcon.style.transform = 'translate(-50%, -50%) rotateZ(135deg)';
-                });
-                target.addEventListener('mouseleave', () => {
-                    cursorIcon.style.transform = 'translate(-50%, -50%) rotate(0deg)';
-                });
-            });
-        }
-
-        /* Show cursor only inside hero section, hide global cursor on hero hover */
-        (function () {
-            const hero = document.querySelector('.section_hero');
-            const cursor = document.querySelector('.main_cursor');
-            const icon = document.querySelector('.cursor_icon');
-            if (!hero || !cursor || !icon) return;
-
-            let curX = 0, curY = 0;
-            let destX = 0, destY = 0;
-            let raf;
-
-            document.addEventListener('mousemove', function (e) {
-                destX = e.clientX;
-                destY = e.clientY;
-            });
-
-            function lerp(a, b, t) { return a + (b - a) * t; }
-
-            function tick() {
-                curX = lerp(curX, destX, 0.12);
-                curY = lerp(curY, destY, 0.12);
-                icon.style.left = curX + 'px';
-                icon.style.top = curY + 'px';
-                raf = requestAnimationFrame(tick);
-            }
-            tick();
-
-            hero.addEventListener('mouseenter', function () {
-                cursor.style.opacity = '1';
-            });
-            hero.addEventListener('mouseleave', function () {
-                cursor.style.opacity = '0';
-            });
-        })();
-    </script>
-    <!-- ===== End Flare Cursor Elements ===== -->
 
 </body>
 
