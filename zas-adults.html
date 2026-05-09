@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html data-wf-domain="fitcore-ttm.webflow.io" data-wf-page="6924214173e7f76c979937f6"
     data-wf-site="691ea5c2d38e36d02b948f36" lang="en">
 
@@ -117,6 +117,576 @@
 </head>
 
 <body class="body">
+<!-- ═══════════════════════════════════════════════════════
+     ZAS WELLNESS LAUNCH OVERLAY — visible until 10:30 AM IST 2026-05-10
+     ═══════════════════════════════════════════════════════ -->
+<div id="zasLaunchOverlay" style="display:none;">
+
+  <!-- Logo (Top Left) -->
+  <div class="zlo-brand fade-in-up" style="animation-delay:0.1s">
+    <img src="image/zaslogowhite.png" alt="ZAS Wellness" class="zlo-logo" onerror="this.style.display='none'; document.getElementById('zloFallbackBrand').style.display='block';">
+    <div id="zloFallbackBrand" style="display:none; font-family:'Montserrat',sans-serif; font-weight:700; font-size:28px; letter-spacing:6px; color:#fff;">ZAS <span style="color:rgba(255,127,80,0.9)">WELLNESS</span></div>
+  </div>
+
+  <!-- Floating background orbs -->
+  <div class="zlo-bg">
+    <div class="zlo-orb zlo-orb-1"></div>
+    <div class="zlo-orb zlo-orb-2"></div>
+    <div class="zlo-orb zlo-orb-3"></div>
+    <div class="zlo-particles" id="zloParticles"></div>
+  </div>
+
+  <!-- Main content -->
+  <div class="zlo-content">
+
+    <div class="zlo-headline-wrap fade-in-up" style="animation-delay:0.3s">
+      <h1 class="zlo-headline">A Different Kind Of Movement<br>Starts Tomorrow.</h1>
+    </div>
+
+    <p class="zlo-subtext fade-in-up" style="animation-delay:0.55s">
+      ZAS Wellness officially launches Tomorrow at <span class="zlo-accent">10.30 am</span>
+    </p>
+
+    <!-- Countdown Timer -->
+    <div class="zlo-countdown fade-in-up" style="animation-delay:0.75s" id="zloCountdown">
+      <div class="zlo-timer-block">
+        <span class="zlo-timer-num" id="zloHours">00</span>
+        <span class="zlo-timer-label">Hours</span>
+      </div>
+      <div class="zlo-timer-sep">:</div>
+      <div class="zlo-timer-block">
+        <span class="zlo-timer-num" id="zloMinutes">00</span>
+        <span class="zlo-timer-label">Minutes</span>
+      </div>
+      <div class="zlo-timer-sep">:</div>
+      <div class="zlo-timer-block">
+        <span class="zlo-timer-num" id="zloSeconds">00</span>
+        <span class="zlo-timer-label">Seconds</span>
+      </div>
+    </div>
+
+    <!-- CTA Button -->
+    <div class="zlo-cta-wrap fade-in-up" style="animation-delay:1s">
+      <button class="zlo-btn" id="zloVideoBtn" aria-label="Watch Intro Video">
+        <span class="zlo-btn-play">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 2L13 8L4 14V2Z" fill="currentColor"/>
+          </svg>
+        </span>
+        Watch Intro Video
+      </button>
+    </div>
+
+    <div class="zlo-line fade-in-up" style="animation-delay:1.2s"></div>
+
+   
+  </div>
+
+</div>
+
+<!-- ═══ VIDEO MODAL ═══ -->
+<div id="zasVideoModal" class="zvm-backdrop" aria-hidden="true" role="dialog">
+  <div class="zvm-panel">
+    <button class="zvm-close" id="zloCloseModal" aria-label="Close video">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2 2L18 18M18 2L2 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+      </svg>
+    </button>
+    <div class="zvm-video-wrap">
+      <video id="zloVideoPlayer" width="100%" height="100%" controls playsinline preload="metadata">
+        <source src="videos/intro-video-dummy.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <p class="zvm-caption">ZAS Wellness — Launching Tomorrow at 10.30 am IST</p>
+  </div>
+</div>
+
+<!-- ═══ OVERLAY STYLES ═══ -->
+<style>
+/* ── Reset & Fonts ── */
+#zasLaunchOverlay, #zasVideoModal {
+  font-family: 'Inter', 'Montserrat', sans-serif;
+  box-sizing: border-box;
+}
+#zasLaunchOverlay *, #zasVideoModal * {
+  box-sizing: inherit;
+}
+
+/* ── Full-screen overlay ── */
+#zasLaunchOverlay {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(ellipse at 30% 70%, #0056D2 0%, #1a6fc4 40%, #2E86C1 75%, #1a5fa8 100%);
+  z-index: 99999;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── Fade-in-up animation ── */
+@keyframes zloFadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fade-in-up {
+  opacity: 0;
+  animation: zloFadeInUp 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+/* ── Floating background ── */
+.zlo-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+.zlo-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0;
+  animation: zloFloat 14s ease-in-out infinite alternate, zloFadeInOrb 2s ease forwards;
+}
+@keyframes zloFadeInOrb {
+  to { opacity: 1; }
+}
+.zlo-orb-1 {
+  width: 55vw; height: 55vw;
+  max-width: 700px; max-height: 700px;
+  background: radial-gradient(circle, rgba(255,127,80,0.22) 0%, transparent 70%);
+  top: -15%; left: -20%;
+  animation-delay: 0s, 0.5s;
+  animation-duration: 18s, 2s;
+}
+.zlo-orb-2 {
+  width: 45vw; height: 45vw;
+  max-width: 560px; max-height: 560px;
+  background: radial-gradient(circle, rgba(135,206,235,0.18) 0%, transparent 70%);
+  bottom: -20%; right: -15%;
+  animation-delay: 2s, 0.8s;
+  animation-duration: 22s, 2s;
+}
+.zlo-orb-3 {
+  width: 30vw; height: 30vw;
+  max-width: 380px; max-height: 380px;
+  background: radial-gradient(circle, rgba(255,99,71,0.18) 0%, transparent 70%);
+  top: 55%; left: 55%;
+  animation-delay: 5s, 1.2s;
+  animation-duration: 16s, 2s;
+}
+@keyframes zloFloat {
+  0%   { transform: translate(0, 0) scale(1); }
+  33%  { transform: translate(4%, -5%) scale(1.05); }
+  66%  { transform: translate(-3%, 4%) scale(0.97); }
+  100% { transform: translate(2%, -2%) scale(1.03); }
+}
+
+/* ── Particles ── */
+.zlo-particle {
+  position: absolute;
+  width: 2px; height: 2px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.5);
+  animation: zloParticleFloat linear infinite;
+}
+@keyframes zloParticleFloat {
+  0%   { transform: translateY(0) translateX(0); opacity: 0; }
+  10%  { opacity: 1; }
+  90%  { opacity: 0.4; }
+  100% { transform: translateY(-100vh) translateX(30px); opacity: 0; }
+}
+
+/* ── Content ── */
+.zlo-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 4vw;
+  margin-top: 8vh;
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* ── Logo ── */
+.zlo-brand {
+  position: absolute;
+  top: 40px;
+  left: 5%;
+  z-index: 10;
+}
+.zlo-logo {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+  filter: brightness(1.1);
+}
+
+/* ── Headline ── */
+.zlo-headline {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(32px, 5.5vw, 68px);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+  margin: 0 0 24px;
+  color: #ffffff;
+  -webkit-text-fill-color: #ffffff;
+  padding: 0 20px;
+}
+
+/* ── Sub-text ── */
+.zlo-subtext {
+  font-size: clamp(14px, 2.2vw, 18px);
+  font-weight: 400;
+  color: rgba(255,255,255,0.85);
+  margin: 0 0 44px;
+  letter-spacing: 0.5px;
+  line-height: 1.6;
+}
+.zlo-accent {
+  color: #FF7F50;
+  font-weight: 700;
+}
+
+/* ── Countdown ── */
+.zlo-countdown {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 52px;
+}
+.zlo-timer-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 14px;
+  padding: 20px 28px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  min-width: 90px;
+  box-shadow: 0 0 30px rgba(0,40,100,0.15), inset 0 1px 0 rgba(255,255,255,0.15);
+  transition: box-shadow 0.4s ease, border-color 0.4s ease;
+}
+.zlo-timer-block:hover {
+  border-color: rgba(255,127,80,0.7);
+  box-shadow: 0 0 40px rgba(255,99,71,0.25), inset 0 1px 0 rgba(255,255,255,0.2);
+}
+.zlo-timer-num {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(32px, 5vw, 54px);
+  font-weight: 700;
+  letter-spacing: -1px;
+  line-height: 1;
+  color: #ffffff;
+  transition: transform 0.15s ease;
+}
+.zlo-timer-num.tick {
+  transform: scale(1.12);
+}
+.zlo-timer-label {
+  font-size: 10px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: rgba(255,127,80,1);
+  font-weight: 600;
+}
+.zlo-timer-sep {
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 300;
+  color: rgba(255,255,255,0.6);
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+/* ── CTA Button ── */
+.zlo-cta-wrap {
+  margin-bottom: 40px;
+}
+.zlo-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 42px;
+  border: none;
+  border-radius: 100px;
+  background: linear-gradient(135deg, #FF7F50 0%, #FF6347 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
+  box-shadow: 0 6px 30px rgba(255,99,71,0.4), 0 2px 8px rgba(0,0,0,0.2);
+}
+.zlo-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.zlo-btn:hover {
+  background: linear-gradient(135deg, #FF6347 0%, #e8512e 100%);
+  box-shadow: 0 8px 40px rgba(255,99,71,0.55), 0 2px 12px rgba(0,0,0,0.25);
+  transform: scale(1.04) translateY(-2px);
+  color: #ffffff;
+}
+.zlo-btn:hover::before { opacity: 1; }
+.zlo-btn:active { transform: scale(1.01) translateY(0); }
+.zlo-btn-play {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px; height: 30px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.25);
+  border: 1px solid rgba(255,255,255,0.4);
+  color: #ffffff;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+.zlo-btn:hover .zlo-btn-play {
+  background: rgba(255,255,255,0.35);
+  box-shadow: 0 0 15px rgba(255,255,255,0.3);
+}
+
+/* ── Divider ── */
+.zlo-line {
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  margin-bottom: 16px;
+}
+
+/* ═══ VIDEO MODAL ═══ */
+.zvm-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 999999;
+  background: rgba(3,4,4,0.88);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.45s cubic-bezier(0.2,0.8,0.2,1), visibility 0.45s;
+}
+.zvm-backdrop.zvm-open {
+  opacity: 1;
+  visibility: visible;
+}
+.zvm-panel {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,127,80,0.15);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 30px 100px rgba(0,0,0,0.7), 0 0 80px rgba(255,99,71,0.12), inset 0 1px 0 rgba(255,255,255,0.06);
+  transform: scale(0.92) translateY(20px);
+  transition: transform 0.45s cubic-bezier(0.2,0.8,0.2,1);
+}
+.zvm-backdrop.zvm-open .zvm-panel {
+  transform: scale(1) translateY(0);
+}
+.zvm-close {
+  position: absolute;
+  top: 14px; right: 14px;
+  z-index: 10;
+  width: 38px; height: 38px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: rgba(255,255,255,0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease;
+}
+.zvm-close:hover {
+  background: rgba(255,127,80,0.12);
+  border-color: rgba(255,127,80,0.35);
+  color: rgba(255,127,80,0.9);
+  box-shadow: 0 0 20px rgba(255,127,80,0.15);
+}
+.zvm-video-wrap {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+.zvm-video-wrap iframe, .zvm-video-wrap video {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  border: none;
+  background-color: #000;
+}
+.zvm-caption {
+  text-align: center;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255,127,80,0.5);
+  margin: 0;
+  padding: 14px 20px;
+  background: rgba(0,0,0,0.3);
+}
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  .zlo-timer-block { padding: 14px 16px; min-width: 68px; border-radius: 10px; }
+  .zlo-headline { letter-spacing: -1px; }
+  .zlo-btn { padding: 14px 28px; font-size: 12px; }
+  .zlo-countdown { gap: 8px; }
+  .zlo-timer-sep { font-size: 24px; }
+}
+@media (max-width: 380px) {
+  .zlo-timer-block { padding: 12px 12px; min-width: 58px; }
+  .zlo-countdown { gap: 6px; }
+}
+</style>
+
+<!-- ═══ OVERLAY SCRIPT ═══ -->
+<script>
+(function() {
+  // ── Target: 2026-05-10 at 10:30:00 IST (UTC+5:30) = 05:00 UTC ──
+  var launchUTC = new Date(Date.UTC(2026, 4, 10, 5, 0, 0, 0));
+
+  var overlay    = document.getElementById('zasLaunchOverlay');
+  var modal      = document.getElementById('zasVideoModal');
+  var videoPlayer= document.getElementById('zloVideoPlayer');
+  var videoBtn   = document.getElementById('zloVideoBtn');
+  var closeBtn   = document.getElementById('zloCloseModal');
+
+  var msRemaining = launchUTC - Date.now();
+
+  if (msRemaining <= 0) {
+    overlay.style.display = 'none';
+    return;
+  }
+
+  overlay.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+
+  // ── Spawn floating particles ──
+  var container = document.getElementById('zloParticles');
+  if (container) {
+    for (var i = 0; i < 30; i++) {
+      (function(idx) {
+        var p = document.createElement('span');
+        p.className = 'zlo-particle';
+        var left = Math.random() * 100;
+        var dur  = 12 + Math.random() * 20;
+        var del  = Math.random() * 15;
+        var size = 1 + Math.random() * 2.5;
+        p.style.cssText = 'left:' + left + 'vw; bottom:-10px; width:' + size + 'px; height:' + size + 'px;'
+          + 'animation-duration:' + dur + 's; animation-delay:' + del + 's; opacity:0;';
+        container.appendChild(p);
+      })(i);
+    }
+  }
+
+  // ── Countdown logic ──
+  function pad(n) { return String(Math.floor(n)).padStart(2, '0'); }
+
+  function updateCountdown() {
+    var diff = launchUTC - Date.now();
+    if (diff <= 0) {
+      clearInterval(timer);
+      document.getElementById('zloHours').textContent   = '00';
+      document.getElementById('zloMinutes').textContent = '00';
+      document.getElementById('zloSeconds').textContent = '00';
+      setTimeout(function() {
+        overlay.style.transition = 'opacity 1.5s ease';
+        overlay.style.opacity    = '0';
+        setTimeout(function() {
+          overlay.style.display   = 'none';
+          document.body.style.overflow = '';
+        }, 1500);
+      }, 400);
+      return;
+    }
+    var h = Math.floor(diff / 3600000);
+    var m = Math.floor((diff % 3600000) / 60000);
+    var s = Math.floor((diff % 60000) / 1000);
+
+    var hEl = document.getElementById('zloHours');
+    var mEl = document.getElementById('zloMinutes');
+    var sEl = document.getElementById('zloSeconds');
+
+    function tickAnim(el, val) {
+      var prev = el.textContent;
+      var newVal = pad(val);
+      if (prev !== newVal) {
+        el.classList.remove('tick');
+        void el.offsetWidth;
+        el.textContent = newVal;
+        el.classList.add('tick');
+        setTimeout(function() { el.classList.remove('tick'); }, 160);
+      }
+    }
+
+    tickAnim(hEl, h);
+    tickAnim(mEl, m);
+    tickAnim(sEl, s);
+  }
+
+  updateCountdown();
+  var timer = setInterval(updateCountdown, 1000);
+
+  // ── Video modal ──
+  function openModal() {
+    modal.classList.add('zvm-open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    if (videoPlayer) {
+      videoPlayer.currentTime = 0;
+      videoPlayer.play().catch(function(e) { console.log('Autoplay prevented', e); });
+    }
+  }
+  function closeModal() {
+    modal.classList.remove('zvm-open');
+    modal.setAttribute('aria-hidden', 'true');
+    if (videoPlayer) { videoPlayer.pause(); }
+  }
+
+  if (videoBtn)  videoBtn.addEventListener('click',  openModal);
+  if (closeBtn)  closeBtn.addEventListener('click',  closeModal);
+  if (modal) {
+    modal.addEventListener('click', function(e) { if (e.target === modal) closeModal(); });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && modal.classList.contains('zvm-open')) closeModal();
+    });
+  }
+})();
+</script>
+<!-- ═══ END LAUNCH OVERLAY ═══ -->
     <div class="page">
         <section class="header">
             <div class="header-content">
