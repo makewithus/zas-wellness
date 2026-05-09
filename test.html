@@ -91,7 +91,7 @@
 <body class="body">
 
 <!-- ═══════════════════════════════════════════════════════
-     ZAS WELLNESS LAUNCH OVERLAY — visible until 12:00 PM IST today
+     ZAS WELLNESS LAUNCH OVERLAY — visible until 10:30 AM IST tomorrow
      ═══════════════════════════════════════════════════════ -->
 <div id="zasLaunchOverlay" style="display:none;">
 
@@ -194,7 +194,7 @@
   inset: 0;
   width: 100vw;
   height: 100vh;
-  background: radial-gradient(ellipse at 40% 60%, #150904 0%, #080302 55%, #000000 100%);
+  background: radial-gradient(ellipse at 30% 70%, #0056D2 0%, #1a6fc4 40%, #2E86C1 75%, #1a5fa8 100%);
   z-index: 99999;
   overflow: hidden;
   display: flex;
@@ -233,7 +233,7 @@
 .zlo-orb-1 {
   width: 55vw; height: 55vw;
   max-width: 700px; max-height: 700px;
-  background: radial-gradient(circle, rgba(255,99,71,0.15) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(255,127,80,0.22) 0%, transparent 70%);
   top: -15%; left: -20%;
   animation-delay: 0s, 0.5s;
   animation-duration: 18s, 2s;
@@ -241,7 +241,7 @@
 .zlo-orb-2 {
   width: 45vw; height: 45vw;
   max-width: 560px; max-height: 560px;
-  background: radial-gradient(circle, rgba(255,127,80,0.10) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(135,206,235,0.18) 0%, transparent 70%);
   bottom: -20%; right: -15%;
   animation-delay: 2s, 0.8s;
   animation-duration: 22s, 2s;
@@ -249,7 +249,7 @@
 .zlo-orb-3 {
   width: 30vw; height: 30vw;
   max-width: 380px; max-height: 380px;
-  background: radial-gradient(circle, rgba(255,99,71,0.12) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(255,99,71,0.18) 0%, transparent 70%);
   top: 55%; left: 55%;
   animation-delay: 5s, 1.2s;
   animation-duration: 16s, 2s;
@@ -266,7 +266,7 @@
   position: absolute;
   width: 2px; height: 2px;
   border-radius: 50%;
-  background: rgba(255,127,80,0.5);
+  background: rgba(255,255,255,0.5);
   animation: zloParticleFloat linear infinite;
 }
 @keyframes zloParticleFloat {
@@ -312,10 +312,8 @@
   line-height: 1.1;
   letter-spacing: -1.5px;
   margin: 0 0 24px;
-  background: linear-gradient(135deg, #ffffff 0%, rgba(255,255,255,0.75) 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #ffffff;
+  -webkit-text-fill-color: #ffffff;
   padding: 0 20px;
 }
 
@@ -323,14 +321,14 @@
 .zlo-subtext {
   font-size: clamp(14px, 2.2vw, 18px);
   font-weight: 400;
-  color: rgba(255,255,255,0.55);
+  color: rgba(255,255,255,0.85);
   margin: 0 0 44px;
   letter-spacing: 0.5px;
   line-height: 1.6;
 }
 .zlo-accent {
-  color: rgba(255,127,80,0.9);
-  font-weight: 600;
+  color: #FF7F50;
+  font-weight: 700;
 }
 
 /* ── Countdown ── */
@@ -345,19 +343,19 @@
   flex-direction: column;
   align-items: center;
   gap: 6px;
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(255,127,80,0.14);
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.3);
   border-radius: 14px;
   padding: 20px 28px;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   min-width: 90px;
-  box-shadow: 0 0 30px rgba(255,99,71,0.08), inset 0 1px 0 rgba(255,255,255,0.05);
+  box-shadow: 0 0 30px rgba(0,40,100,0.15), inset 0 1px 0 rgba(255,255,255,0.15);
   transition: box-shadow 0.4s ease, border-color 0.4s ease;
 }
 .zlo-timer-block:hover {
-  border-color: rgba(255,127,80,0.35);
-  box-shadow: 0 0 40px rgba(255,99,71,0.18), inset 0 1px 0 rgba(255,255,255,0.08);
+  border-color: rgba(255,127,80,0.7);
+  box-shadow: 0 0 40px rgba(255,99,71,0.25), inset 0 1px 0 rgba(255,255,255,0.2);
 }
 .zlo-timer-num {
   font-family: 'Montserrat', sans-serif;
@@ -375,13 +373,13 @@
   font-size: 10px;
   letter-spacing: 2.5px;
   text-transform: uppercase;
-  color: rgba(255,127,80,0.6);
-  font-weight: 500;
+  color: rgba(255,127,80,1);
+  font-weight: 600;
 }
 .zlo-timer-sep {
   font-size: clamp(28px, 4vw, 44px);
   font-weight: 300;
-  color: rgba(255,127,80,0.35);
+  color: rgba(255,255,255,0.6);
   line-height: 1;
   margin-bottom: 20px;
 }
@@ -395,15 +393,15 @@
   align-items: center;
   gap: 12px;
   padding: 16px 42px;
-  border: 1px solid rgba(255,127,80,0.3);
+  border: none;
   border-radius: 100px;
-  background: rgba(255,127,80,0.06);
+  background: linear-gradient(135deg, #FF7F50 0%, #FF6347 100%);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  color: rgba(255,255,255,0.9);
+  color: #ffffff;
   font-family: 'Inter', sans-serif;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 1.5px;
   text-transform: uppercase;
   cursor: pointer;
@@ -411,21 +409,20 @@
   position: relative;
   overflow: hidden;
   transition: all 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
-  box-shadow: 0 0 30px rgba(255,99,71,0.12), inset 0 1px 0 rgba(255,255,255,0.06);
+  box-shadow: 0 6px 30px rgba(255,99,71,0.4), 0 2px 8px rgba(0,0,0,0.2);
 }
 .zlo-btn::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 50% 50%, rgba(255,127,80,0.12) 0%, transparent 70%);
+  background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, transparent 60%);
   opacity: 0;
   transition: opacity 0.4s ease;
 }
 .zlo-btn:hover {
-  border-color: rgba(255,127,80,0.65);
-  background: rgba(255,127,80,0.10);
-  box-shadow: 0 0 50px rgba(255,99,71,0.25), 0 0 100px rgba(255,127,80,0.08), inset 0 1px 0 rgba(255,255,255,0.1);
-  transform: scale(1.04) translateY(-1px);
+  background: linear-gradient(135deg, #FF6347 0%, #e8512e 100%);
+  box-shadow: 0 8px 40px rgba(255,99,71,0.55), 0 2px 12px rgba(0,0,0,0.25);
+  transform: scale(1.04) translateY(-2px);
   color: #ffffff;
 }
 .zlo-btn:hover::before { opacity: 1; }
@@ -436,29 +433,29 @@
   justify-content: center;
   width: 30px; height: 30px;
   border-radius: 50%;
-  background: rgba(255,127,80,0.15);
-  border: 1px solid rgba(255,127,80,0.3);
-  color: rgba(255,127,80,0.9);
+  background: rgba(255,255,255,0.25);
+  border: 1px solid rgba(255,255,255,0.4);
+  color: #ffffff;
   flex-shrink: 0;
   transition: all 0.3s ease;
 }
 .zlo-btn:hover .zlo-btn-play {
-  background: rgba(255,127,80,0.25);
-  box-shadow: 0 0 15px rgba(255,127,80,0.3);
+  background: rgba(255,255,255,0.35);
+  box-shadow: 0 0 15px rgba(255,255,255,0.3);
 }
 
 /* ── Divider + tagline ── */
 .zlo-line {
   width: 60px;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(255,127,80,0.35), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
   margin-bottom: 16px;
 }
 .zlo-tagline {
   font-size: 11px;
   letter-spacing: 4px;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.25);
+  color: rgba(255,255,255,0.5);
   margin: 0;
 }
 
@@ -471,7 +468,7 @@
   font-size: 10px;
   letter-spacing: 2.5px;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.45);
   animation: zloPulse 3s ease-in-out infinite alternate !important;
 }
 @keyframes zloPulse {
@@ -581,19 +578,9 @@
 <!-- ═══ OVERLAY SCRIPT ═══ -->
 <script>
 (function() {
-  // ── Target: today at 15:00:00 IST (UTC+5:30) ──
-  var now = new Date();
-  var launchIST = new Date(
-    now.getFullYear(),
-    now.getMonth(),
-    now.getDate(),
-    15, 0, 0, 0          // local midnight of device — we'll override with IST below
-  );
-
-  // Build launch time as today 15:00:00 IST in UTC
-  // IST = UTC+5:30 → 3pm IST = 09:30 UTC
-  var todayUTC  = new Date(Date.UTC(now.getFullYear(), now.getMonth(), now.getDate()));
-  var launchUTC = new Date(todayUTC.getTime() + (9 * 60 + 30) * 60 * 1000); // 09:30 UTC = 15:00 IST
+  // ── Target: tomorrow (2026-05-10) at 10:30:00 IST (UTC+5:30) ──
+  // IST = UTC+5:30 → 10:30 AM IST = 05:00 UTC
+  var launchUTC = new Date(Date.UTC(2026, 4, 10, 5, 0, 0, 0)); // 2026-05-10 05:00 UTC = 10:30 AM IST
 
   var overlay    = document.getElementById('zasLaunchOverlay');
   var modal      = document.getElementById('zasVideoModal');
