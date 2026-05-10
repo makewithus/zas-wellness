@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!-- This site was created in Webflow. https://webflow.com -->
 <!-- Last Published: Mon Jan 26 2026 10:18:21 GMT+0000 (Coordinated Universal Time) -->
 <html data-wf-domain="fitcore-ttm.webflow.io" data-wf-page="691ea5c3d38e36d02b948f6f"
@@ -1130,7 +1130,7 @@
                     inset: 0;
                     width: 100%;
                     height: 100%;
-                    z-index: 0;
+                    z-index: 2;
                     pointer-events: none;
                 }
 
@@ -1312,10 +1312,30 @@
                     padding-left: 5%;
                 }
 
-                .homepage-hero-bottom {
+                /* ===== Hero Background Image (hero.png — furthest most image) ===== */
+                .hero-bg-image-wrap {
                     position: absolute;
                     left: 0;
                     bottom: 0;
+                    width: 100%;
+                    height: 65%;
+                    z-index: 1;
+                    pointer-events: none;
+                    overflow: hidden;
+                }
+
+                .hero-bg-image-wrap img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: bottom center;
+                    display: block;
+                }
+
+                .homepage-hero-bottom {
+                    position: absolute;
+                    left: 0;
+                    bottom: 5vh;
                     width: 100%;
                     margin: 0;
                     padding-bottom: 0;
@@ -1325,15 +1345,15 @@
 
                 .split-animate {
                     font-family: 'Inter';
-                    /* "zas wellness" = ~12 chars: font-size scaled from tetherup(8) to fit edge-to-edge */
-                    font-size: clamp(3rem, 12.5vw, 16rem);
+                    /* "MOVE • BREATHE • BECOME" — fitted to fill screen from left to right */
+                    font-size: clamp(1.8rem, 7.8vw, 11rem);
                     font-weight: 900;
                     line-height: 0.88;
                     letter-spacing: -0.02em;
                     text-transform: uppercase;
                     color: var(--color-white);
                     margin: 0;
-                    padding: 0;
+                    padding: 0 1vw;
                     display: block;
                     white-space: nowrap;
                     text-align: center;
@@ -1347,13 +1367,13 @@
 
                 @media screen and (max-width: 1280px) {
                     .split-animate {
-                        font-size: clamp(2.5rem, 13vw, 14rem);
+                        font-size: clamp(1.6rem, 7.5vw, 9rem);
                     }
                 }
 
                 @media screen and (max-width: 991px) {
                     .split-animate {
-                        font-size: clamp(2.5rem, 12.5vw, 12rem);
+                        font-size: clamp(1.4rem, 7vw, 7rem);
                     }
 
                     .homepage_hero-top {
@@ -1425,7 +1445,7 @@
                     }
 
                     .split-animate {
-                        font-size: clamp(4rem, 18vw, 12rem);
+                        font-size: clamp(1rem, 7vw, 4rem);
                         padding: 0;
                         white-space: nowrap;
                         letter-spacing: -0.02em;
@@ -1433,11 +1453,15 @@
                         transform: scaleY(1.4);
                         transform-origin: bottom center;
                     }
+
+                    .hero-bg-image-wrap {
+                        height: 45%;
+                    }
                 }
 
                 @media screen and (max-width: 480px) {
                     .split-animate {
-                        font-size: clamp(2.8rem, 12vw, 5rem);
+                        font-size: clamp(0.85rem, 7vw, 2.5rem);
                     }
                 }
 
@@ -1481,7 +1505,7 @@
                     right: 0;
                     width: 100%;
                     height: 100%;
-                    z-index: 1;
+                    z-index: 3;
                     pointer-events: none;
                 }
 
@@ -1538,6 +1562,11 @@
                 <div class="scroll_target">
                     <header class="section_hero">
 
+                        <!-- Hero Background Image (bottommost layer — behind all other images) -->
+                        <div class="hero-bg-image-wrap">
+                            <img src="image/hero.png" alt="ZAS Wellness Hero Background" />
+                        </div>
+
                         <!-- Flare Cursor WebGL Fluid Canvas -->
                         <div class="hero-canvas-wrapper">
                             <canvas data-splash="" class="fluid"></canvas>
@@ -1582,7 +1611,7 @@
                                                
                                             </div>
                                             <div class="homepage-hero-bottom">
-                                                <h1 class="split-animate" id="anthem-hero-h1">ZAS WELLNESS</h1>
+                                                <h1 class="split-animate" id="anthem-hero-h1">MOVE &bull; BREATHE &bull; BECOME</h1>
                                             </div>
                                         </div>
                                     </div>
