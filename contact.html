@@ -15,9 +15,7 @@
     <meta
         content="Ready to start your fitness journey? Get in touch with ZAS Fit today! Find our location, phone number, email, and easily send us a message."
         property="og:description" />
-    <meta
-        content="image/zasemblem.png"
-        property="og:image" />
+    <meta content="image/zasemblem.png" property="og:image" />
     <meta content="Contact - ZAS Fit" property="twitter:title" />
     <meta
         content="Ready to start your fitness journey? Get in touch with ZAS Fit today! Find our location, phone number, email, and easily send us a message."
@@ -27,11 +25,9 @@
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <meta content="1nparj5QmHqPyY1pHIuevLbkzAxa38EQwLyqvaprOVY" name="google-site-verification" />
     <meta content="Webflow" name="generator" />
-    <link
-        href="691ea5c2d38e36d02b948f36/css/fitcore-ttm.webflow.shared.8948b5576.css"
-        rel="stylesheet" type="text/css" />
-    <link
-        href="691ea5c2d38e36d02b948f36/css/fitcore-ttm.webflow.69255154d13d96c173cc68da-c85db849d.css"
+    <link href="691ea5c2d38e36d02b948f36/css/fitcore-ttm.webflow.shared.8948b5576.css" rel="stylesheet"
+        type="text/css" />
+    <link href="691ea5c2d38e36d02b948f36/css/fitcore-ttm.webflow.69255154d13d96c173cc68da-c85db849d.css"
         rel="stylesheet" type="text/css" />
     <style>
         @media (min-width:992px) {
@@ -240,378 +236,468 @@
 
 <body class="body">
 
-<!-- ═══════════════════════════════════════════════════════
+    <!-- ═══════════════════════════════════════════════════════
      ZAS WELLNESS LAUNCH OVERLAY — visible until 10:30 AM IST 2026-05-10
      ═══════════════════════════════════════════════════════ -->
-<div id="zasLaunchOverlay" style="display:none;">
+    <div id="zasLaunchOverlay" style="display:none;">
 
-  <!-- Logo (Top Left) -->
-  <div class="zlo-brand fade-in-up" style="animation-delay:0.1s">
-    <img src="image/zaslogowhite.png" alt="ZAS Wellness" class="zlo-logo" onerror="this.style.display='none'; document.getElementById('zloFallbackBrand').style.display='block';">
-    <div id="zloFallbackBrand" style="display:none; font-family:'Montserrat',sans-serif; font-weight:700; font-size:28px; letter-spacing:6px; color:#fff;">ZAS <span style="color:rgba(255,127,80,0.9)">WELLNESS</span></div>
-  </div>
+        <!-- Logo (Top Left) -->
+        <div class="zlo-brand fade-in-up" style="animation-delay:0.1s">
+            <img src="image/zaslogowhite.png" alt="ZAS Wellness" class="zlo-logo"
+                onerror="this.style.display='none'; document.getElementById('zloFallbackBrand').style.display='block';">
+            <div id="zloFallbackBrand"
+                style="display:none; font-family:'Montserrat',sans-serif; font-weight:700; font-size:28px; letter-spacing:6px; color:#fff;">
+                ZAS <span style="color:rgba(255,127,80,0.9)">WELLNESS</span></div>
+        </div>
 
-  <!-- Floating background orbs -->
-  <div class="zlo-bg">
-    <div class="zlo-orb zlo-orb-1"></div>
-    <div class="zlo-orb zlo-orb-2"></div>
-    <div class="zlo-orb zlo-orb-3"></div>
-    <div class="zlo-particles" id="zloParticles"></div>
-  </div>
+        <!-- Floating background orbs -->
+        <div class="zlo-bg">
+            <div class="zlo-orb zlo-orb-1"></div>
+            <div class="zlo-orb zlo-orb-2"></div>
+            <div class="zlo-orb zlo-orb-3"></div>
+            <div class="zlo-particles" id="zloParticles"></div>
+        </div>
 
-  <!-- Main content -->
-  <div class="zlo-content">
+        <!-- Main content -->
+        <div class="zlo-content">
 
-    <div class="zlo-headline-wrap fade-in-up" style="animation-delay:0.3s">
-      <h1 class="zlo-headline">A Different Kind Of Movement<br>Starts Today.</h1>
+            <div class="zlo-headline-wrap fade-in-up" style="animation-delay:0.3s">
+                <h1 class="zlo-headline">A Different Kind Of Movement<br>Starts Today.</h1>
+            </div>
+
+            <p class="zlo-subtext fade-in-up" style="animation-delay:0.55s">
+                ZAS Wellness officially launches <span class="zlo-accent">Today</span> at <span class="zlo-accent">10.30
+                    am IST</span>
+            </p>
+
+            <!-- Countdown Timer -->
+            <div class="zlo-countdown fade-in-up" style="animation-delay:0.75s" id="zloCountdown">
+                <div class="zlo-timer-block">
+                    <span class="zlo-timer-num" id="zloHours">00</span>
+                    <span class="zlo-timer-label">Hours</span>
+                </div>
+                <div class="zlo-timer-sep">:</div>
+                <div class="zlo-timer-block">
+                    <span class="zlo-timer-num" id="zloMinutes">00</span>
+                    <span class="zlo-timer-label">Minutes</span>
+                </div>
+                <div class="zlo-timer-sep">:</div>
+                <div class="zlo-timer-block">
+                    <span class="zlo-timer-num" id="zloSeconds">00</span>
+                    <span class="zlo-timer-label">Seconds</span>
+                </div>
+            </div>
+
+            <div class="zlo-line fade-in-up" style="animation-delay:1s"></div>
+
+
+        </div>
+
     </div>
 
-    <p class="zlo-subtext fade-in-up" style="animation-delay:0.55s">
-      ZAS Wellness officially launches <span class="zlo-accent">Today</span> at <span class="zlo-accent">10.30 am IST</span>
-    </p>
-
-    <!-- Countdown Timer -->
-    <div class="zlo-countdown fade-in-up" style="animation-delay:0.75s" id="zloCountdown">
-      <div class="zlo-timer-block">
-        <span class="zlo-timer-num" id="zloHours">00</span>
-        <span class="zlo-timer-label">Hours</span>
-      </div>
-      <div class="zlo-timer-sep">:</div>
-      <div class="zlo-timer-block">
-        <span class="zlo-timer-num" id="zloMinutes">00</span>
-        <span class="zlo-timer-label">Minutes</span>
-      </div>
-      <div class="zlo-timer-sep">:</div>
-      <div class="zlo-timer-block">
-        <span class="zlo-timer-num" id="zloSeconds">00</span>
-        <span class="zlo-timer-label">Seconds</span>
-      </div>
-    </div>
-
-    <div class="zlo-line fade-in-up" style="animation-delay:1s"></div>
-
-   
-  </div>
-
-</div>
 
 
+    <!-- ═══ OVERLAY STYLES ═══ -->
+    <style>
+        /* ── Reset & Fonts ── */
+        #zasLaunchOverlay,
+        #zasVideoModal {
+            font-family: 'Inter', 'Montserrat', sans-serif;
+            box-sizing: border-box;
+        }
 
-<!-- ═══ OVERLAY STYLES ═══ -->
-<style>
-/* ── Reset & Fonts ── */
-#zasLaunchOverlay, #zasVideoModal {
-  font-family: 'Inter', 'Montserrat', sans-serif;
-  box-sizing: border-box;
-}
-#zasLaunchOverlay *, #zasVideoModal * {
-  box-sizing: inherit;
-}
+        #zasLaunchOverlay *,
+        #zasVideoModal * {
+            box-sizing: inherit;
+        }
 
-/* ── Full-screen overlay ── */
-#zasLaunchOverlay {
-  position: fixed;
-  inset: 0;
-  width: 100vw;
-  height: 100vh;
-  background: radial-gradient(ellipse at 30% 70%, #0056D2 0%, #1a6fc4 40%, #2E86C1 75%, #1a5fa8 100%);
-  z-index: 99999;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
+        /* ── Full-screen overlay ── */
+        #zasLaunchOverlay {
+            position: fixed;
+            inset: 0;
+            width: 100vw;
+            height: 100vh;
+            background: radial-gradient(ellipse at 30% 70%, #0056D2 0%, #1a6fc4 40%, #2E86C1 75%, #1a5fa8 100%);
+            z-index: 99999;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
 
-/* ── Fade-in-up animation ── */
-@keyframes zloFadeInUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-.fade-in-up {
-  opacity: 0;
-  animation: zloFadeInUp 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
-}
+        /* ── Fade-in-up animation ── */
+        @keyframes zloFadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
 
-/* ── Floating background ── */
-.zlo-bg {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  overflow: hidden;
-}
-.zlo-orb {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(90px);
-  opacity: 0;
-  animation: zloFloat 14s ease-in-out infinite alternate, zloFadeInOrb 2s ease forwards;
-}
-@keyframes zloFadeInOrb {
-  to { opacity: 1; }
-}
-.zlo-orb-1 {
-  width: 55vw; height: 55vw;
-  max-width: 700px; max-height: 700px;
-  background: radial-gradient(circle, rgba(255,127,80,0.22) 0%, transparent 70%);
-  top: -15%; left: -20%;
-  animation-delay: 0s, 0.5s;
-  animation-duration: 18s, 2s;
-}
-.zlo-orb-2 {
-  width: 45vw; height: 45vw;
-  max-width: 560px; max-height: 560px;
-  background: radial-gradient(circle, rgba(135,206,235,0.18) 0%, transparent 70%);
-  bottom: -20%; right: -15%;
-  animation-delay: 2s, 0.8s;
-  animation-duration: 22s, 2s;
-}
-.zlo-orb-3 {
-  width: 30vw; height: 30vw;
-  max-width: 380px; max-height: 380px;
-  background: radial-gradient(circle, rgba(255,99,71,0.18) 0%, transparent 70%);
-  top: 55%; left: 55%;
-  animation-delay: 5s, 1.2s;
-  animation-duration: 16s, 2s;
-}
-@keyframes zloFloat {
-  0%   { transform: translate(0, 0) scale(1); }
-  33%  { transform: translate(4%, -5%) scale(1.05); }
-  66%  { transform: translate(-3%, 4%) scale(0.97); }
-  100% { transform: translate(2%, -2%) scale(1.03); }
-}
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
-/* ── Particles ── */
-.zlo-particle {
-  position: absolute;
-  width: 2px; height: 2px;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.5);
-  animation: zloParticleFloat linear infinite;
-}
-@keyframes zloParticleFloat {
-  0%   { transform: translateY(0) translateX(0); opacity: 0; }
-  10%  { opacity: 1; }
-  90%  { opacity: 0.4; }
-  100% { transform: translateY(-100vh) translateX(30px); opacity: 0; }
-}
+        .fade-in-up {
+            opacity: 0;
+            animation: zloFadeInUp 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+        }
 
-/* ── Content ── */
-.zlo-content {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px 4vw;
-  margin-top: 8vh;
-  max-width: 1200px;
-  width: 100%;
-}
+        /* ── Floating background ── */
+        .zlo-bg {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            overflow: hidden;
+        }
 
-/* ── Logo ── */
-.zlo-brand {
-  position: absolute;
-  top: 40px;
-  left: 5%;
-  z-index: 10;
-}
-.zlo-logo {
-  height: 40px;
-  width: auto;
-  object-fit: contain;
-  filter: brightness(1.1);
-}
+        .zlo-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(90px);
+            opacity: 0;
+            animation: zloFloat 14s ease-in-out infinite alternate, zloFadeInOrb 2s ease forwards;
+        }
 
-/* ── Headline ── */
-.zlo-headline {
-  font-family: 'Montserrat', sans-serif;
-  font-size: clamp(32px, 5.5vw, 68px);
-  font-weight: 800;
-  line-height: 1.1;
-  letter-spacing: -1.5px;
-  margin: 0 0 24px;
-  color: #ffffff;
-  -webkit-text-fill-color: #ffffff;
-  padding: 0 20px;
-}
+        @keyframes zloFadeInOrb {
+            to {
+                opacity: 1;
+            }
+        }
 
-/* ── Sub-text ── */
-.zlo-subtext {
-  font-size: clamp(14px, 2.2vw, 18px);
-  font-weight: 400;
-  color: rgba(255,255,255,0.85);
-  margin: 0 0 44px;
-  letter-spacing: 0.5px;
-  line-height: 1.6;
-}
-.zlo-accent {
-  color: #FF7F50;
-  font-weight: 700;
-}
+        .zlo-orb-1 {
+            width: 55vw;
+            height: 55vw;
+            max-width: 700px;
+            max-height: 700px;
+            background: radial-gradient(circle, rgba(255, 127, 80, 0.22) 0%, transparent 70%);
+            top: -15%;
+            left: -20%;
+            animation-delay: 0s, 0.5s;
+            animation-duration: 18s, 2s;
+        }
 
-/* ── Countdown ── */
-.zlo-countdown {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 52px;
-}
-.zlo-timer-block {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 6px;
-  background: rgba(255,255,255,0.12);
-  border: 1px solid rgba(255,255,255,0.3);
-  border-radius: 14px;
-  padding: 20px 28px;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  min-width: 90px;
-  box-shadow: 0 0 30px rgba(0,40,100,0.15), inset 0 1px 0 rgba(255,255,255,0.15);
-  transition: box-shadow 0.4s ease, border-color 0.4s ease;
-}
-.zlo-timer-block:hover {
-  border-color: rgba(255,127,80,0.7);
-  box-shadow: 0 0 40px rgba(255,99,71,0.25), inset 0 1px 0 rgba(255,255,255,0.2);
-}
-.zlo-timer-num {
-  font-family: 'Montserrat', sans-serif;
-  font-size: clamp(32px, 5vw, 54px);
-  font-weight: 700;
-  letter-spacing: -1px;
-  line-height: 1;
-  color: #ffffff;
-  transition: transform 0.15s ease;
-}
-.zlo-timer-num.tick {
-  transform: scale(1.12);
-}
-.zlo-timer-label {
-  font-size: 10px;
-  letter-spacing: 2.5px;
-  text-transform: uppercase;
-  color: rgba(255,127,80,1);
-  font-weight: 600;
-}
-.zlo-timer-sep {
-  font-size: clamp(28px, 4vw, 44px);
-  font-weight: 300;
-  color: rgba(255,255,255,0.6);
-  line-height: 1;
-  margin-bottom: 20px;
-}
+        .zlo-orb-2 {
+            width: 45vw;
+            height: 45vw;
+            max-width: 560px;
+            max-height: 560px;
+            background: radial-gradient(circle, rgba(135, 206, 235, 0.18) 0%, transparent 70%);
+            bottom: -20%;
+            right: -15%;
+            animation-delay: 2s, 0.8s;
+            animation-duration: 22s, 2s;
+        }
 
-/* ── Divider ── */
-.zlo-line {
-  width: 60px;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
-  margin-bottom: 16px;
-}
+        .zlo-orb-3 {
+            width: 30vw;
+            height: 30vw;
+            max-width: 380px;
+            max-height: 380px;
+            background: radial-gradient(circle, rgba(255, 99, 71, 0.18) 0%, transparent 70%);
+            top: 55%;
+            left: 55%;
+            animation-delay: 5s, 1.2s;
+            animation-duration: 16s, 2s;
+        }
 
-/* ── Responsive ── */
-@media (max-width: 640px) {
-  .zlo-timer-block { padding: 14px 16px; min-width: 68px; border-radius: 10px; }
-  .zlo-headline { letter-spacing: -1px; }
-  .zlo-btn { padding: 14px 28px; font-size: 12px; }
-  .zlo-countdown { gap: 8px; }
-  .zlo-timer-sep { font-size: 24px; }
-}
-@media (max-width: 380px) {
-  .zlo-timer-block { padding: 12px 12px; min-width: 58px; }
-  .zlo-countdown { gap: 6px; }
-}
-</style>
+        @keyframes zloFloat {
+            0% {
+                transform: translate(0, 0) scale(1);
+            }
 
-<!-- ═══ OVERLAY SCRIPT ═══ -->
-<script>
-(function() {
-  // ── Target: 2026-05-11 at 10:30:00 IST (UTC+5:30) = 05:00 UTC ──
-  var launchUTC = new Date(Date.UTC(2026, 4, 11, 5, 0, 0, 0));
+            33% {
+                transform: translate(4%, -5%) scale(1.05);
+            }
 
-  var overlay = document.getElementById('zasLaunchOverlay');
+            66% {
+                transform: translate(-3%, 4%) scale(0.97);
+            }
 
-  var msRemaining = launchUTC - Date.now();
+            100% {
+                transform: translate(2%, -2%) scale(1.03);
+            }
+        }
 
-  if (msRemaining <= 0) {
-    overlay.style.display = 'none';
-    return;
-  }
+        /* ── Particles ── */
+        .zlo-particle {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            animation: zloParticleFloat linear infinite;
+        }
 
-  overlay.style.display = 'flex';
-  document.body.style.overflow = 'hidden';
+        @keyframes zloParticleFloat {
+            0% {
+                transform: translateY(0) translateX(0);
+                opacity: 0;
+            }
 
-  // ── Spawn floating particles ──
-  var container = document.getElementById('zloParticles');
-  if (container) {
-    for (var i = 0; i < 30; i++) {
-      (function(idx) {
-        var p = document.createElement('span');
-        p.className = 'zlo-particle';
-        var left = Math.random() * 100;
-        var dur  = 12 + Math.random() * 20;
-        var del  = Math.random() * 15;
-        var size = 1 + Math.random() * 2.5;
-        p.style.cssText = 'left:' + left + 'vw; bottom:-10px; width:' + size + 'px; height:' + size + 'px;'
-          + 'animation-duration:' + dur + 's; animation-delay:' + del + 's; opacity:0;';
-        container.appendChild(p);
-      })(i);
-    }
-  }
+            10% {
+                opacity: 1;
+            }
 
-  // ── Countdown logic ──
-  function pad(n) { return String(Math.floor(n)).padStart(2, '0'); }
+            90% {
+                opacity: 0.4;
+            }
 
-  function updateCountdown() {
-    var diff = launchUTC - Date.now();
-    if (diff <= 0) {
-      clearInterval(timer);
-      document.getElementById('zloHours').textContent   = '00';
-      document.getElementById('zloMinutes').textContent = '00';
-      document.getElementById('zloSeconds').textContent = '00';
-      setTimeout(function() {
-        overlay.style.transition = 'opacity 1.5s ease';
-        overlay.style.opacity    = '0';
-        setTimeout(function() {
-          overlay.style.display   = 'none';
-          document.body.style.overflow = '';
-        }, 1500);
-      }, 400);
-      return;
-    }
-    var h = Math.floor(diff / 3600000);
-    var m = Math.floor((diff % 3600000) / 60000);
-    var s = Math.floor((diff % 60000) / 1000);
+            100% {
+                transform: translateY(-100vh) translateX(30px);
+                opacity: 0;
+            }
+        }
 
-    var hEl = document.getElementById('zloHours');
-    var mEl = document.getElementById('zloMinutes');
-    var sEl = document.getElementById('zloSeconds');
+        /* ── Content ── */
+        .zlo-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px 4vw;
+            margin-top: 8vh;
+            max-width: 1200px;
+            width: 100%;
+        }
 
-    function tickAnim(el, val) {
-      var prev = el.textContent;
-      var newVal = pad(val);
-      if (prev !== newVal) {
-        el.classList.remove('tick');
-        void el.offsetWidth;
-        el.textContent = newVal;
-        el.classList.add('tick');
-        setTimeout(function() { el.classList.remove('tick'); }, 160);
-      }
-    }
+        /* ── Logo ── */
+        .zlo-brand {
+            position: absolute;
+            top: 40px;
+            left: 5%;
+            z-index: 10;
+        }
 
-    tickAnim(hEl, h);
-    tickAnim(mEl, m);
-    tickAnim(sEl, s);
-  }
+        .zlo-logo {
+            height: 40px;
+            width: auto;
+            object-fit: contain;
+            filter: brightness(1.1);
+        }
 
-  updateCountdown();
-  var timer = setInterval(updateCountdown, 1000);
-})();
-</script>
-<!-- ═══ END LAUNCH OVERLAY ═══ -->
+        /* ── Headline ── */
+        .zlo-headline {
+            font-family: 'Montserrat', sans-serif;
+            font-size: clamp(32px, 5.5vw, 68px);
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -1.5px;
+            margin: 0 0 24px;
+            color: #ffffff;
+            -webkit-text-fill-color: #ffffff;
+            padding: 0 20px;
+        }
+
+        /* ── Sub-text ── */
+        .zlo-subtext {
+            font-size: clamp(14px, 2.2vw, 18px);
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.85);
+            margin: 0 0 44px;
+            letter-spacing: 0.5px;
+            line-height: 1.6;
+        }
+
+        .zlo-accent {
+            color: #FF7F50;
+            font-weight: 700;
+        }
+
+        /* ── Countdown ── */
+        .zlo-countdown {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 52px;
+        }
+
+        .zlo-timer-block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            background: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 14px;
+            padding: 20px 28px;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            min-width: 90px;
+            box-shadow: 0 0 30px rgba(0, 40, 100, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+            transition: box-shadow 0.4s ease, border-color 0.4s ease;
+        }
+
+        .zlo-timer-block:hover {
+            border-color: rgba(255, 127, 80, 0.7);
+            box-shadow: 0 0 40px rgba(255, 99, 71, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+        }
+
+        .zlo-timer-num {
+            font-family: 'Montserrat', sans-serif;
+            font-size: clamp(32px, 5vw, 54px);
+            font-weight: 700;
+            letter-spacing: -1px;
+            line-height: 1;
+            color: #ffffff;
+            transition: transform 0.15s ease;
+        }
+
+        .zlo-timer-num.tick {
+            transform: scale(1.12);
+        }
+
+        .zlo-timer-label {
+            font-size: 10px;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: rgba(255, 127, 80, 1);
+            font-weight: 600;
+        }
+
+        .zlo-timer-sep {
+            font-size: clamp(28px, 4vw, 44px);
+            font-weight: 300;
+            color: rgba(255, 255, 255, 0.6);
+            line-height: 1;
+            margin-bottom: 20px;
+        }
+
+        /* ── Divider ── */
+        .zlo-line {
+            width: 60px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            margin-bottom: 16px;
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 640px) {
+            .zlo-timer-block {
+                padding: 14px 16px;
+                min-width: 68px;
+                border-radius: 10px;
+            }
+
+            .zlo-headline {
+                letter-spacing: -1px;
+            }
+
+            .zlo-btn {
+                padding: 14px 28px;
+                font-size: 12px;
+            }
+
+            .zlo-countdown {
+                gap: 8px;
+            }
+
+            .zlo-timer-sep {
+                font-size: 24px;
+            }
+        }
+
+        @media (max-width: 380px) {
+            .zlo-timer-block {
+                padding: 12px 12px;
+                min-width: 58px;
+            }
+
+            .zlo-countdown {
+                gap: 6px;
+            }
+        }
+    </style>
+
+    <!-- ═══ OVERLAY SCRIPT ═══ -->
+    <script>
+        (function () {
+            // ── Target: 2026-05-11 at 10:30:00 IST (UTC+5:30) = 05:00 UTC ──
+            var launchUTC = new Date(Date.UTC(2026, 4, 11, 5, 0, 0, 0));
+
+            var overlay = document.getElementById('zasLaunchOverlay');
+
+            var msRemaining = launchUTC - Date.now();
+
+            if (msRemaining <= 0) {
+                overlay.style.display = 'none';
+                return;
+            }
+
+            overlay.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+
+            // ── Spawn floating particles ──
+            var container = document.getElementById('zloParticles');
+            if (container) {
+                for (var i = 0; i < 30; i++) {
+                    (function (idx) {
+                        var p = document.createElement('span');
+                        p.className = 'zlo-particle';
+                        var left = Math.random() * 100;
+                        var dur = 12 + Math.random() * 20;
+                        var del = Math.random() * 15;
+                        var size = 1 + Math.random() * 2.5;
+                        p.style.cssText = 'left:' + left + 'vw; bottom:-10px; width:' + size + 'px; height:' + size + 'px;'
+                            + 'animation-duration:' + dur + 's; animation-delay:' + del + 's; opacity:0;';
+                        container.appendChild(p);
+                    })(i);
+                }
+            }
+
+            // ── Countdown logic ──
+            function pad(n) { return String(Math.floor(n)).padStart(2, '0'); }
+
+            function updateCountdown() {
+                var diff = launchUTC - Date.now();
+                if (diff <= 0) {
+                    clearInterval(timer);
+                    document.getElementById('zloHours').textContent = '00';
+                    document.getElementById('zloMinutes').textContent = '00';
+                    document.getElementById('zloSeconds').textContent = '00';
+                    setTimeout(function () {
+                        overlay.style.transition = 'opacity 1.5s ease';
+                        overlay.style.opacity = '0';
+                        setTimeout(function () {
+                            overlay.style.display = 'none';
+                            document.body.style.overflow = '';
+                        }, 1500);
+                    }, 400);
+                    return;
+                }
+                var h = Math.floor(diff / 3600000);
+                var m = Math.floor((diff % 3600000) / 60000);
+                var s = Math.floor((diff % 60000) / 1000);
+
+                var hEl = document.getElementById('zloHours');
+                var mEl = document.getElementById('zloMinutes');
+                var sEl = document.getElementById('zloSeconds');
+
+                function tickAnim(el, val) {
+                    var prev = el.textContent;
+                    var newVal = pad(val);
+                    if (prev !== newVal) {
+                        el.classList.remove('tick');
+                        void el.offsetWidth;
+                        el.textContent = newVal;
+                        el.classList.add('tick');
+                        setTimeout(function () { el.classList.remove('tick'); }, 160);
+                    }
+                }
+
+                tickAnim(hEl, h);
+                tickAnim(mEl, m);
+                tickAnim(sEl, s);
+            }
+
+            updateCountdown();
+            var timer = setInterval(updateCountdown, 1000);
+        })();
+    </script>
+    <!-- ═══ END LAUNCH OVERLAY ═══ -->
 
     <div class="page">
         <section class="header">
@@ -892,7 +978,7 @@
                                                 class="contact-basic-info">
                                                 <div class="contact-address-box">
                                                     <div class="contact-address">Trivandrum <br>
-                                                         Kerala 695001</div>
+                                                        Kerala 695001</div>
                                                 </div>
                                                 <div class="contact-timing-box">
                                                     <div class="contact-timing">Mon–Sat: 6 AM – 10 PM
@@ -956,8 +1042,8 @@
                                     </div>
                                     <div data-w-id="9783710f-ed73-6ea5-b470-d3df823560a3" class="contact-images-wrap">
                                         <div class="single-image-box radius-large full-image"><img
-                                                src="image/hover1.png"
-                                                loading="lazy" alt="about image" class="single-image" /></div>
+                                                src="image/hover1.png" loading="lazy" alt="about image"
+                                                class="single-image" /></div>
                                     </div>
                                     <div class="contact-form-wrap">
                                         <div class="contact-form-box">
@@ -967,11 +1053,7 @@
                                             </div>
                                             <div data-w-id="15207574-c3b3-9e28-5ec0-6d0188146573"
                                                 class="contact-form-block w-form">
-                                                <form id="contact-form" name="email-form" data-name="Email Form"
-                                                    method="get" class="contact-form"
-                                                    data-wf-page-id="69255154d13d96c173cc68da"
-                                                    data-wf-element-id="15207574-c3b3-9e28-5ec0-6d0188146574"
-                                                    data-turnstile-sitekey="0x4AAAAAAAQTptj2So4dx43e">
+                                                <form id="contact-form" name="email-form" data-name="Email Form" class="contact-form">
                                                     <div class="contact-form-grid">
                                                         <div id="w-node-b91d7fe4-07eb-d1d3-3a06-ca27fa3a995a-73cc68da"
                                                             class="form-item"><input class="form-field w-input"
@@ -993,9 +1075,24 @@
                                                                     data-name="Programs" required=""
                                                                     aria-label="programs" class="form-select w-select">
                                                                     <option value="">Preferred programs</option>
-                                                                    <option value="First">First choice</option>
-                                                                    <option value="Second">Second choice</option>
-                                                                    <option value="Third">Third choice</option>
+                                                                    <option value="Student Wellness Programs">Student Wellness Programs
+                                                                    </option>
+                                                                    <option value="Passion Discovery Sessions">Passion Discovery Sessions
+                                                                    </option>
+                                                                    <option value="Creative & Physical Activity Modules">Creative & Physical Activity
+                                                                        Modules</option>
+                                                                    <option value="Confidence Building Workshops">Confidence Building Workshops
+                                                                    </option>
+                                                                    <option value="School Wellness Collaborations">School Wellness Collaborations
+                                                                    </option>
+                                                                    <option value="Personality Development Activities">Personality Development
+                                                                        Activities</option>
+                                                                    <option value="Movement & Rhythm-Based Fitness Sessions">Movement & Rhythm-Based
+                                                                        Fitness Sessions</option>
+                                                                    <option value="Emotional Wellness Engagements">Emotional Wellness
+                                                                        Engagements</option>
+                                                                    <option value="Student Observation & Growth Tracking">Student Observation & Growth
+                                                                        Tracking</option>
                                                                 </select></div>
                                                         </div>
                                                         <div id="w-node-_7cd5686b-a55d-2c27-7e8c-253cbbbcb9a0-73cc68da"
@@ -1015,10 +1112,12 @@
                                                     </div>
                                                 </form>
                                                 <div class="success-message two w-form-done">
-                                                    <div class="success-message-text">Your message has been sent successfully.</div>
+                                                    <div class="success-message-text">Your message has been sent
+                                                        successfully.</div>
                                                 </div>
                                                 <div class="error-message two w-form-fail">
-                                                    <div class="error-message-text">Failed to send your message. Please try again.</div>
+                                                    <div class="error-message-text">Failed to send your message. Please
+                                                        try again.</div>
                                                 </div>
                                             </div>
                                         </div>
@@ -1143,7 +1242,8 @@
                                                 <div class="faq-tabs-nav">Corporate Wellness</div>
                                             </a>
                                             <a data-w-tab="Tab 5" class="faq-tabs-link w-inline-block w-tab-link">
-                                                <div class="faq-tabs-nav">Community, Accessibility & Getting Started</div>
+                                                <div class="faq-tabs-nav">Community, Accessibility & Getting Started
+                                                </div>
                                             </a>
                                         </div>
                                         <div class="faq-tabs-content w-tab-content">
@@ -1161,7 +1261,8 @@
                                                                 class="faq-item w-dropdown">
                                                                 <div class="faq-toggle w-dropdown-toggle">
                                                                     <div class="faq-icon w-icon-dropdown-toggle"></div>
-                                                                    <div class="faq-title">What is ZAS Wellness about?</div>
+                                                                    <div class="faq-title">What is ZAS Wellness about?
+                                                                    </div>
                                                                     <div class="faq-icon-block">
                                                                         <div class="faq-icon-holders"><img
                                                                                 loading="lazy"
@@ -1174,7 +1275,10 @@
                                                                 </div>
                                                                 <nav class="faq-content w-dropdown-list">
                                                                     <div class="faq-desc-box">
-                                                                        <p class="faq-desc">ZAS Wellness helps students discover their passion through movement, confidence building, and wellness experiences.</p>
+                                                                        <p class="faq-desc">ZAS Wellness helps students
+                                                                            discover their passion through movement,
+                                                                            confidence building, and wellness
+                                                                            experiences.</p>
                                                                     </div>
                                                                 </nav>
                                                             </div>
@@ -1185,7 +1289,8 @@
                                                                 class="faq-item w-dropdown">
                                                                 <div class="faq-toggle w-dropdown-toggle">
                                                                     <div class="faq-icon w-icon-dropdown-toggle"></div>
-                                                                    <div class="faq-title">How is ZAS different from fitness or dance classes?</div>
+                                                                    <div class="faq-title">How is ZAS different from
+                                                                        fitness or dance classes?</div>
                                                                     <div class="faq-icon-block">
                                                                         <div class="faq-icon-holders"><img
                                                                                 loading="lazy"
@@ -1198,7 +1303,9 @@
                                                                 </div>
                                                                 <nav class="faq-content w-dropdown-list">
                                                                     <div class="faq-desc-box">
-                                                                        <p class="faq-desc">ZAS focuses on emotional wellbeing, confidence, and self-discovery — not just physical movement.</p>
+                                                                        <p class="faq-desc">ZAS focuses on emotional
+                                                                            wellbeing, confidence, and self-discovery —
+                                                                            not just physical movement.</p>
                                                                     </div>
                                                                 </nav>
                                                             </div>
@@ -1209,7 +1316,8 @@
                                                                 class="faq-item w-dropdown">
                                                                 <div class="faq-toggle w-dropdown-toggle">
                                                                     <div class="faq-icon w-icon-dropdown-toggle"></div>
-                                                                    <div class="faq-title">Why does ZAS focus on passion discovery?</div>
+                                                                    <div class="faq-title">Why does ZAS focus on passion
+                                                                        discovery?</div>
                                                                     <div class="faq-icon-block">
                                                                         <div class="faq-icon-holders"><img
                                                                                 loading="lazy"
@@ -1222,12 +1330,14 @@
                                                                 </div>
                                                                 <nav class="faq-content w-dropdown-list">
                                                                     <div class="faq-desc-box">
-                                                                        <p class="faq-desc">Because passion helps students stay motivated, focused, and connected to what they genuinely enjoy. </p>
+                                                                        <p class="faq-desc">Because passion helps
+                                                                            students stay motivated, focused, and
+                                                                            connected to what they genuinely enjoy. </p>
                                                                     </div>
                                                                 </nav>
                                                             </div>
                                                         </div>
-                                                        
+
                                                     </div>
                                                 </div>
                                             </div>
@@ -1242,7 +1352,8 @@
                                                                 class="faq-item w-dropdown">
                                                                 <div class="faq-toggle w-dropdown-toggle">
                                                                     <div class="faq-icon w-icon-dropdown-toggle"></div>
-                                                                    <div class="faq-title">What wellness programs does ZAS offer for schools?</div>
+                                                                    <div class="faq-title">What wellness programs does
+                                                                        ZAS offer for schools?</div>
                                                                     <div class="faq-icon-block">
                                                                         <div class="faq-icon-holders"><img
                                                                                 loading="lazy"
@@ -1255,7 +1366,9 @@
                                                                 </div>
                                                                 <nav class="faq-content w-dropdown-list">
                                                                     <div class="faq-desc-box">
-                                                                        <p class="faq-desc">ZAS provides on-site wellness sessions with movement, breathwork, and focus activities for students.</p>
+                                                                        <p class="faq-desc">ZAS provides on-site
+                                                                            wellness sessions with movement, breathwork,
+                                                                            and focus activities for students.</p>
                                                                     </div>
                                                                 </nav>
                                                             </div>
@@ -1265,7 +1378,8 @@
                                                                 class="faq-item w-dropdown">
                                                                 <div class="faq-toggle w-dropdown-toggle">
                                                                     <div class="faq-icon w-icon-dropdown-toggle"></div>
-                                                                    <div class="faq-title">Can ZAS help disengaged or unmotivated students?
+                                                                    <div class="faq-title">Can ZAS help disengaged or
+                                                                        unmotivated students?
                                                                     </div>
                                                                     <div class="faq-icon-block">
                                                                         <div class="faq-icon-holders"><img
@@ -1279,7 +1393,9 @@
                                                                 </div>
                                                                 <nav class="faq-content w-dropdown-list">
                                                                     <div class="faq-desc-box">
-                                                                        <p class="faq-desc">Yes. ZAS helps students reconnect through structured and pressure-free activities.</p>
+                                                                        <p class="faq-desc">Yes. ZAS helps students
+                                                                            reconnect through structured and
+                                                                            pressure-free activities.</p>
                                                                     </div>
                                                                 </nav>
                                                             </div>
@@ -1289,7 +1405,8 @@
                                                                 class="faq-item w-dropdown">
                                                                 <div class="faq-toggle w-dropdown-toggle">
                                                                     <div class="faq-icon w-icon-dropdown-toggle"></div>
-                                                                    <div class="faq-title">What results can schools expect?
+                                                                    <div class="faq-title">What results can schools
+                                                                        expect?
                                                                     </div>
                                                                     <div class="faq-icon-block">
                                                                         <div class="faq-icon-holders"><img
@@ -1303,7 +1420,9 @@
                                                                 </div>
                                                                 <nav class="faq-content w-dropdown-list">
                                                                     <div class="faq-desc-box">
-                                                                        <p class="faq-desc">Schools often notice better focus, confidence, attendance, and classroom engagement.</p>
+                                                                        <p class="faq-desc">Schools often notice better
+                                                                            focus, confidence, attendance, and classroom
+                                                                            engagement.</p>
                                                                     </div>
                                                                 </nav>
                                                             </div>
@@ -1313,7 +1432,8 @@
                                                                 class="faq-item w-dropdown">
                                                                 <div class="faq-toggle w-dropdown-toggle">
                                                                     <div class="faq-icon w-icon-dropdown-toggle"></div>
-                                                                    <div class="faq-title">How does ZAS fit into school timetables?</div>
+                                                                    <div class="faq-title">How does ZAS fit into school
+                                                                        timetables?</div>
                                                                     <div class="faq-icon-block">
                                                                         <div class="faq-icon-holders"><img
                                                                                 loading="lazy"
@@ -1326,7 +1446,9 @@
                                                                 </div>
                                                                 <nav class="faq-content w-dropdown-list">
                                                                     <div class="faq-desc-box">
-                                                                        <p class="faq-desc">Programs are flexible and can fit into PE periods, wellness slots, or co-curricular schedules.
+                                                                        <p class="faq-desc">Programs are flexible and
+                                                                            can fit into PE periods, wellness slots, or
+                                                                            co-curricular schedules.
                                                                         </p>
                                                                     </div>
                                                                 </nav>
@@ -1346,7 +1468,8 @@
                                                                 class="faq-item w-dropdown">
                                                                 <div class="faq-toggle w-dropdown-toggle">
                                                                     <div class="faq-icon w-icon-dropdown-toggle"></div>
-                                                                    <div class="faq-title">How do parents know ZAS is right for their child?</div>
+                                                                    <div class="faq-title">How do parents know ZAS is
+                                                                        right for their child?</div>
                                                                     <div class="faq-icon-block">
                                                                         <div class="faq-icon-holders"><img
                                                                                 loading="lazy"
@@ -1359,7 +1482,9 @@
                                                                 </div>
                                                                 <nav class="faq-content w-dropdown-list">
                                                                     <div class="faq-desc-box">
-                                                                        <p class="faq-desc">ZAS is ideal for children still discovering their interests, confidence, or sense of direction.</p>
+                                                                        <p class="faq-desc">ZAS is ideal for children
+                                                                            still discovering their interests,
+                                                                            confidence, or sense of direction.</p>
                                                                     </div>
                                                                 </nav>
                                                             </div>
@@ -1369,7 +1494,8 @@
                                                                 class="faq-item w-dropdown">
                                                                 <div class="faq-toggle w-dropdown-toggle">
                                                                     <div class="faq-icon w-icon-dropdown-toggle"></div>
-                                                                    <div class="faq-title">What if a child is not into sports or dance?</div>
+                                                                    <div class="faq-title">What if a child is not into
+                                                                        sports or dance?</div>
                                                                     <div class="faq-icon-block">
                                                                         <div class="faq-icon-holders"><img
                                                                                 loading="lazy"
@@ -1382,7 +1508,9 @@
                                                                 </div>
                                                                 <nav class="faq-content w-dropdown-list">
                                                                     <div class="faq-desc-box">
-                                                                        <p class="faq-desc">That’s completely okay. ZAS focuses on self-discovery, not competition or performance.</p>
+                                                                        <p class="faq-desc">That’s completely okay. ZAS
+                                                                            focuses on self-discovery, not competition
+                                                                            or performance.</p>
                                                                     </div>
                                                                 </nav>
                                                             </div>
@@ -1392,7 +1520,8 @@
                                                                 class="faq-item w-dropdown">
                                                                 <div class="faq-toggle w-dropdown-toggle">
                                                                     <div class="faq-icon w-icon-dropdown-toggle"></div>
-                                                                    <div class="faq-title">How quickly can parents see changes?</div>
+                                                                    <div class="faq-title">How quickly can parents see
+                                                                        changes?</div>
                                                                     <div class="faq-icon-block">
                                                                         <div class="faq-icon-holders"><img
                                                                                 loading="lazy"
@@ -1405,12 +1534,14 @@
                                                                 </div>
                                                                 <nav class="faq-content w-dropdown-list">
                                                                     <div class="faq-desc-box">
-                                                                        <p class="faq-desc">Small changes are usually visible within 3–4 weeks, with deeper growth over time.</p>
+                                                                        <p class="faq-desc">Small changes are usually
+                                                                            visible within 3–4 weeks, with deeper growth
+                                                                            over time.</p>
                                                                     </div>
                                                                 </nav>
                                                             </div>
                                                         </div>
-                                                        
+
                                                     </div>
                                                 </div>
                                             </div>
@@ -1425,7 +1556,8 @@
                                                                 class="faq-item w-dropdown">
                                                                 <div class="faq-toggle w-dropdown-toggle">
                                                                     <div class="faq-icon w-icon-dropdown-toggle"></div>
-                                                                    <div class="faq-title">What does a ZAS corporate wellness program look like?</div>
+                                                                    <div class="faq-title">What does a ZAS corporate
+                                                                        wellness program look like?</div>
                                                                     <div class="faq-icon-block">
                                                                         <div class="faq-icon-holders"><img
                                                                                 loading="lazy"
@@ -1438,7 +1570,9 @@
                                                                 </div>
                                                                 <nav class="faq-content w-dropdown-list">
                                                                     <div class="faq-desc-box">
-                                                                        <p class="faq-desc">ZAS runs guided movement and energy reset sessions for workplace wellbeing.</p>
+                                                                        <p class="faq-desc">ZAS runs guided movement and
+                                                                            energy reset sessions for workplace
+                                                                            wellbeing.</p>
                                                                     </div>
                                                                 </nav>
                                                             </div>
@@ -1448,7 +1582,8 @@
                                                                 class="faq-item w-dropdown">
                                                                 <div class="faq-toggle w-dropdown-toggle">
                                                                     <div class="faq-icon w-icon-dropdown-toggle"></div>
-                                                                    <div class="faq-title">Can ZAS help with burnout and stress?</div>
+                                                                    <div class="faq-title">Can ZAS help with burnout and
+                                                                        stress?</div>
                                                                     <div class="faq-icon-block">
                                                                         <div class="faq-icon-holders"><img
                                                                                 loading="lazy"
@@ -1461,7 +1596,9 @@
                                                                 </div>
                                                                 <nav class="faq-content w-dropdown-list">
                                                                     <div class="faq-desc-box">
-                                                                        <p class="faq-desc">Yes. Sessions help reduce stress, improve energy, and strengthen team connection.</p>
+                                                                        <p class="faq-desc">Yes. Sessions help reduce
+                                                                            stress, improve energy, and strengthen team
+                                                                            connection.</p>
                                                                     </div>
                                                                 </nav>
                                                             </div>
@@ -1471,7 +1608,8 @@
                                                                 class="faq-item w-dropdown">
                                                                 <div class="faq-toggle w-dropdown-toggle">
                                                                     <div class="faq-icon w-icon-dropdown-toggle"></div>
-                                                                    <div class="faq-title">Can ZAS scale for large teams?</div>
+                                                                    <div class="faq-title">Can ZAS scale for large
+                                                                        teams?</div>
                                                                     <div class="faq-icon-block">
                                                                         <div class="faq-icon-holders"><img
                                                                                 loading="lazy"
@@ -1484,12 +1622,14 @@
                                                                 </div>
                                                                 <nav class="faq-content w-dropdown-list">
                                                                     <div class="faq-desc-box">
-                                                                        <p class="faq-desc">Yes. Programs can be adapted for both small and large employee groups.</p>
+                                                                        <p class="faq-desc">Yes. Programs can be adapted
+                                                                            for both small and large employee groups.
+                                                                        </p>
                                                                     </div>
                                                                 </nav>
                                                             </div>
                                                         </div>
-                                                        
+
                                                     </div>
                                                 </div>
                                             </div>
@@ -1504,7 +1644,8 @@
                                                                 class="faq-item w-dropdown">
                                                                 <div class="faq-toggle w-dropdown-toggle">
                                                                     <div class="faq-icon w-icon-dropdown-toggle"></div>
-                                                                    <div class="faq-title">Does ZAS only work with premium schools and corporates?</div>
+                                                                    <div class="faq-title">Does ZAS only work with
+                                                                        premium schools and corporates?</div>
                                                                     <div class="faq-icon-block">
                                                                         <div class="faq-icon-holders"><img
                                                                                 loading="lazy"
@@ -1517,7 +1658,9 @@
                                                                 </div>
                                                                 <nav class="faq-content w-dropdown-list">
                                                                     <div class="faq-desc-box">
-                                                                        <p class="faq-desc">No. ZAS also supports NGOs, orphanages, and community wellness initiatives.</p>
+                                                                        <p class="faq-desc">No. ZAS also supports NGOs,
+                                                                            orphanages, and community wellness
+                                                                            initiatives.</p>
                                                                     </div>
                                                                 </nav>
                                                             </div>
@@ -1527,7 +1670,8 @@
                                                                 class="faq-item w-dropdown">
                                                                 <div class="faq-toggle w-dropdown-toggle">
                                                                     <div class="faq-icon w-icon-dropdown-toggle"></div>
-                                                                    <div class="faq-title">Is ZAS available in India and UAE?</div>
+                                                                    <div class="faq-title">Is ZAS available in India and
+                                                                        UAE?</div>
                                                                     <div class="faq-icon-block">
                                                                         <div class="faq-icon-holders"><img
                                                                                 loading="lazy"
@@ -1540,7 +1684,8 @@
                                                                 </div>
                                                                 <nav class="faq-content w-dropdown-list">
                                                                     <div class="faq-desc-box">
-                                                                        <p class="faq-desc">Yes. ZAS operates across Kerala, India and Dubai, UAE.</p>
+                                                                        <p class="faq-desc">Yes. ZAS operates across
+                                                                            Kerala, India and Dubai, UAE.</p>
                                                                     </div>
                                                                 </nav>
                                                             </div>
@@ -1550,7 +1695,8 @@
                                                                 class="faq-item w-dropdown">
                                                                 <div class="faq-toggle w-dropdown-toggle">
                                                                     <div class="faq-icon w-icon-dropdown-toggle"></div>
-                                                                    <div class="faq-title">How can schools or organisations get started? </div>
+                                                                    <div class="faq-title">How can schools or
+                                                                        organisations get started? </div>
                                                                     <div class="faq-icon-block">
                                                                         <div class="faq-icon-holders"><img
                                                                                 loading="lazy"
@@ -1563,7 +1709,9 @@
                                                                 </div>
                                                                 <nav class="faq-content w-dropdown-list">
                                                                     <div class="faq-desc-box">
-                                                                        <p class="faq-desc">Institutions can contact ZAS through WhatsApp to discuss customised programs.</p>
+                                                                        <p class="faq-desc">Institutions can contact ZAS
+                                                                            through WhatsApp to discuss customised
+                                                                            programs.</p>
                                                                     </div>
                                                                 </nav>
                                                             </div>
@@ -1573,7 +1721,8 @@
                                                                 class="faq-item w-dropdown">
                                                                 <div class="faq-toggle w-dropdown-toggle">
                                                                     <div class="faq-icon w-icon-dropdown-toggle"></div>
-                                                                    <div class="faq-title">What is the minimum commitment to try ZAS?
+                                                                    <div class="faq-title">What is the minimum
+                                                                        commitment to try ZAS?
                                                                     </div>
                                                                     <div class="faq-icon-block">
                                                                         <div class="faq-icon-holders"><img
@@ -1587,7 +1736,8 @@
                                                                 </div>
                                                                 <nav class="faq-content w-dropdown-list">
                                                                     <div class="faq-desc-box">
-                                                                        <p class="faq-desc">ZAS offers monthly programs as a flexible starting option.</p>
+                                                                        <p class="faq-desc">ZAS offers monthly programs
+                                                                            as a flexible starting option.</p>
                                                                     </div>
                                                                 </nav>
                                                             </div>
@@ -1911,6 +2061,79 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.14.2/ScrollTrigger.min.js"></script>
         <!-- Master Initialization Script -->
         <script src="js/webflow-init.js" type="text/javascript"></script>
+
+    <!-- ═══ FORMSPREE AJAX — INLINE MESSAGES ═══ -->
+    <script>
+        (function () {
+            var form      = document.getElementById('contact-form');
+            if (!form) return;
+
+            /* Webflow success / error divs already in the HTML */
+            var formWrap  = form.closest('.w-form');
+            var successEl = formWrap ? formWrap.querySelector('.w-form-done') : null;
+            var errorEl   = formWrap ? formWrap.querySelector('.w-form-fail') : null;
+
+            /*
+             * capture: true  — our handler fires in the CAPTURE phase,
+             *   which is BEFORE Webflow's bubble-phase listener.
+             * stopImmediatePropagation() — stops ALL other handlers
+             *   (including Webflow's) from seeing this event at all.
+             */
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                e.stopImmediatePropagation();
+
+                var submitBtn = form.querySelector('[type="submit"]');
+
+                /* Ensure Webflow's status divs are hidden */
+                if (successEl) successEl.style.display = 'none';
+                if (errorEl)   errorEl.style.display   = 'none';
+                form.style.display = '';
+
+                /* Loading state */
+                if (submitBtn) {
+                    submitBtn.disabled = true;
+                    submitBtn.value    = 'Sending…';
+                }
+
+                /* In case Webflow still manages to show the fail div asynchronously, hide it again */
+                setTimeout(function () {
+                    if (errorEl) errorEl.style.display = 'none';
+                }, 0);
+
+                fetch('https://formspree.io/f/xpqbgbgj', {
+                    method:  'POST',
+                    body:    new FormData(form),
+                    headers: { 'Accept': 'application/json' }
+                })
+                .then(function (response) {
+                    if (submitBtn) {
+                        submitBtn.disabled = false;
+                        submitBtn.value    = 'Send message';
+                    }
+                    if (response.ok) {
+                        form.reset();
+                        form.style.display = 'none';
+                        if (successEl) successEl.style.display = 'block';
+                    } else {
+                        if (errorEl) errorEl.style.display = 'block';
+                    }
+                })
+                .catch(function () {
+                    if (submitBtn) {
+                        submitBtn.disabled = false;
+                        submitBtn.value    = 'Send message';
+                    }
+                    if (errorEl) errorEl.style.display = 'block';
+                });
+
+            }, true); /* <-- capture phase: fires BEFORE Webflow */
+
+        })();
+    </script>
+    <!-- ═══ END FORMSPREE AJAX ═══ -->
+
 </body>
 
 </html>
